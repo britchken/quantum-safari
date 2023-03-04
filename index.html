@@ -81,6 +81,7 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 			/* Implementation of the presentation of the audio player */
+
 			const playIconContainer = document.getElementById('play-icon');
 			const audioPlayerContainer = document.getElementById('audio-player-container');
 			const seekSlider = document.getElementById('seek-slider');
@@ -89,13 +90,14 @@
 			let playState = 'play';
 			let muteState = 'unmute';
 
-
 			const updatePlayState = () => {
 				if(playState === 'play') {
 					audio.play();
+					requestAnimationFrame(whilePlaying);
 					playState = 'pause';
 				} else {
 					audio.pause();
+					cancelAnimationFrame(raf);
 					playState = 'play';
 				}
 			}
@@ -162,6 +164,7 @@
 				seekSlider.value = Math.floor(audio.currentTime);
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
 				audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
+				raf = requestAnimationFrame(whilePlaying);
 			}
 
 			if (audio.readyState > 0) {
@@ -187,10 +190,16 @@
 
 			seekSlider.addEventListener('input', () => {
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
+				if(!audio.paused) {
+					cancelAnimationFrame(raf);
+				}
 			});
 
 			seekSlider.addEventListener('change', () => {
 				audio.currentTime = seekSlider.value;
+				if(!audio.paused) {
+					requestAnimationFrame(whilePlaying);
+				}
 			});
 
 			volumeSlider.addEventListener('input', (e) => {
@@ -232,18 +241,22 @@
 				navigator.mediaSession.setActionHandler('play', () => {
 					if(playState === 'play') {
 						audio.play();
+						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
 					} else {
 						audio.pause();
+						cancelAnimationFrame(raf);
 						playState = 'play';
 					}
 				});
 				navigator.mediaSession.setActionHandler('pause', () => {
 					if(playState === 'play') {
 						audio.play();
+						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
 					} else {
 						audio.pause();
+						cancelAnimationFrame(raf);
 						playState = 'play';
 					}
 				});
@@ -266,6 +279,7 @@
 					audioPlayerContainer.style.setProperty('--seek-before-width', '0%');
 					currentTimeContainer.textContent = '0:00';
 					if(playState === 'pause') {
+						cancelAnimationFrame(raf);
 						playState = 'play';
 					}
 				});
