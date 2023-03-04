@@ -15,35 +15,15 @@
 		</head>
 	<body class="is-preload">
 
-		<!-- Sidebar -->
-		<section id="sidebar">
-			<div class="inner">
-				<nav>
-					<ul>
-						<li><a href="#intro">Quantum Safari</a></li>
-						<li><a href="#one">Lank's fantastic paintings!</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
-
-			
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
-				<div class="inner">
-					<h1 id="testss">The home of Halloween</h1>
-					<p>New album coming soon! Scroll down to see the progress!</p>
-					<p>In the meantime, feel free to check out <a href="https://brianhasgoodphotos.info/s/yonxtHHieRQzxn2"><bold></bold>this link</bold></a> as you listen.</p>
-					<p>I'll be posting updates here, so stay tuned.</p>
-				</div>
-			</section>
-
-			<!-- One -->
 			<section id="one" class="wrapper style1 fullscreen fade-up">
 				<div class="inner">
-					<h1>Halloween Album</h1>
+					<h1 id="testss">Quantum Safari</h1>
+					<p>New album coming soon!! Check out the current state of it below (almost finished :D )</p>
+					<p>In the meantime, feel free to check out <a href="https://brianhasgoodphotos.info/s/yonxtHHieRQzxn2"><bold></bold>this link</bold></a> as you listen.</p>
+					<p>I'll be posting updates here, so stay tuned.</p>
 				</div>
 				<div id="song_list">
 					<div class="button" onclick="changeSong('1')">1. Spooky Overture?</div>
@@ -59,15 +39,16 @@
 				<div id="art_wrap"> <img id="art" src="images/1.jpg" width="auto" height="500px"> </div>
 				<div id="audio-player-container">
 					<audio src="songs/1.mp3" preload="metadata"></audio>
-					<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
 					<input type="range" id="seek-slider" max="100" value="0">
 					<span id="current-time" class="time">0:00</span>
 					<span id="duration" class="time">0:00</span>
-					<output id="volume-output">100</output>
 					<input type="range" id="volume-slider" max="100" value="100">
+					<output id="volume-output">100</output>
+					<br>
+					<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
 					<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>
 					<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
-					<button id="mute-icon"><i class='material-icons'>volume_up</i></button>
+					<button id="mute-icon" style="float: right;"><i class='material-icons'>volume_up</i></button>
 				</div>
 			</section>
 		</div>
