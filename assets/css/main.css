@@ -4072,6 +4072,21 @@ input, select, textarea {
 			cursor: pointer;
 		}
 
+		#seek-slider::-webkit-slider-thumb {
+			position: relative;
+			background:url("../../images/boy.png");
+			background-repeat: no-repeat;
+			background-size: auto;
+			background-position: right;
+			box-sizing: content-box;
+			border: 0px solid #007db5;
+			height: 150px;
+			width: 100px;
+			border-radius: 0%;
+			cursor: pointer;
+			margin: -75px -50px 0 0;
+		}
+
 		#song_list
 		{
 			width:100%;
