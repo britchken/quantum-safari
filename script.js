@@ -29,7 +29,8 @@ const muteAnimation = lottieWeb.loadAnimation({
 
 playAnimation.goToAndStop(14, true);
 
-playIconContainer.addEventListener('click', () => {
+
+const updatePlayState = () => {
     if(playState === 'play') {
         audio.play();
         playAnimation.playSegments([14, 27], true);
@@ -41,6 +42,10 @@ playIconContainer.addEventListener('click', () => {
         cancelAnimationFrame(raf);
         playState = 'play';
     }
+}
+
+playIconContainer.addEventListener('click', () => {
+    updatePlayState();
 });
 
 muteIconContainer.addEventListener('click', () => {
@@ -118,6 +123,13 @@ if (audio.readyState > 0) {
     });
 }
 
+audio.addEventListener('durationchange', () => {
+    displayDuration();
+    setSliderMax();
+    displayBufferedAmount();
+});
+
+
 audio.addEventListener('progress', displayBufferedAmount);
 
 seekSlider.addEventListener('input', () => {
@@ -144,8 +156,14 @@ volumeSlider.addEventListener('input', (e) => {
 
 /* MEEEEEEEEEEEEEEEEE  */ 
 export function changeSong(song) {
-    document.getElementById('audio_thing').src='songs/' + song + '.mp3';
+    console.log(calculateTime(audio.duration))
+    audio.src='songs/' + song + '.mp3';
+    console.log(audio.duration);
+    audio.load();
+    playState = 'play'
+    updatePlayState();
     document.getElementById('art').src='images/' + song + '.jpg';
+
 }
 
 

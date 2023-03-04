@@ -21,8 +21,7 @@
 			<div class="inner">
 				<nav>
 					<ul>
-						<li><a href="#intro">Welcome</a></li>
-						<li><a href="#one">Lank's fantastic paintings!</a></li>
+						<li><a href="#intro">Lank's fantastic paintings!</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -31,30 +30,37 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 
-			<!-- Intro -->
+			<!--
 			<section id="intro" class="wrapper style1 fullscreen fade-up">
 				<div class="inner">
 					<h1 id="testss">Quantum Safari</h1>
-					<p>Halloween album coming soon!</p>
+					<p>Halloween album coming soon! Scroll down to see the progress!</p>
 					<ul class="actions">
 						<li><a href="https://brianhasgoodphotos.info/s/3pq784ofjabe2rp" class="button">Click here to see the progress!</a></li>
 					</ul>
 				</div>
-			</section>
+			</section>-->
 
 			<!-- One -->
-			<section id="one" class="wrapper style1 fullscreen fade-up">
-				<li><a class="button" onclick="changeSong('1')">Spooky Overture?</a></li>
-				<li><a class="button" onclick="changeSong('2')">Lights Out</a></li>
-				<li><a class="button" onclick="changeSong('3')">And I'm Gone</a></li>
-				<li><a class="button" onclick="changeSong('4')">Be Seen on Halloween</a></li>
-				<li><a class="button" onclick="changeSong('5')">Two for the Toads</a></li>
-				<li><a class="button" onclick="changeSong('6')">Good Idea, Bad Execution</a></li>
-				<li><a class="button" onclick="changeSong('7')">Echoes of the Moon</a></li>
-				<li><a class="button" onclick="changeSong('8')">Give it a Try</a></li>
-				<li><a class="button" onclick="changeSong('9')">Be seein' you</a></li>
+			<section id="intro" class="wrapper style1 fullscreen fade-up">
+				<div class="inner">
+					<h1>Quantum Safari</h1>
+			    	<p>Halloween album coming soon! Listen to it below (work in progress)</p>
+				</div>
+				<div id="song_list">
+					<div class="button" onclick="changeSong('1')">1. Spooky Overture?</div>
+					<div class="button" onclick="changeSong('2')">2. Lights Out</div>
+					<div class="button" onclick="changeSong('3')">3. And I'm Gone</div>
+					<div class="button" onclick="changeSong('4')">4. Be Seen on Halloween</div>
+					<div class="button" onclick="changeSong('5')">5. Two for the Toads</div>
+					<div class="button" onclick="changeSong('6')">6. Good Idea, Bad Execution</div>
+					<div class="button" onclick="changeSong('7')">7. Echoes of the Moon</div>
+					<div class="button" onclick="changeSong('8')">8. Give it a Try</div>
+					<div class="button" onclick="changeSong('9')">9. Be seein' you</div>
+				</div>
+				<div id="art_wrap"> <img id="art" src="images/1.jpg" width="auto" height="500px"> </div>
 				<div id="audio-player-container">
-					<audio id="audio_thing" src="songs/1.mp3" preload="metadata" loop></audio>
+					<audio src="songs/1.mp3" preload="metadata" loop></audio>
 					<button id="play-icon"></button>
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0">
@@ -63,9 +69,6 @@
 					<input type="range" id="volume-slider" max="100" value="100">
 					<button id="mute-icon"></button>
 				</div>
-				<img id="art" src="images/1.jpg">				
-				
-
 			</section>
 		</div>
 
