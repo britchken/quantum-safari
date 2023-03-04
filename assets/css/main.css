@@ -1953,11 +1953,13 @@ input, select, textarea {
 			input[type="button"]:hover:after,
 			button:hover:after,
 			.button:hover:after {
-				opacity: 0.05;
+				opacity: 0.1;
 				-moz-transform: scale(1);
 				-webkit-transform: scale(1);
 				-ms-transform: scale(1);
 				transform: scale(1);
+				box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+				-webkit-transition: 0.5s;
 			}
 
 			input[type="submit"]:hover:active,
@@ -3922,14 +3924,14 @@ input, select, textarea {
 		}
 
 		#play-icon {
-			margin: 20px 2.5% 10px 2.5%;
+			margin: 20px 1% 10px 2.5%;
 		}
 		path {
 			stroke: #2edcd9;
 		}
 		.time {
 			display: inline-block;
-			width: 37px;
+			width: 40px;
 			text-align: center;
 			font-size: 20px;
 			margin: 28.5px 0 18.5px 0;
@@ -3960,9 +3962,7 @@ input, select, textarea {
 		#volume-slider::before {
 			width: var(--volume-before-width);
 		}
-		#mute-icon {
-			margin: 0 2.5%;
-		}
+
 		input[type="range"] {
 			position: relative;
 			-webkit-appearance: none;
@@ -3983,10 +3983,10 @@ input, select, textarea {
 		input[type="range"]::before {
 			position: absolute;
 			content: "";
-			top: 8px;
+			top: 0px;
 			left: 0;
 			width: var(--seek-before-width);
-			height: 3px;
+			height: 30px;
 			background-color: #007db5;
 			cursor: pointer;
 		}
@@ -3994,17 +3994,18 @@ input, select, textarea {
 			position: relative;
 			-webkit-appearance: none;
 			box-sizing: content-box;
-			border: 1px solid #007db5;
-			height: 15px;
-			width: 15px;
+			border: 3px solid #000;
+			height: 40px;
+			width: 40px;
 			border-radius: 50%;
-			background-color: #fff;
+			background:url("../../images/moon.png");
+			background-repeat: no-repeat;
+			background-size: auto;
 			cursor: pointer;
-			margin: -7px 0 0 0;
+			margin: -22px 0 0 0;
 		}
 		input[type="range"]:active::-webkit-slider-thumb {
 			transform: scale(1.2);
-			background: #007db5;
 		}
 		input[type="range"]::-moz-range-track {
 			width: 100%;
@@ -4014,16 +4015,19 @@ input, select, textarea {
 		}
 		input[type="range"]::-moz-range-progress {
 			background-color: #007db5;
+			height: 100%;
 		}
 		input[type="range"]::-moz-focus-outer {
 			border: 0;
 		}
 		input[type="range"]::-moz-range-thumb {
-			background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+			background:url("../../images/moon.png");
+			background-repeat: no-repeat;
+			background-size: auto;
 			box-sizing: content-box;
-			border: 3px solid #007db5;
-			height: 30px;
-			width: 30px;
+			border: 3px solid #000;
+			height: 40px;
+			width: 40px;
 			border-radius: 50%;
 			background-color: #3c2c62;
 			cursor: pointer;
@@ -4051,7 +4055,7 @@ input, select, textarea {
 			height: 15px;
 			width: 15px;
 			border-radius: 50%;
-			background-color: #fff;
+			background-color: #000;
 			cursor: pointer;
 		}
 		input[type="range"]:active::-ms-thumb {
@@ -4065,9 +4069,10 @@ input, select, textarea {
 			background-size: auto;
 			background-position: right;
 			box-sizing: content-box;
-			border: 0px solid #007db5;
+			border-width: 0;
 			height: 150px;
 			width: 100px;
+			margin: -70px 0 0 0;
 			border-radius: 0%;
 			cursor: pointer;
 		}
