@@ -147,11 +147,16 @@ volumeSlider.addEventListener('input', (e) => {
 /* Implementation of the Media Session API */
 if('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
-        title: 'Komorebi',
-        artist: 'Anitek',
-        album: 'MainStay',
+        title: 'Halloween Album',
+        artist: 'Quantum Safari',
+        album: 'Halloween: a Halloweeny Halloween',
         artwork: [
-            { src: 'images/boo.jpg', sizes: '512x512', type: 'image/png' }
+            { src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
+            { src: 'images/1/128.jpg', sizes: '128x128', type: 'image/png' },
+            { src: 'images/1/192.jpg', sizes: '192x192', type: 'image/png' },
+            { src: 'images/1/256.jpg', sizes: '256x256', type: 'image/png' },
+            { src: 'images/1/384.jpg', sizes: '384x384', type: 'image/png' },
+            { src: 'images/1/512.jpg', sizes: '512x512', type: 'image/png' },
         ]
     });
     navigator.mediaSession.setActionHandler('play', () => {
