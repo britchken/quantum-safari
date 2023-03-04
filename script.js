@@ -9,7 +9,7 @@ const muteIconContainer = document.getElementById('mute-icon');
 let playState = 'play';
 let muteState = 'unmute';
 
-const playAnimation = lottieWeb.loadAnimation({
+var playAnimation = lottieWeb.loadAnimation({
   container: playIconContainer,
   path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/pause/pause.json',
   renderer: 'svg',
@@ -86,7 +86,7 @@ const calculateTime = (secs) => {
     return `${minutes}:${returnedSeconds}`;
 }
 
-const displayDuration = () => {
+function displayDuration () {
     durationContainer.textContent = calculateTime(audio.duration);
 }
 
@@ -142,6 +142,11 @@ volumeSlider.addEventListener('input', (e) => {
 });
 
 
+/* MEEEEEEEEEEEEEEEEE  */ 
+export function changeSong(song) {
+    document.getElementById('audio_thing').src='songs/' + song + '.mp3';
+    document.getElementById('art').src='images/' + song + '.jpg';
+}
 
 
 /* Implementation of the Media Session API */
