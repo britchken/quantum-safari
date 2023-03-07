@@ -4076,13 +4076,13 @@ input, select, textarea {
 			background:url("../../images/boy.png");
 			background-repeat: no-repeat;
 			background-size: auto;
-			background-position: right;
+			background-position: center;
 			box-sizing: content-box;
 			border-width: 0;
 			height: 150px;
 			width: 100px;
 			margin: -70px 0 0 0;
-			border-radius: 0%;
+			border-radius: 0;
 			cursor: pointer;
 		}
 
@@ -4105,7 +4105,7 @@ input, select, textarea {
 		{
 			width:100%;
 			text-align: center;
-		}
+		}lyrics
 
 		#art_wrap
 		{
@@ -4115,7 +4115,58 @@ input, select, textarea {
 			width:50%;
 		}
 
-		#lyrics
-		{
+		#scroll-container {
+			border: 3px solid black;
+			border-radius: 5px;
+			max-height: 100px;
+			overflow: hidden;
+		  }
+
+		  #lyrics_all {
 			margin-left: 20px;
+		  }  
+
+		#lyrics {
+			margin-left: 20px;
+			height: 100%;
+			text-align: left;
+			white-space:pre;
+
+			transition: width 2s;
+			
+			/* animation properties */
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+			
+			animation: my-animation 50s linear infinite;
+			animation-play-state: 'paused';
 		}
+		  
+		@keyframes my-animation {
+			from {
+			  -moz-transform: translateY(0);
+			  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+			}
+			to {
+			  -moz-transform: translateY(-100%);
+			  -webkit-transform: translateY(-100%);
+			  transform: translateY(-100%);
+			}
+		  }
+
+/*		  @keyframes my-animation {
+			from {
+			  -moz-transform: translateY(0);
+			  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+			}
+			to {
+			  -moz-transform: translateY(-100%);
+			  -webkit-transform: translateY(-100%);
+			  transform: translateY(-100%);
+			}
+		  }
+
+*/

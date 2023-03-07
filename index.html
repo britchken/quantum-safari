@@ -18,11 +18,10 @@
 
 		<!-- Wrapper -->
 		<div id="wrapper">
-			<section id="one" class="wrapper style1 fullscreen fade-up">
+			<section id="one" class="wrapper style1 fade-up">
 				<div class="inner">
-					<h1 id="testss">Quantum Safari</h1>
+					<h1 id="tests">Quantum Safari</h1>
 					<p>New album coming soon!! Check out the current state of it below (almost finished :D )</p>
-					<p>Scroll down to read the lyrics!</p>
 					<p>I'll be posting updates here, so stay tuned.</p>
 				</div>
 				<div id="song_list">
@@ -34,9 +33,19 @@
 					<div class="button" onclick="changeSong('6')">6. Good Idea, Bad Execution</div>
 					<div class="button" onclick="changeSong('7')">7. Echoes of the Moon</div>
 					<div class="button" onclick="changeSong('8')">8. Give it a Try</div>
-					<div class="button" onclick="changeSong('9')">9. Be seein' you</div>
+					<div class="button" onclick="changeSong('9')">9. Be Seein' You</div>
 				</div>
-				<div id="art_wrap"> <img id="art" src="images/1.jpg" width="auto" height="500px"> </div>
+
+				<!-- Subtitles/Art -->
+				<section style="display:block; overflow: hidden; border: 5px solid rgb(17, 0, 53); max-height:700px">
+					<div id="lyrics" style="float: left; width:200px" >
+						<p id="current_lyrics" style="position:relative;" class="scroll">
+						</p>
+					</div>
+				    <div id="art_wrap" style="float: left;"> <img id="art" src="images/1.jpg" width="auto" style="position:static; top:0; max-height:700px;"> </div>
+			    </section>
+
+				<!-- Audio Player -->
 				<div id="audio-player-container">
 					<audio src="songs/1.mp3" preload="metadata"></audio>
 					<input type="range" id="seek-slider" max="100" value="0">
@@ -52,9 +61,9 @@
 				</div>
 			</section>
 		</div>
-<div id="lyrics">
+<div id="lyrics_all">
+	<br>
 <h2>Lyrics</h2>
-
 <h3>2. Lights Out</h3>
 <pre>Mom  
 Good night honey, I’ve got candy to hand out  
@@ -400,6 +409,7 @@ WHO COULD BE A BETTER YOU!
 			const seekSlider = document.getElementById('seek-slider');
 			const volumeSlider = document.getElementById('volume-slider');
 			const muteIconContainer = document.getElementById('mute-icon');
+			const lyrics = document.getElementById('lyrics');
 			let playState = 'play';
 			let muteState = 'unmute';
 			let song = 1;
@@ -407,11 +417,13 @@ WHO COULD BE A BETTER YOU!
 			const updatePlayState = () => {
 				if(playState === 'play') {
 					audio.play();
+					lyrics.style.animationPlayState = 'running';
 					requestAnimationFrame(whilePlaying);
 					playIconContainer.innerHTML = "<i class='material-icons'>pause</i>";
 					playState = 'pause';
 				} else {
 					audio.pause();
+					lyrics.style.animationPlayState = 'paused';
 					cancelAnimationFrame(raf);
 					playIconContainer.innerHTML = "<i class='material-icons'>play_arrow</i>";
 					playState = 'play';
@@ -446,10 +458,6 @@ WHO COULD BE A BETTER YOU!
 				showRangeProgress(e.target);
 			});
 
-
-
-
-
 			/* Implementation of the functionality of the audio player */
 
 			const audio = document.querySelector('audio');
@@ -474,14 +482,18 @@ WHO COULD BE A BETTER YOU!
 			}
 
 			const displayBufferedAmount = () => {
-				const bufferedAmount = Math.floor(audio.buffered.end(audio.buffered.length - 1));
+				bufferedAmount = 0;
+				if (audio.buffered.length >= 1) {
+					bufferedAmount = Math.floor(audio.buffered.end(audio.buffered.length - 1));
+				}
 				audioPlayerContainer.style.setProperty('--buffered-width', `${(bufferedAmount / seekSlider.max) * 100}%`);
 			}
 
 			const whilePlaying = () => {
+//				document.getElementById("current_lyrics").style.transition("5s");
 				seekSlider.value = Math.floor(audio.currentTime);
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
-				audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
+				audioPlayerContainer.style.setProperty('--seek-before-width', `${audio.currentTime / seekSlider.max * 100}%`);
 				raf = requestAnimationFrame(whilePlaying);
 			}
 
@@ -526,10 +538,27 @@ WHO COULD BE A BETTER YOU!
 				});
 			}
 
+
+
+			function reset_animation() {
+ 			 var el = document.getElementById('lyrics');
+			el.style.animation = 'none';
+			el.offsetHeight; /* trigger reflow */
+			el.style.animation = null; 
+			}
+
 			audio.addEventListener('durationchange', () => {
 				displayDuration();
 				setSliderMax();
 				displayBufferedAmount();
+				reset_animation();
+				//document.getElementById('lyrics').style.animation.keyframes.insertRule("0%   { -transform:rotate(30 deg) }");
+				//document.getElementById('lyrics').style.animation.keyframes.insertRule("100% { -transform:rotate(100 deg) }");
+				//document.getElementById('lyrics').style.animation.keyframes.insertRule("0%   { -moz-transform:rotate(30 deg) }");
+				//document.getElementById('lyrics').style.animation.keyframes.insertRule("100% { -moz-transform:rotate(100 deg) }");
+				lyrics.style.animation= "my-animation " + audio.duration + "s linear infinite";
+				console.log("lyrics.style.animation=" + lyrics.style.animation);
+				
 			});
 
 
@@ -538,6 +567,7 @@ WHO COULD BE A BETTER YOU!
 			audio.addEventListener('ended', nextSong);
 
 			seekSlider.addEventListener('input', () => {
+				document.getElementById("current_lyrics").style.top = "-" + seekSlider.value + "%";
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
 				if(!audio.paused) {
 					cancelAnimationFrame(raf);
@@ -567,9 +597,23 @@ WHO COULD BE A BETTER YOU!
 				playState = 'play'
 				updatePlayState();
 				document.getElementById('art').src='images/' + s + '.jpg';
+				if (s==2) {
+					lyrics.style.width = "400px";
+					document.getElementById('current_lyrics').innerHTML =
+					"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Mom:<br>Good night honey, I've got candy to hand out.<br>Sweet dreams, now I'll turn the lights out!<br><br><br><br>Boy:<br>There’s only one chance a year to conquer the night,<br>But it’s always the same story, she turns out that dang light<br>So I’m stuck in here thinkin’ and dreamin’ of Halloween<br>Designing my own costume that will never be seen<br>I know there’s something out there, a world outside this room,<br>Though so far I only know its reflection in the moon<br>But tonight will be different, I won’t go to sleep<br>this time around I pick trick over treat<br>See mom always told me, I’m her special little son<br>Now it’s time for someone special to have a little fun.<br><br>Mom: Oh honey? One more thing -<br>No matter how you’re feeling<br>Or what you’re gonna do<br>There will never be another<br>who could be a better you!<br>"
+				}  
+				else if (s==6) {
+					lyrics.style.width = "400px";
+					document.getElementById('current_lyrics').innerHTML =
+						"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Welcome to the show!<br><br><br>It's a good idea, but bad execution <br>I'm thinking that's not a great solution <br>Hey, so come and play!<br>Boy: how do you play?<br>Let's all tell 'em why they're an idiot<br>Hear their bright ideas and why they didn't work<br>Finally we see they're just a little bit.... dumb!<br>Boy: ''What? Who would want to play-''<br>Tonight's first contestant is a monster of a man<br>One bite from a werewolf had a-blown away his plan<br>Da da da dum, he lost everything - got cursed by cosmic fate:<br>The same moon that transforms him then illuminates his face<br>But he wouldn't give up easily; he had too much to lose<br>So he plans out his revenge and waits until the next full moon<br>Then he climbs up to the highest tree and jumps into the sky<br>he sets his sights upon the moon with a fire in his eyes<br><br>He grabs ahold with all his power, here's the zero hour, it's beginning<br>he digs his claws into the sides, his retribution satisfied, he's grinning<br>And he rips it and whacks it and in one fell swoop,<br>He sweeps it and swipes it and CRACKS it to the side,<br>AND IT TURNS!!!!!!!!<br>AND AS IT DOES THE PART OF HIM THAT GAVE HIM STRENGTH TO<br>CLIMB AND JUMP AND CLAW AND TEAR APART THE MOON WAS GONE!!!!!!<br>AND HE COULD NOT HOLD ON!!!!!!!!!!!<br>NO HE COULD NOT HOLD ON!!!!!<br>So come on down and let's all tell ‘em why! Two, three -<br>It was a good idea, but bad execution<br>I'm thinking that's not a great solution<br>Hey, so come and play!<br>And let's all tell em why they're an idiot,<br>Hear their bright ideas and why they didn't work<br>Finally we see they're just a little bit...dumb!<br>Boy: No, this is a terrible game-<br>Next up is a lonely ghost who liked to be alive,<br>She thought she wouldn't have to make new friends after she died<br>da dum da dum. Now she's feeling down - to be alone is tough<br>She wants her old friends back but they're not dying fast enough!!<br>And there's one guy in particular she misses most of all,<br>He was charming, he was clever, he made winter feel like fall,<br>She died too soon to tell him and they never got to be,<br>She sees an opportunity to fulfill destiny!<br>She heads back into town, dressed up in her finest gown, she was stunning<br>But as she floats on past, everyone becomes aghast, they start running,<br>And she's moanin’ and wailin’ - in her desperation,<br>She starts scarin’ and spookin', there's a mass migration,<br>IT'S A GHOST TOWN!!!!!!!!<br>SHE STOPS THERE WRAPPED IN SPACE AND SKY AND WONDERS HOW<br>THE ONLY LIFE SHE EVER KNEW AND ALL HER FRIENDS WERE GONE!!!!!!<br>AND SHE COULD NOT MOVE ON!!!!!!<br>NO SHE COULD NOT MOVE ON!!!!!!!<br>So come on down and let's all tell her why!!!<br>Let's all tell her why!<br>-keyboard solo-<br>It's the good idea hall of fame!<br>Doors with hinges on the bottom<br>A counterclockwise clock<br>How 'bout online cash deposit<br>And made-for-two-feet socks<br>Why not an uneven staircase<br>to trip burglars sneakin' in<br>And lottery tickets<br>Without a chance to win<br>I'm thinkin' five finger nail clippers<br>Sweaters for your fish<br>Individually wrapped cereal or a<br>washer for one dish, let's hear these...<br>...good ideas, with bad execution<br>That's the thing we're lookin for, that's the right solution<br>Like a floor-mounted shower head<br>That sprays you from below<br>Or a verbal traffic signal<br>''stop stop stop, okay go!''<br>No doubt about it,<br>We've got so much more in store!<br>Boy: No! I just can't take any more!<br>These are NOT good ideas, and this show isn't fun.<br>I don't wanna play, and I'm not the only one.<br>I'm gonna unplug the music, put an end to this scene<br>I won't let you take away my first Halloween<br>Host: You think you call the shots?<br>You're just a little boy!<br>Now let's tell you why you're an idiot<br>Turn the spotlights on - now you're in the thick of it<br>Let's take a look at your GOOD IDEA!<br>Tonight's last contestant is a kid who's all alone,<br>Wanting to feel big, he runs away from home -<br>ba dum ba dum - do you feel safe?<br>Isn't it obvious this was all a big mistake?<br>What were you thinking? WHAT ARE YOU DOING HERE?<br> AHHHHHHHHHH<br><br><br><br><br><br><br><br><br>" 
+				}
+				else {
+					lyrics.style.width = "200px";
+					document.getElementById('current_lyrics').innerHTML = "";
+				}
+				
 
 			}
-
 
 			/* Implementation of the Media Session API */
 			if('mediaSession' in navigator) {
