@@ -1,4 +1,3 @@
-@import url(fontawesome-all.min.css);
 
 /*
 	Hyperspace by HTML5 UP
@@ -3919,7 +3918,7 @@ input, select, textarea {
 			--buffered-width: 0%;
 			position: relative;
 			width: 100%;
-			height: 250px;
+			height: 300px;
 			background: #130032;
 		}
 
@@ -4105,14 +4104,6 @@ input, select, textarea {
 		{
 			width:100%;
 			text-align: center;
-		}lyrics
-
-		#art_wrap
-		{
-			display:block;
-			margin-left:auto;
-			margin-right:auto;
-			width:50%;
 		}
 
 		#scroll-container {
