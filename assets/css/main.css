@@ -4113,12 +4113,8 @@ input, select, textarea {
 			overflow: hidden;
 		  }
 
-		  #lyrics_all {
-			margin-left: 20px;
-		  }  
-
 		#lyrics {
-			margin-left: 20px;
+			margin-left: 100px;
 			height: 100%;
 			text-align: left;
 			white-space:pre;
@@ -4145,6 +4141,12 @@ input, select, textarea {
 			  -webkit-transform: translateY(-100%);
 			  transform: translateY(-100%);
 			}
+		  }
+
+		  .rainbow-text {
+			background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		  }
 
 /*		  @keyframes my-animation {
