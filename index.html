@@ -14,38 +14,32 @@
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
 		</head>
-	<body class="is-preload">
-
+	<body>
 
 		<!-- Wrapper -->
-		<div id="wrapper" style="position:absolute; bottom:0; width:100%; height:100%;">
-			<div id="one" class="wrapper style1 fade-up" style="height:100%; bottom:0;">
-				<div class="inner">
-					<h1 id="tests">Quantum Safari</h1>
-					<p>New album coming soon!! Check out the current state of it below. I'll be posting updates here, so stay tuned!</p>
-				</div>
-
-				<div style="bottom:0;">
-				<div id="song_list">
-					<div class="button" onclick="changeSong('1')">1. Spooky Overture?</div>
-					<div class="button" onclick="changeSong('2')">2. Lights Out</div>
-					<div class="button" onclick="changeSong('3')">3. And I'm Gone</div>
-					<div class="button" onclick="changeSong('4')">4. Be Seen on Halloween</div>
-					<div class="button" onclick="changeSong('5')">5. Two for the Toads</div>
-					<div class="button" onclick="changeSong('6')">6. Good Idea, Bad Execution</div>
-					<div class="button" onclick="changeSong('7')">7. Echoes of the Moon</div>
-					<div class="button" onclick="changeSong('8')">8. Give it a Try</div>
-					<div class="button" onclick="changeSong('9')">9. Be Seein' You</div>
-				</div>
-
-				<!-- Main content -->
-				<section class="main-content">
-
-					<!-- Lyrics -->
-					<div id="lyric_container" style="z-index:1;">
-						<div id="lyrics" style="width:0; margin-left:100px; z-index:1;">
-							<div id="current_lyrics" style="position:relative; z-index:1;">
-								<div id="lyrics2" style="position:absolute; z-index:1; visibility:hidden;">
+		<div id="wrapper" style="position:relative; height:100vh;">
+			<div style="height:300px; overflow:hidden; position:relative;">
+				<h1 id="tests">Quantum Safari</h1>
+				<p>New album coming soon!! Check out the current state of it below. I'll be posting updates here, so stay tuned!</p>
+			
+			<div id="song_list">
+				<div class="button" onclick="changeSong('1')">1. Spooky Overture?</div>
+				<div class="button" onclick="changeSong('2')">2. Lights Out</div>
+				<div class="button" onclick="changeSong('3')">3. And I'm Gone</div>
+				<div class="button" onclick="changeSong('4')">4. Be Seen on Halloween</div>
+				<div class="button" onclick="changeSong('5')">5. Two for the Toads</div>
+				<div class="button" onclick="changeSong('6')">6. Good Idea, Bad Execution</div>
+				<div class="button" onclick="changeSong('7')">7. Echoes of the Moon</div>
+				<div class="button" onclick="changeSong('8')">8. Give it a Try</div>
+				<div class="button" onclick="changeSong('9')">9. Be Seein' You</div>
+			</div>
+		</div>
+			<div class="main-content" style="margin:0; padding:0; height:calc(100% - 600px); width:100%;">
+				<!-- Lyrics -->
+				<div id="lyric_container" style="z-index:1; width:600px" >
+					<div id="lyrics" style="width:600px; margin-left:100px; z-index:1;">
+						<div id="current_lyrics" style="position:relative; z-index:1;">
+							<div id="lyrics2" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font color="#FFB6C1">
 Good night honey, I've got candy to hand out.
@@ -76,15 +70,15 @@ Or what you’re gonna do
 There will never be another
 who could be a better you!
 </font>
-								</div>
-								<div id="lyrics3" style="position:absolute; z-index:1; visibility:hidden;">
+							</div>
+							<div id="lyrics3" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font color="#B0916E">
 And I'm gone.
 </font>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-								</div>
-								<div id="lyrics4" style="position:absolute; z-index:1; visibility:hidden;">
+							</div>
+							<div id="lyrics4" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Welcome to the Groove-yard
 Let me introduce you
@@ -113,30 +107,13 @@ On Halloween
 Halloween
 
 
+<font color="#222222">Yo, I just got to thinking that this party was a dud.
+But now it's clear to me all that we needed was fresh blood.</font>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Hope you brought your dance moves, kid,
+I want to see your style
+So get down beside the flicker of a pumpkin's smile
+Stay a while!!!!
 
 
 <font color="#222222">
@@ -146,8 +123,8 @@ One, two, three...</font>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-								</div>
-								<div id="lyrics6" style="position:absolute; z-index:1; visibility:hidden;">
+							</div>
+							<div id="lyrics6" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="rainbow-text">Welcome to the show!</div>
 
@@ -281,8 +258,8 @@ YOU SHOULDN'T HAVE COME HERE!
 
 </div>
 <br><br><br><br><br><br><br><br><br> 
-								</div>
-								<div id="lyrics7" style="position:absolute; z-index:1; visibility:hidden;">
+							</div>
+							<div id="lyrics7" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font color="#222222">
 Turn the light out
@@ -341,11 +318,10 @@ RARARAHRARHHRAO </font>
 <br><br><br>
 <font color="#B0916E">
 I'm not afraid of you
-Don't be afraid of me
-I'm here
-</font>
-								</div>
-								<div id="lyrics8" style="position:absolute; z-index:1; visibility:hidden;">
+Don't be afraid of me</font>
+<div class="and-im-here-text">I see you, And I'm here.</div>
+							</div>
+							<div id="lyrics8" style="position:absolute; z-index:1; visibility:hidden;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font color="#B0916E">
 Give it a try, be part of the world that surrounds you
@@ -424,33 +400,31 @@ OR WHAT YOU'RE GONNA DO
 THERE WILL NEVER BE ANOTHER
 WHO COULD BE A BETTER YOU!
 </font>
-								</div>
 							</div>
 						</div>
-				    </div>
-
-				    <!-- Paintings -->
-					<div id="art_wrap" style="position:relative; top:0; width:auto; height:800px;">
-						<img id="art" style="margin-left:auto; margin-right:auto; display:block; max-height:100%; max-width:100%; position:relative; top:50%; transform: translateY(-50%); z-index:0;"  src="images/1.jpg">
 					</div>
-			    </section>
+				</div>
 
-				<!-- Audio Player -->
-				<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-					<audio src="songs/1.mp3" preload="metadata"></audio>
-					<input type="range" id="seek-slider" max="100" value="0">
-					<span id="current-time" class="time">0:00</span>
-					<span id="duration" class="time">0:00</span>
-					<input type="range" id="volume-slider" max="100" value="100">
-					<br>
-					<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
-					<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>
-					<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
-					<button id="mute-icon" style="float: right;"><i class='material-icons'>volume_up</i></button>
-				</div>
-				</div>
-			</section>
-		</div>
+				<!-- Paintings -->
+				<img id="art" src="images/1.jpg">
+				
+			</div> <!-- /one -->
+
+			<!-- Audio Player -->
+			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
+				<audio src="songs/1.mp3" preload="metadata"></audio>
+				<input type="range" id="seek-slider" max="100" value="0">
+				<span id="current-time" class="time">0:00</span>
+				<span id="duration" class="time">0:00</span>
+				<br>
+				<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>					
+				<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
+				<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
+				<input type="range" id="volume-slider" max="100" value="100">
+				<button id="mute-icon" style="float: right;"><i class='material-icons'>volume_up</i></button>
+			</div>
+			
+		</div> <!-- /wrapper -->
 
 		<!--///////////////////////////////////////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
@@ -482,7 +456,6 @@ WHO COULD BE A BETTER YOU!
 			const lyrics = document.getElementById('lyrics');
 			const lyric_container = document.getElementById('lyric_container');
 			const current_lyrics = document.getElementById("current_lyrics");
-			const art_wrap = document.getElementById("art_wrap");
 			const lyr2 = document.getElementById("lyrics2");
 			const lyr3 = document.getElementById("lyrics3");
 			const lyr4 = document.getElementById("lyrics4");
@@ -695,47 +668,33 @@ WHO COULD BE A BETTER YOU!
 					lyr2.style.visibility = "visible";
 					lyrics.style.height = lyr2.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
-					lyric_container.style.width = "600px";
-					art_wrap.style.width = "calc(100% - 600px)";
 				} 
 				else if (s == 3) {
 					lyr3.style.visibility = "visible";
 					lyrics.style.height = lyr3.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 203 + "s infinite");
-					lyric_container.style.width = "200px";
-					art_wrap.style.width = "calc(100% - 200px)";
 				}
 				else if (s == 4) {
 					lyr4.style.visibility = "visible";
 					lyrics.style.height = lyr4.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 216 + "s infinite");
-					lyric_container.style.width = "550px";
-					art_wrap.style.width = "calc(100% - 550px)";
 				}
 				else if (s == 6) {
 					lyr6.style.visibility = "visible";
 					lyrics.style.height = lyr6.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 332 + "s infinite");
-					lyric_container.style.width = "650px";
-					art_wrap.style.width = "calc(100% - 650px)";
 				}
 				else if (s == 7) {
 					lyr7.style.visibility = "visible";
 					lyrics.style.height = lyr7.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 300 + "s infinite");
-					lyric_container.style.width = "470px";
-					art_wrap.style.width = "calc(100% - 470px)";
 				}
 				else if (s == 8) {
 					lyr8.style.visibility = "visible";
 					lyrics.style.height = lyr8.offsetHeight + "px";
 					lyrics.style.setProperty("animation", "my-animation linear " + 242 + "s infinite");
-					lyric_container.style.width = "600px";
-					art_wrap.style.width = "calc(100% - 600px)";
 				}
 				else {
-					lyric_container.style.width = "0";
-					art_wrap.style.width = "100%";
 				}
 				
 			}
