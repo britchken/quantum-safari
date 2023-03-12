@@ -470,13 +470,13 @@ WHO COULD BE A BETTER YOU!
 			const updatePlayState = () => {
 				if(playState === 'play') {
 					audio.play();
-					lyrics.style.animationPlayState = 'running';
+					current_lyrics.style.animationPlayState = 'running';
 					requestAnimationFrame(whilePlaying);
 					playIconContainer.innerHTML = "<i class='material-icons'>pause</i>";
 					playState = 'pause';
 				} else {
 					audio.pause();
-					lyrics.style.animationPlayState = 'paused';
+					current_lyrics.style.animationPlayState = 'paused';
 					cancelAnimationFrame(raf);
 					playIconContainer.innerHTML = "<i class='material-icons'>play_arrow</i>";
 					playState = 'play';
@@ -587,7 +587,7 @@ WHO COULD BE A BETTER YOU!
 			}
 
 			function reset_animation() {
- 			 var el = document.getElementById('lyrics');
+ 			 var el = document.getElementById('current_lyrics');
 			 el.style.animation = 'none';
 			 el.offsetHeight; /* trigger reflow */
 			}
@@ -603,11 +603,11 @@ WHO COULD BE A BETTER YOU!
                 current_lyrics.style.top = "calc(100% - 600px - " + seekSlider.value/audio.duration*lyrics.clientHeight + "px)";
 				var calc = audio.duration;// * 1/(1 - seekSlider.value/audio.duration);
 				console.log(calc);
-				lyrics.style.setProperty("animation", "my-animation linear " + calc + "s infinite");
+				current_lyrics.style.setProperty("animation", "my-animation linear " + calc + "s infinite");
 				if(playState === 'play') {
-					lyrics.style.animationPlayState = 'paused';
+					current_lyrics.style.animationPlayState = 'paused';
 				} else {
-					lyrics.style.animationPlayState = 'running';
+					current_lyrics.style.animationPlayState = 'running';
 				}
 			}
 
@@ -617,7 +617,7 @@ WHO COULD BE A BETTER YOU!
 
 			seekSlider.addEventListener('input', () => {
 				updateAnimation();
-				lyrics.style.animationPlayState = 'paused';
+				current_lyrics.style.animationPlayState = 'paused';
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
 				if(!audio.paused) {
 					cancelAnimationFrame(raf);
@@ -627,7 +627,7 @@ WHO COULD BE A BETTER YOU!
 			// Restart the animation when let go of the mouse (or touch!)
 			function mouse_up() {
 				if (playState == "pause") {
-					lyrics.style.animationPlayState = 'running';
+					current_lyrics.style.animationPlayState = 'running';
 				}
 			}
 
@@ -657,35 +657,33 @@ WHO COULD BE A BETTER YOU!
 				reset_animation();
 				if (s == 2) {
 					lyr2.style.visibility = "visible";
-					lyrics.style.height = lyr2.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
+					current_lyrics.style.height = lyr2.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
 				} 
 				else if (s == 3) {
 					lyr3.style.visibility = "visible";
-					lyrics.style.height = lyr3.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 203 + "s infinite");
-					console.log("setting lyrics.height to " + lyrics.style.height);
-					console.log("setting current_lyrics.style.top to " + current_lyrics.style.top);
+					current_lyrics.style.height = lyr3.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 203 + "s infinite");
 				}
 				else if (s == 4) {
 					lyr4.style.visibility = "visible";
-					lyrics.style.height = lyr4.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 216 + "s infinite");
+					current_lyrics.style.height = lyr4.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 216 + "s infinite");
 				}
 				else if (s == 6) {
 					lyr6.style.visibility = "visible";
-					lyrics.style.height = lyr6.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 332 + "s infinite");
+					current_lyrics.style.height = lyr6.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 332 + "s infinite");
 				}
 				else if (s == 7) {
 					lyr7.style.visibility = "visible";
-					lyrics.style.height = lyr7.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 300 + "s infinite");
+					current_lyrics.style.height = lyr7.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 300 + "s infinite");
 				}
 				else if (s == 8) {
 					lyr8.style.visibility = "visible";
-					lyrics.style.height = lyr8.offsetHeight + "px";
-					lyrics.style.setProperty("animation", "my-animation linear " + 242 + "s infinite");
+					current_lyrics.style.height = lyr8.offsetHeight + "px";
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 242 + "s infinite");
 				}
 				else {
 				}
