@@ -22,6 +22,8 @@ p {
 	padding-bottom: 30px;
 	position:absolute;
 	bottom:0;
+	width:100%;
+	text-align: center;
 }
 
 .main-content {
@@ -82,7 +84,7 @@ p {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 300px;
+	height: 250px;
 	background: #130032;
 	z-index: 1;
 	font-family: sans-serif;
@@ -102,19 +104,19 @@ p {
 }
 
 #play-icon {
-	margin: 50px 50px 0 20px;
+	margin: 20px 30px 0px 30px;
 	padding: 20px 30px 20px 30px;
 }
 #prev-icon {
-	margin: 50px 50px 0 20px;
+	margin: 20px 30px 0px 30px;
 	padding: 10px 20px 10px 20px;
 }
 #next-icon {
-	margin: 50px 50px 0 20px;
+	margin: 20px 30px 0px 30px;
 	padding: 10px 20px 10px 20px;
 }
 #mute-icon {
-	margin: 50px 100px 0 20px;
+	margin: 30px 100px 5px 20px;
 	padding: 10px 20px 10px 20px;
 }
 path {
@@ -193,6 +195,7 @@ input[type="range"]::-webkit-slider-thumb {
 	cursor: pointer;
 	margin: -7px 0 0 0;
 	transform: scale(1.2);
+	z-index: 3;
 }
 input[type="range"]:active::-webkit-slider-thumb {
 	transform: scale(1.4);
@@ -222,6 +225,7 @@ input[type="range"]::-moz-range-thumb {
 	background-color: #3c2c62;
 	cursor: pointer;
 	transform: scale(1.2);
+	z-index: 3;
 }
 input[type="range"]:active::-moz-range-thumb {
 	transform: scale(1.4);
@@ -287,12 +291,6 @@ input[type="range"]:active::-ms-thumb {
 	margin: -75px -50px 0 0;
 }
 
-#song_list
-{
-	width:100%;
-	text-align: center;
-}
-
 #scroll-container {
 	border: 3px solid black;
 	border-radius: 5px;
@@ -346,11 +344,46 @@ input[type="range"]:active::-ms-thumb {
 	-webkit-text-fill-color: transparent;
 	}
 
-	.and-im-here-text {
-		background-image: linear-gradient(to right, #B0916E, #ffffff, #ffffff);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		}	
+	.mom {
+		color:#FFB6C1;
+		font-family: "Oleo Script Swash Caps";
+	}
+
+	.boy {
+		color: #B0916E;
+		font-family: "Londrina Solid";
+	}
+	
+	.host {
+		color:#90A0E6;
+		font-family: "Boogaloo";
+	}
+
+	.ghost {
+		color:#90EE90;
+		font-family: "Mansalva";
+	}
+
+	.wolf {
+		color:#222222;
+		font-family: "Permanent Marker";
+	}
+
+	.pipe {
+		color: #bcb668;
+		font-family: "Coiny";
+	}
+	
+	.boy_white {
+		color: #EEEEEE;
+		font-family: "Londrina Solid";
+	}
+
+	.song {
+		position: absolute;
+		z-index: 1;
+		visibility: hidden;
+	}
 
 /*		  @keyframes my-animation {
 	from {
