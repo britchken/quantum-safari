@@ -23,7 +23,37 @@
 	<body>
 
 		<!-- Wrapper -->
-		<div id="wrapper" style="position:relative; height:100vh;">
+		<div id="wrapper" style="position:relative; height:100vh; overflow:hidden;">
+			<div id="curtain" style="position: absolute; top:150px; left:0%; width:100%; height:calc(100% - 150px); z-index:7;">
+				<div class="start_button" onclick="move()" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+					<font color="#000" style="font-family: Creepster; font-size:100px;">
+					LET'S BEGIN</font>
+				</div>
+			</div>
+			<div id="move_left">
+				<div id="curtain_back"></div>
+				<div class='rnInner'>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+				</div>
+				<div id="curtain_rod"></div>
+			</div>
+			<div id="move_right">
+				<div id="curtain_back"></div>
+				<div class='rnInner'>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+					<div class='rnUnit'></div>
+				</div>
+				<div id="curtain_rod"></div>
+			</div>
 			<div style="height:300px; overflow:hidden; position:relative;">
 				<h1 id="tests">Quantum Safari</h1>
 				<p>New album coming soon!! Check out the current state of it below. I'll be posting updates here, so stay tuned!</p>
@@ -46,8 +76,8 @@
 						<div id="current_lyrics" style="position:relative; z-index:1;">
 							<div id="lyrics2" class="song">
 <br><br>
-<font class="mom">Good night honey, I've got candy to hand out.
-Sweet dreams, now I'll turn the lights out!</font>
+<font class="mom">Good night honey, I've got candy to give out
+Sweet dreams, now I'll turn the lights out</font>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font class="boy">
@@ -424,6 +454,7 @@ WHO COULD BE A BETTER YOU!
 				<br>
 				<div style="position:relative;">
 					<div style="position:absolute; text-align: center; width:100%;">
+						<div id="now_playing" style="position:absolute;" ></div>
 						<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>					
 						<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
 						<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
@@ -468,6 +499,17 @@ WHO COULD BE A BETTER YOU!
 			const lyr6 = document.getElementById("lyrics6");
 			const lyr7 = document.getElementById("lyrics7");
 			const lyr8 = document.getElementById("lyrics8");
+			const np = document.getElementById("now_playing");
+			const names = ["",
+							"1. Halloween Overture",
+							"2. Lights Out",
+							"3. And I'm Gone",
+							"4. Be Seen on Halloween",
+							"5. Two for the Toads",
+							"6. Good Idea, Bad Execution",
+							"7. Echoes of the Moon",
+							"8. Give It a Try",
+							"9. Be Seein' You"];
 			let playState = 'play';
 			let muteState = 'unmute';
 			let song = 1;
@@ -643,10 +685,17 @@ WHO COULD BE A BETTER YOU!
 			});
 
 
+			function move() {
+				document.getElementById("move_left").style.left = "-55%";
+				document.getElementById("move_right").style.left = "105%";
+				document.getElementById("curtain").remove();
+				changeSong(1);
+			}
+
 			/* Super cool function right here!  */ 
 			function changeSong(s) {
 				song = s;
-				audio.src='songs/' + s + '.mp3';
+				audio.src='songs/' + names[s] + '.mp3';
 				audio.load();
 				playState = 'play'
 				updatePlayState();
@@ -659,6 +708,7 @@ WHO COULD BE A BETTER YOU!
 				lyr8.style.visibility = "hidden";
 				current_lyrics.style.top = "calc(100% - 200px)"; // Make the lyrics come from the bottom!
 				reset_animation();
+				np.innerHTML = names[s];
 				if (s == 2) {
 					lyr2.style.visibility = "visible";
 					current_lyrics.style.height = lyr2.offsetHeight + "px";
