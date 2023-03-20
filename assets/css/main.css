@@ -481,61 +481,62 @@ input[type="range"]:active::-ms-thumb {
     margin: auto;
     transform-style: preserve-3d;
     transition: transform 6s ease;
-    transform-origin: -120% top;
-    
+    transform-origin: -120% top;   
 }
 
 .rnUnit {
+	margin-right:2%;
+    width: 16%;
 	margin-left:2%;
-    width: 14%;
     height: 120vh;
 	background: repeating-linear-gradient(
 		to left,
 		#832060 0%,
 		#581541 30%, 
 		#6a1a4e 65%);
+	filter:blur(0.1px);
     background-size:  100% 100%; 
     display:inline-block;   
     transform-origin: 0 0%;
-    transform: rotate(2deg);
-    animation: rnUnit 3s ease infinite;
+    transform: rotate(1deg);
+    animation: rnUnit 4s ease infinite;
 }
 
 @keyframes rnUnit {
     50% {
-        transform: rotate(-2deg) ;
+        transform: rotate(-1deg) ;
     }
 }
 
 .rnUnit:nth-child(1) {
-    animation-delay: -0.1s;
-}
-.rnUnit:nth-child(2) {
     animation-delay: -0.2s;
 }
-.rnUnit:nth-child(3) {
-    animation-delay: -0.3s;
-}
-.rnUnit:nth-child(4) {
+.rnUnit:nth-child(2) {
     animation-delay: -0.4s;
 }
-.rnUnit:nth-child(5) {
-    animation-delay: -0.5s;
-}
-.rnUnit:nth-child(6) {
+.rnUnit:nth-child(3) {
     animation-delay: -0.6s;
 }
+.rnUnit:nth-child(4) {
+    animation-delay: -0.8s;
+}
+.rnUnit:nth-child(5) {
+    animation-delay: -1s;
+}
+.rnUnit:nth-child(6) {
+    animation-delay: -1.2s;
+}
 .rnUnit:nth-child(7) {
-    animation-delay: -.7s;
+    animation-delay: -1.4s;
 }
 .rnUnit:nth-child(8) {
-    animation-delay: -.8s;
+    animation-delay: -1.6s;
 }
 .rnUnit:nth-child(9) {
-    animation-delay: -.9s;
+    animation-delay: -1.8s;
 }
 .rnUnit:nth-child(10) {
-    animation-delay: -1s;
+    animation-delay: -2s;
 }
 
 
