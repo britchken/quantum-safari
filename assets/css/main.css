@@ -22,7 +22,7 @@ p {
 	position: absolute;
 	top:150px;
 	left:0%;
-	width:50%;
+	width:calc(50% + 2px);
 	height:calc(100% - 150px);
 	z-index:2;
 	transition: left 5s;
