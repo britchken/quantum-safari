@@ -17,14 +17,14 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mansalva">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Solid">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie Flower">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coiny">
 	</head>
 	<body>
 
 		<!-- Wrapper -->
 		<div id="wrapper" style="position:relative; height:100vh; overflow:hidden;">
-			<div id="curtain" style="position: absolute; top:150px; left:0%; width:100%; height:calc(100% - 150px); z-index:7;">
+			<div id="curtain">
 				<div class="start_button" onclick="move()" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
 					<font color="#000" style="font-family: Creepster; font-size:100px;">
 					LET'S BEGIN</font>
@@ -54,23 +54,11 @@
 				   --></div>
 				<div id="curtain_rod"></div>
 			</div>
-			<div style="height:300px; overflow:hidden; position:relative;">
+			<div style="height:150px; overflow:hidden; position:relative;">
 				<h1 id="tests">Quantum Safari</h1>
 				<p>New album coming soon!! Check out the current state of it below. I'll be posting updates here, so stay tuned!</p>
-			
-			<div id="song_list">
-				<div class="button" onclick="changeSong('1')">1. Halloween Overture</div>
-				<div class="button" onclick="changeSong('2')">2. Lights Out</div>
-				<div class="button" onclick="changeSong('3')">3. And I'm Gone</div>
-				<div class="button" onclick="changeSong('4')">4. Be Seen on Halloween</div>
-				<div class="button" onclick="changeSong('5')">5. Two for the Toads</div>
-				<div class="button" onclick="changeSong('6')">6. Good Idea, Bad Execution</div>
-				<div class="button" onclick="changeSong('7')">7. Echoes of the Moon</div>
-				<div class="button" onclick="changeSong('8')">8. Give it a Try</div>
-				<div class="button" onclick="changeSong('9')">9. Be Seein' You</div>
-			</div>
 		</div>
-			<div class="main-content" style="margin:0; padding:0; height:calc(100% - 550px); width:100%;">
+			<div class="main-content">
 				<!-- Lyrics -->
 					<div id="lyrics" style="z-index:1; width:550px; margin-left:50px; z-index:1;">
 						<div id="current_lyrics" style="position:relative; z-index:1;">
@@ -209,12 +197,12 @@ AND CLAW AND TEAR APART THE MOON WAS GONE!!!!!!
 
 AND HE COULD NOT HOLD ON!!!!!!!!!!!
 NO HE COULD NOT HOLD ON!!!!!
-<br><br>
+
 So come on down and let's all tell ‘em why! Two, three -
 It was a good idea, but bad execution
 I'm thinking that's not a great solution
 Hey, so come and play!
-<br><br>
+
 And let's all tell em why they're an idiot,
 Hear their bright ideas and why they didn't work
 Finally we see they're just a little bit...dumb!</font>
@@ -248,8 +236,7 @@ NO SHE COULD NOT MOVE ON!!!!!!!
 <br><br>
 So come on down and let's all tell her why!!!
 Let's all tell her why!
-<br><br><br><br><br><br><br><br>
-
+<br><br><br><br><br><br>
 It's the good idea hall of fame!
 
 Doors with hinges on the bottom, a counterclockwise clock
@@ -257,10 +244,8 @@ How 'bout online cash deposit? And made-for-two-feet socks
 Why not an uneven staircase to trip burglars sneakin' in
 And lottery tickets without a chance to win
 
-I'm thinkin' five finger nail clippers
-Sweaters for your fish
-Individually wrapped cereal or a
-Washer for one dish, let's hear these...
+I'm thinkin' five finger nail clippers, sweaters for your fish
+Individually wrapped cereal, or a washer for one dish! Let's hear these...
 
 ...Good ideas, with bad execution!
 That's the thing we're lookin for,
@@ -274,14 +259,13 @@ These are NOT good ideas, and this show isn't fun.
 I don't wanna play, and I'm not the only one.
 I'm gonna unplug the music, put an end to this scene
 I won't let you take away my first Halloween!</font>
-
 <font color="#90A0E6" style="font-family: Creepster; font-size:25px;">
 You think you're in control?
 You're just a little boy!
 
 Now let's tell you why you're an idiot
 Turn the spotlights on -
-now you're in the thick of it!
+You're now in the thick of it!
 Let's take a look at your GOOD IDEA!
 
 Tonight's last contestant is a kid who's all alone,
@@ -294,11 +278,8 @@ Isn't it obvious this was all a big mistake?
 
 What were you thinking?
 
-WHAT ARE YOU DOING HERE?
-
-YOU SHOULDN'T HAVE COME HERE!
-</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+WHAT ARE YOU DOING HERE?</font>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="lyrics7" class="song">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -398,7 +379,7 @@ Why I need to change
 And what you’re asking me to do
 Well it sounds quite strange
 
-The last time that I opened up 
+The last time that I opened up
 And didn’t have a thing to hide
 Was back when I was with you
 But that was on the other side
@@ -445,7 +426,7 @@ WHO COULD BE A BETTER YOU!
 
 				<!-- Paintings -->
 				<img id="art" src="images/1.jpg">
-				
+
 			</div> <!-- /one -->
 
 			<!-- Audio Player -->
@@ -453,21 +434,30 @@ WHO COULD BE A BETTER YOU!
 				<audio src="songs/1.mp3" preload="metadata"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
-					<input type="range" id="seek-slider" max="100" value="0">
+					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
 					<span id="duration" class="time">0:00</span>
 				</div>
-				<br>
 				<div style="position:relative;">
 					<div style="position:absolute; text-align: center; width:100%;">
-						<div id="now_playing" style="position:absolute;" ></div>
-						<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>					
+						<select id="now_playing" style="position:absolute;" onchange="changeSong(this.selectedIndex+1)">
+  						<option>1. Halloween Overture</option>
+					    <option>2. Lights Out</option>
+					    <option>3. And I'm Gone</option>
+					    <option>4. Be Seen on Halloween</option>
+					    <option>5. Two for the Toads</option>
+							<option>6. Good Idea, Bad Execution</option>
+							<option>7. Echoes of the Moon</option>
+							<option>8. Give it a Try</option>
+							<option>9. Be Seein' You</option>
+						  </select>
+						<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>
 						<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
 						<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
 					</div>
 					<button id="mute-icon" style="position:absolute; right:0;"><i class='material-icons'>volume_up</i></button>
 				</div>
 			</div>
-			
+
 		</div> <!-- /wrapper -->
 
 		<!--///////////////////////////////////////////////////////////////////-->
@@ -614,7 +604,7 @@ WHO COULD BE A BETTER YOU!
 					changeSong(song);
 					updatePlayState();
 				} else {
-					if (audio.currentTime < 5) {
+					if (audio.currentTime < 1) {
 						song--;
 					}
 					changeSong(song);
@@ -624,7 +614,7 @@ WHO COULD BE A BETTER YOU!
 				audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
 				raf = requestAnimationFrame(whilePlaying);
 			}
-			
+
 			if (audio.readyState > 0) {
 				displayDuration();
 				setSliderMax();
@@ -646,12 +636,12 @@ WHO COULD BE A BETTER YOU!
 			audio.addEventListener('durationchange', () => {
 				displayDuration();
 				setSliderMax();
-				displayBufferedAmount();	
+				displayBufferedAmount();
 			});
 
 			function updateAnimation() {
 				reset_animation();
-                current_lyrics.style.top = "calc(100% - 200px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
+        current_lyrics.style.top = "calc(100% - 150px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
 				var calc = audio.duration;
 				current_lyrics.style.setProperty("animation", "my-animation linear " + calc + "s infinite");
 				if(playState === 'play') {
@@ -696,7 +686,7 @@ WHO COULD BE A BETTER YOU!
 				changeSong(1);
 			}
 
-			/* Super cool function right here!  */ 
+			/* Super cool function right here!  */
 			function changeSong(s) {
 				song = s;
 				audio.src='songs/' + names[s] + '.mp3';
@@ -710,14 +700,14 @@ WHO COULD BE A BETTER YOU!
 				lyr6.style.visibility = "hidden";
 				lyr7.style.visibility = "hidden";
 				lyr8.style.visibility = "hidden";
-				current_lyrics.style.top = "calc(100% - 200px)"; // Make the lyrics come from the bottom!
+				current_lyrics.style.top = "calc(100% - 150px)"; // Make the lyrics come from the bottom!
 				reset_animation();
-				np.innerHTML = names[s];
+				np.selectedIndex = s-1;
 				if (s == 2) {
 					lyr2.style.visibility = "visible";
 					current_lyrics.style.height = lyr2.offsetHeight + "px";
 					current_lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
-				} 
+				}
 				else if (s == 3) {
 					lyr3.style.visibility = "visible";
 					current_lyrics.style.height = lyr3.offsetHeight + "px";
@@ -745,7 +735,7 @@ WHO COULD BE A BETTER YOU!
 				}
 				else {
 				}
-				
+
 			}
 
 			/* Implementation of the Media Session API */
@@ -815,7 +805,7 @@ WHO COULD BE A BETTER YOU!
 					}
 				});
 			}
-			</script>			  
+			</script>
 
 
 	</body>
