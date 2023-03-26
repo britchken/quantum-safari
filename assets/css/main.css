@@ -11,10 +11,11 @@ h1 {
 	padding: 30px 0 0 30px;
 }
 
-p { 
+p {
 	color: #ccc;
 	font-family: sans-serif;
-	padding: 30px;
+	padding-left: 30px;
+	padding-top: 10px;
 	margin: 0;
 }
 
@@ -51,20 +52,25 @@ p {
 	transition: left 5s;
 }
 
-#song_list {
-	padding-bottom: 30px;
-	position:absolute;
-	bottom:0;
-	width:100%;
-	text-align: center;
-}
-
 .main-content {
 	display:inline-flex;
 	align-items:flex-start;
 	justify-content:center;
 	overflow: hidden;
-	border-top: 5px solid rgb(17, 0, 53);
+	border: 5px solid rgb(17, 0, 53);
+	margin:0;
+	padding:0;
+	height:calc(100% - 350px);
+	width:calc(100% - 10px);
+}
+
+#curtain {
+	position: absolute;
+	top:150px;
+	left:0%;
+	width:100%;
+	height:calc(100% - 150px);
+	z-index:7;
 }
 
 #curtain_rod {
@@ -77,10 +83,9 @@ p {
 
 .start_button {
 	box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-	background-color:#5900a2;
-	border-radius:6px;
-	border:1px solid #c584f3;
+	background:linear-gradient(to bottom, #876fc6 5%, #493382 100%);
+	border-radius:10px;
+	border:0px solid #493382;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -93,37 +98,11 @@ p {
 	text-shadow:0px 1px 0px #9752cc;
 }
 .start_button:hover {
-	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
-	background-color:#bc80ea;
+  background:linear-gradient(to bottom, #a65e42 5%, #493382 100%);
+	border:0px;
+	background-color:#5e42a6;
 }
 .start_button:active {
-	position:relative;
-	top:1px;
-}
-
-
-.button {
-	box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-	background-color:#dfbdfa;
-	border-radius:6px;
-	border:1px solid #c584f3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:6px 24px;
-	margin-bottom: 5px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #9752cc;
-}
-.button:hover {
-	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
-	background-color:#bc80ea;
-}
-.button:active {
 	position:relative;
 	top:1px;
 }
@@ -136,7 +115,7 @@ p {
 	margin-right:auto;
 	display:block;
 	position:relative;
-	top:50%; 
+	top:50%;
 	transform:translateY(-50%);
 	max-width:calc(100% - 550px);
 	z-index:0;
@@ -152,7 +131,7 @@ p {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 250px;
+	height: 200px;
 	background: #130032;
 	z-index: 1;
 	font-family: sans-serif;
@@ -174,23 +153,27 @@ p {
 #now_playing {
 	top:45%;
 	left:30px;
+	font-family: "Londrina Solid";
+	font-size: 20px;
+	background-color: #9E8DC9;
+	border-color: #000;
 }
 
 #play-icon {
-	margin: 20px 30px 0px 30px;
-	padding: 20px 30px 20px 30px;
+	margin: 10px 30px 10px 30px;
+	padding: 10px 30px 10px 30px;
 }
 #prev-icon {
-	margin: 20px 30px 0px 30px;
-	padding: 10px 20px 10px 20px;
+	margin: 10px 30px 10px 30px;
+	padding: 8px 20px 8px 20px;
 }
 #next-icon {
-	margin: 20px 30px 0px 30px;
-	padding: 10px 20px 10px 20px;
+	margin: 10px 30px 10px 30px;
+	padding: 8px 20px 8px 20px;
 }
 #mute-icon {
-	margin: 30px 100px 5px 20px;
-	padding: 10px 20px 10px 20px;
+	margin: 10px 100px 10px 20px;
+	padding: 8px 20px 8px 20px;
 }
 path {
 	stroke: #2edcd9;
@@ -210,23 +193,6 @@ output {
 	margin: 35px 2.5% 0 5%;
 	clear: left;
 }
-#volume-slider {
-	margin: 40px 2.5%;
-	width: 20%;
-	height: 30px;
-}
-#volume-slider::-webkit-slider-runnable-track {
-	background: rgba(0, 125, 181, 0.6);
-}
-#volume-slider::-moz-range-track {
-	background: rgba(0, 125, 181, 0.6);
-}
-#volume-slider::-ms-fill-upper {
-	background: rgba(0, 125, 181, 0.6);
-}
-#volume-slider::before {
-	width: var(--volume-before-width);
-}
 
 input[type="range"] {
 	position: relative;
@@ -241,6 +207,8 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 100%;
+	border-color:#000;
+	border-width: 50px 0;
 	cursor: pointer;
 	background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
 }
@@ -271,7 +239,7 @@ input[type="range"]::-webkit-slider-thumb {
 	z-index: 3;
 }
 input[type="range"]:active::-webkit-slider-thumb {
-	transform: scale(1.4);
+	transform: scale(1.2);
 }
 input[type="range"]::-moz-range-track {
 	width: 100%;
@@ -343,6 +311,7 @@ input[type="range"]:active::-ms-thumb {
 	margin: -70px 0 0 0;
 	border-radius: 0;
 	cursor: pointer;
+	z-index: 101;
 }
 
 .material-icons {
@@ -362,6 +331,7 @@ input[type="range"]:active::-ms-thumb {
 	border-radius: 0%;
 	cursor: pointer;
 	margin: -75px -50px 0 0;
+	z-index: 101;
 }
 
 #scroll-container {
@@ -388,16 +358,16 @@ input[type="range"]:active::-ms-thumb {
 	height: 100%;
 	text-align: left;
 	white-space:pre;
-	
+
 	/* animation properties */
 	-moz-transform: translateY(0);
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
-	
+
 	animation: my-animation 50s linear infinite;
 	animation-play-state: 'paused';
 }
-	
+
 @keyframes my-animation {
 	from {
 		-moz-transform: translateY(0);
@@ -419,14 +389,15 @@ input[type="range"]:active::-ms-thumb {
 
 	.mom {
 		color:#FFB6C1;
-		font-family: "Oleo Script Swash Caps";
+		font-family: "Indie Flower";
+		font-weight: bold;
 	}
 
 	.boy {
 		color: #B0916E;
 		font-family: "Londrina Solid";
 	}
-	
+
 	.host {
 		color:#90A0E6;
 		font-family: "Boogaloo";
@@ -446,7 +417,7 @@ input[type="range"]:active::-ms-thumb {
 		color: #618a88;
 		font-family: "Coiny";
 	}
-	
+
 	.boy_white {
 		color: #DDDDDD;
 		font-family: "Londrina Solid";
@@ -481,7 +452,7 @@ input[type="range"]:active::-ms-thumb {
     margin: auto;
     transform-style: preserve-3d;
     transition: transform 6s ease;
-    transform-origin: -120% top;   
+    transform-origin: -120% top;
 }
 
 .rnUnit {
@@ -492,11 +463,11 @@ input[type="range"]:active::-ms-thumb {
 	background: repeating-linear-gradient(
 		to left,
 		#832060 0%,
-		#581541 30%, 
+		#581541 30%,
 		#6a1a4e 65%);
 	filter:blur(0.1px);
-    background-size:  100% 100%; 
-    display:inline-block;   
+    background-size:  100% 100%;
+    display:inline-block;
     transform-origin: 0 0%;
     transform: rotate(1deg);
     animation: rnUnit 4s ease infinite;
