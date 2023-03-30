@@ -17,8 +17,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mansalva">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Solid">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie Flower">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Emilys Candy">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coiny">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eater">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
 	</head>
 	<body>
 
@@ -127,7 +129,7 @@ ooooooohhh ho ho hoooooooooo ohello</font>
 <font class="host">
 Come to the trick or treat suite
 Tour my spooktacular pad
-Not a wax or wayne in sight
+Not a Wax or Wayne in sight
 So come out and take over the night
 
 He’s a late-night DJ who can lay down a groove
@@ -138,21 +140,20 @@ Let yourself be seen</font>
 
 <font class="host">On Halloween
 Halloween</font>
-<br><br>
 
 <font class="wolf">Yo, I just got to thinking
 that this party was a dud
 But now it's clear to me that
 all we needed was fresh blood</font>
 
-<font class="host">Hope you brought your dance moves, kid,
+<font class="host">Hope you brought your dance moves kid,
 I want to see your style
 So get down beside the flicker of a pumpkin's smile
 Stay a while!</font>
 
-<br><br><br><br>
+<br><br><br><br><br><br>
 <font class="wolf">
-Happy Halloween, kid.
+Happy Halloween, kid
 One, two, three...</font>
 <font class="ghost">Boo!</font>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -542,6 +543,9 @@ WHO COULD BE A BETTER YOU!
 			});
 
 			const showRangeProgress = (rangeInput) => {
+				console.log("updating!");
+				temp = 60*(rangeInput.value/audio.duration)-20;
+				seekSlider.style.setProperty("--nudgeFactor", temp + "px");
 				audioPlayerContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
 			}
 
@@ -580,9 +584,13 @@ WHO COULD BE A BETTER YOU!
 			}
 
 			const whilePlaying = () => {
-				seekSlider.value = Math.floor(audio.currentTime);
-				currentTimeContainer.textContent = calculateTime(seekSlider.value);
-				audioPlayerContainer.style.setProperty('--seek-before-width', `${audio.currentTime / seekSlider.max * 100}%`);
+				seekSlider.value = audio.currentTime;
+				currentTimeContainer.textContent = calculateTime(Math.floor(seekSlider.value));
+				var temp;
+				temp = 60*(audio.currentTime/audio.duration)-20;
+				seekSlider.style.setProperty("--nudgeFactor", temp + "px");
+				console.log("ssssss" + audio.currentTime + "time out of " + seekSlider.max);
+				audioPlayerContainer.style.setProperty('--seek-before-width', audio.currentTime);
 				raf = requestAnimationFrame(whilePlaying);
 			}
 
@@ -641,7 +649,7 @@ WHO COULD BE A BETTER YOU!
 
 			function updateAnimation() {
 				reset_animation();
-        current_lyrics.style.top = "calc(100% - 150px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
+        current_lyrics.style.top = "calc(100% - 200px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
 				var calc = audio.duration;
 				current_lyrics.style.setProperty("animation", "my-animation linear " + calc + "s infinite");
 				if(playState === 'play') {
@@ -679,10 +687,16 @@ WHO COULD BE A BETTER YOU!
 			});
 
 
+			function deleteCurtains() {
+				document.getElementById("move_left").remove();
+				document.getElementById("move_right").remove();
+			}
+
 			function move() {
 				document.getElementById("move_left").style.left = "-55%";
 				document.getElementById("move_right").style.left = "105%";
 				document.getElementById("curtain").remove();
+				setTimeout(deleteCurtains, 5500); // For performance!
 				changeSong(1);
 			}
 
@@ -700,7 +714,7 @@ WHO COULD BE A BETTER YOU!
 				lyr6.style.visibility = "hidden";
 				lyr7.style.visibility = "hidden";
 				lyr8.style.visibility = "hidden";
-				current_lyrics.style.top = "calc(100% - 150px)"; // Make the lyrics come from the bottom!
+				current_lyrics.style.top = "calc(100% - 200px)"; // Make the lyrics come from the bottom!
 				reset_animation();
 				np.selectedIndex = s-1;
 				if (s == 2) {
