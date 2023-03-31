@@ -125,7 +125,7 @@ On Halloween</font>
 <font class="ghost">Helloooo helloooooooooooooooo
 helooooo ooo oooooooohh helloooooooooo
 ooooooohhh ho ho hoooooooooo ohello</font>
-<br><br><br>
+<br>
 <font class="host">
 Come to the trick or treat suite
 Tour my spooktacular pad
@@ -149,9 +149,10 @@ all we needed was fresh blood</font>
 <font class="host">Hope you brought your dance moves kid,
 I want to see your style
 So get down beside the flicker of a pumpkin's smile
+
 Stay a while!</font>
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <font class="wolf">
 Happy Halloween, kid
 One, two, three...</font>
@@ -225,7 +226,7 @@ she was stunning
 But as she floats on past, everyone becomes aghast,
 they start running
 
-And she's moanin’ and wailin’ - in her desperation
+And she's moaning and wailing, in her desperation
 She starts scarin’ and spookin', there's a mass migration
 IT'S A GHOST TOWN!!!!!!!!
 SHE STOPS THERE WRAPPED IN SPACE AND SKY
@@ -260,7 +261,7 @@ These are NOT good ideas, and this show isn't fun.
 I don't wanna play, and I'm not the only one.
 I'm gonna unplug the music, put an end to this scene
 I won't let you take away my first Halloween!</font>
-<font color="#90A0E6" style="font-family: Creepster; font-size:25px;">
+<font color="#90A0E6" style="font-family: Creepster; font-size:24pt;">
 You think you're in control?
 You're just a little boy!
 
@@ -280,7 +281,7 @@ Isn't it obvious this was all a big mistake?
 What were you thinking?
 
 WHAT ARE YOU DOING HERE?</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="lyrics7" class="song">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -317,9 +318,9 @@ Intergalactically
 There used to be this comet,
 I would count the weeks till she flew by
 But every time she would say she's still waitin'
-Waitin' to meteorite guy!</font>
+Waitin' to meteorite guy!
 <br><br><br><br><br><br><br><br><br>
-<font color="#222222" style="font-family: Permanent Marker">
+
 And that jealous moon's always there
 Feels like I just can't win
 When it starts to grow fat in the sides
@@ -368,6 +369,7 @@ And didn’t have a thing to hide
 Was back when I was with you
 But that was on the other side
 The other side</font>
+<br>
 <font class="boy_white">
 Give it a try, be part of the world that surrounds you
 Open your eyes, look around, go outside
@@ -378,7 +380,7 @@ And life won’t pass you by</font>
 I must admit I don’t see
 Why I need to change
 And what you’re asking me to do
-Well it sounds quite strange
+Well, it sounds quite strange
 
 The last time that I opened up
 And didn’t have a thing to hide
@@ -397,12 +399,10 @@ Close your eyes, remember back, look inside
 If you still think that your ship can’t stand the weather
 Well just hop on board mine
 Let's go!</font>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <font class="boy_white">
-And I'm always by your side
-Yeah, I'm always by your side
-I'll always be there for you
-You can be my spirit guide
+And I'm always by your side, yeah, I'm always by your side
+I'll always be there for you, you can be my spirit guide
 
 Cause so what? You died! Okay? Take it as a given
 You're in the after life, why not start after livin'!
@@ -432,7 +432,7 @@ WHO COULD BE A BETTER YOU!
 
 			<!-- Audio Player -->
 			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-				<audio src="songs/1.mp3" preload="metadata"></audio>
+				<audio src="songs/1.mp3" preload="auto"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
@@ -460,6 +460,15 @@ WHO COULD BE A BETTER YOU!
 			</div>
 
 		</div> <!-- /wrapper -->
+		<audio src="songs/1.mp3" preload="auto"></audio>
+		<audio src="songs/2.mp3" preload="auto"></audio>
+		<audio src="songs/3.mp3" preload="auto"></audio>
+		<audio src="songs/4.mp3" preload="auto"></audio>
+		<audio src="songs/5.mp3" preload="auto"></audio>
+		<audio src="songs/6.mp3" preload="auto"></audio>
+		<audio src="songs/7.mp3" preload="auto"></audio>
+		<audio src="songs/8.mp3" preload="auto"></audio>
+		<audio src="songs/9.mp3" preload="auto"></audio>
 
 		<!--///////////////////////////////////////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
@@ -510,6 +519,27 @@ WHO COULD BE A BETTER YOU!
 			let muteState = 'unmute';
 			let song = 1;
 
+
+			/* Preload all the images so they load smoothly */
+			var images = [];
+			
+			preload(
+	    	"images/1.jpg",
+				"images/2.jpg",
+				"images/3.jpg",
+				"images/4.jpg",
+				"images/5.jpg",
+				"images/6.jpg",
+				"images/7.jpg",
+				"images/8.jpg",
+				"images/9.jpg"
+			)
+			function preload() {
+			    for (var i = 0; i < arguments.length; i++) {
+			        images[i] = new Image();
+			        images[i].src = preload.arguments[i];
+			    }
+			}
 			const updatePlayState = () => {
 				if(playState === 'play') {
 					audio.play();
@@ -543,7 +573,6 @@ WHO COULD BE A BETTER YOU!
 			});
 
 			const showRangeProgress = (rangeInput) => {
-				console.log("updating!");
 				temp = 60*(rangeInput.value/audio.duration)-20;
 				seekSlider.style.setProperty("--nudgeFactor", temp + "px");
 				audioPlayerContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
@@ -589,8 +618,7 @@ WHO COULD BE A BETTER YOU!
 				var temp;
 				temp = 60*(audio.currentTime/audio.duration)-20;
 				seekSlider.style.setProperty("--nudgeFactor", temp + "px");
-				console.log("ssssss" + audio.currentTime + "time out of " + seekSlider.max);
-				audioPlayerContainer.style.setProperty('--seek-before-width', audio.currentTime);
+				audioPlayerContainer.style.setProperty('--seek-before-width', `${(seekSlider.value / seekSlider.max) * 100}%`);
 				raf = requestAnimationFrame(whilePlaying);
 			}
 
