@@ -1,11 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-
 	<head>
 		<title>Quantum Safari</title>
 		<meta  http-equiv="Content-Type" content="application;charset=UTF-8">
@@ -27,8 +21,16 @@
 		<!-- Wrapper -->
 		<div id="wrapper" style="position:relative; height:100vh; overflow:hidden;">
 			<div id="curtain">
-				<div class="start_button" onclick="move()" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
-					<font color="#000" style="font-family: Creepster; font-size:100px;">
+				<div id="title">
+					<font class="neonText" style="font-size:9vw;">
+						Lights Out:<br>
+					</font>	
+					<font class="neonText" style="font-size:5vw;">
+						A Halloween Adventure
+					</font>	
+				</div>
+				<div class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
+					<font color="#000" style="font-family: Creepster; font-size:60px;">
 					LET'S BEGIN</font>
 				</div>
 			</div>
@@ -56,10 +58,6 @@
 				   --></div>
 				<div id="curtain_rod"></div>
 			</div>
-			<div style="height:150px; overflow:hidden; position:relative;">
-				<h1 id="tests">Quantum Safari</h1>
-				<p>New album coming soon!! Check out the current state of it below. I'll be posting updates here, so stay tuned!</p>
-		</div>
 			<div class="main-content">
 				<!-- Lyrics -->
 					<div id="lyrics" style="z-index:1; width:550px; margin-left:50px; z-index:1;">
@@ -432,7 +430,7 @@ WHO COULD BE A BETTER YOU!
 
 			<!-- Audio Player -->
 			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-				<audio src="songs/1.mp3" preload="auto"></audio>
+				<audio src="songs/1. Overture.mp3" preload="auto"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
@@ -441,11 +439,11 @@ WHO COULD BE A BETTER YOU!
 				<div style="position:relative;">
 					<div style="position:absolute; text-align: center; width:100%;">
 						<select id="now_playing" style="position:absolute;" onchange="changeSong(this.selectedIndex+1)">
-  						<option>1. Halloween Overture</option>
-					    <option>2. Lights Out</option>
-					    <option>3. And I'm Gone</option>
-					    <option>4. Be Seen on Halloween</option>
-					    <option>5. Two for the Toads</option>
+							<option>1. Overture</option>
+							<option>2. Lights Out</option>
+							<option>3. And I'm Gone</option>
+							<option>4. Be Seen on Halloween</option>
+							<option>5. Two for the Toads</option>
 							<option>6. Good Idea, Bad Execution</option>
 							<option>7. Echoes of the Moon</option>
 							<option>8. Give it a Try</option>
@@ -460,15 +458,15 @@ WHO COULD BE A BETTER YOU!
 			</div>
 
 		</div> <!-- /wrapper -->
-		<audio src="songs/1.mp3" preload="auto"></audio>
-		<audio src="songs/2.mp3" preload="auto"></audio>
-		<audio src="songs/3.mp3" preload="auto"></audio>
-		<audio src="songs/4.mp3" preload="auto"></audio>
-		<audio src="songs/5.mp3" preload="auto"></audio>
-		<audio src="songs/6.mp3" preload="auto"></audio>
-		<audio src="songs/7.mp3" preload="auto"></audio>
-		<audio src="songs/8.mp3" preload="auto"></audio>
-		<audio src="songs/9.mp3" preload="auto"></audio>
+		<audio src="songs/1. Overture.mp3" preload="auto"></audio>
+		<audio src="songs/2. Lights Out.mp3" preload="auto"></audio>
+		<audio src="songs/3. And I'm Gone.mp3" preload="auto"></audio>
+		<audio src="songs/4. Be Seen on Halloween.mp3" preload="auto"></audio>
+		<audio src="songs/5. Two for the Toads.mp3" preload="auto"></audio>
+		<audio src="songs/6. Good Idea, Bad Execution.mp3" preload="auto"></audio>
+		<audio src="songs/7. Echoes of the Moon.mp3" preload="auto"></audio>
+		<audio src="songs/8. Give It a Try.mp3" preload="auto"></audio>
+		<audio src="songs/9. Be Seein' You.mp3" preload="auto"></audio>
 
 		<!--///////////////////////////////////////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
@@ -506,7 +504,7 @@ WHO COULD BE A BETTER YOU!
 			const lyr8 = document.getElementById("lyrics8");
 			const np = document.getElementById("now_playing");
 			const names = ["",
-							"1. Halloween Overture",
+							"1. Overture",
 							"2. Lights Out",
 							"3. And I'm Gone",
 							"4. Be Seen on Halloween",
@@ -785,14 +783,14 @@ WHO COULD BE A BETTER YOU!
 				navigator.mediaSession.metadata = new MediaMetadata({
 					title: 'Halloween Album',
 					artist: 'Quantum Safari',
-					album: 'Halloween: a Halloweeny Halloween',
+					album: 'Lights Out: A Halloween Adventure',
 					artwork: [
-						{ src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
+/*						{ src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
 						{ src: 'images/1/128.jpg', sizes: '128x128', type: 'image/png' },
 						{ src: 'images/1/192.jpg', sizes: '192x192', type: 'image/png' },
 						{ src: 'images/1/256.jpg', sizes: '256x256', type: 'image/png' },
 						{ src: 'images/1/384.jpg', sizes: '384x384', type: 'image/png' },
-						{ src: 'images/1/512.jpg', sizes: '512x512', type: 'image/png' },
+						{ src: 'images/1/512.jpg', sizes: '512x512', type: 'image/png' },*/
 					]
 				});
 				navigator.mediaSession.setActionHandler('play', () => {

@@ -21,10 +21,10 @@ p {
 
 #move_left {
 	position: absolute;
-	top:150px;
-	left:0%;
+	top:0;
+	left:0;
 	width:calc(50% + 2px);
-	height:calc(100% - 150px);
+	height:100%;
 	z-index:2;
 	transition: left 5s;
 
@@ -32,10 +32,10 @@ p {
 
 #move_right {
 	position: absolute;
-	top:150px;
+	top:0;
 	left:50%;
 	width:50%;
-	height:calc(100% - 150px);
+	height:100%;
 	z-index:2;
 	transition: left 5s;
 
@@ -52,24 +52,91 @@ p {
 	transition: left 5s;
 }
 
+#title {
+	position: absolute;
+	top:15%;
+	left:50%;
+	width:60vw;
+	max-height:40vh;
+	transform:translateX(-50%);
+	text-align: center;
+	font-family: "Creepster", sans-serif;
+	background-color: #000;
+	border: 0.2rem solid #fff;
+	border-radius: 2rem;
+	padding: 3vh 5vh 3vh 5vh;
+	box-shadow: 0 0 .2rem #fff,
+				 0 0 .2rem #fff,
+				 0 0 2rem #bc13fe,
+				 0 0 0.8rem #bc13fe,
+				 0 0 2.8rem #bc13fe,
+				 inset 0 0 1.3rem #bc13fe;
+}
+
+.neonText {
+	animation: pulsate 1.5s infinite alternate;  
+
+	color: #fff;
+	text-shadow:
+	  0 0 7px #fff,
+	  0 0 10px #fff,
+	  0 0 21px #bc13fe,
+	  0 0 42px #bc13fe,
+	  0 0 82px #bc13fe,
+	  0 0 92px #bc13fe,
+	  0 0 102px #bc13fe,
+	  0 0 151px #bc13fe;
+ }
+		
+
+
+ @keyframes pulsate {
+	  
+	100% {
+ 
+		 text-shadow:
+		 0 0 3px #fff,
+		 0 0 7px #cec6e4,
+		 0 0 19px #bc13fe,
+		 0 0 40px #bc13fe,
+		 0 0 80px #bc13fe,
+		 0 0 90px #bc13fe,
+		 0 0 100px #bc13fe;
+	
+	}
+	
+	0% {
+ 
+	  text-shadow:
+	  0 0 2px #fff,
+	  0 0 4px #cec6e4,
+	  0 0 6px #bc13fe,
+	  0 0 10px #bc13fe,
+	  0 0 45px #bc13fe,
+	  0 0 55px #bc13fe,
+	  0 0 70px #bc13fe;
+
+ }
+}
+
 .main-content {
 	display:inline-flex;
 	align-items:flex-start;
 	justify-content:center;
 	overflow: hidden;
-	border: 5px solid rgb(17, 0, 53);
+	border: 10px solid rgb(17, 0, 53);
 	margin:0;
 	padding:0;
-	height:calc(100% - 400px);
-	width:calc(100% - 10px);
+	height:calc(100% - 250px);
+	width:calc(100% - 20px);
 }
 
 #curtain {
 	position: absolute;
-	top:150px;
+	top:0px;
 	left:0%;
 	width:100%;
-	height:calc(100% - 150px);
+	height:100%;
 	z-index:7;
 }
 
@@ -424,7 +491,7 @@ input[type="range"]::-ms-fill-upper {
 .rnUnit {
 	margin-right:2%;
     width: 16%;
-	margin-left:2%;
+	 margin-left:2%;
     height: 120vh;
 	background: repeating-linear-gradient(
 		to left,
@@ -441,7 +508,7 @@ input[type="range"]::-ms-fill-upper {
 
 @keyframes rnUnit {
     50% {
-        transform: rotate(-1deg) ;
+        transform: rotate(-0.75deg) ;
     }
 }
 
