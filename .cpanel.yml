@@ -10,3 +10,4 @@ deployment:
     - cp -R images $DEPLOYPATH
     - cp -R songs $DEPLOYPATH
     - cp -R assets $DEPLOYPATH
+    - cp counter.php $DEPLOYPATH
