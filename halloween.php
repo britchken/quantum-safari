@@ -220,9 +220,9 @@ He was charming, he was clever, he made winter feel like fall
 She died too soon to tell him and they never got to be
 She sees an opportunity to fulfill destiny!
 
-She heads back into town, dressed up in her finest gown,
+She floats back into town, dressed up in her finest gown,
 She was stunning
-But as she floats on past, everyone becomes aghast,
+But as she saunters past, everyone becomes aghast,
 They start running
 
 And she's moaning and wailing, in her desperation
