@@ -15,5 +15,5 @@ if (isset($_COOKIE['page_viewed'])) {
   setcookie('page_viewed', true, time() + 3600 * 24); // expires after 24 hours
 }
 
-echo "Views: " . $count; // display the count on the webpage
+echo " " . $count; // display the count on the webpage
 ?>
