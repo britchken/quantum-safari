@@ -5,8 +5,8 @@ deployment:
     - export DEPLOYPATH=/home/quanjlmc/public_html/
 
 # This line copies the index.php file to deploy path - the document root of your website:
-    - cp index.html $DEPLOYPATH
-    - cp halloween.html $DEPLOYPATH
+    - cp index.php $DEPLOYPATH
+    - cp halloween.php $DEPLOYPATH
     - cp -R images $DEPLOYPATH
     - cp -R songs $DEPLOYPATH
     - cp -R assets $DEPLOYPATH
