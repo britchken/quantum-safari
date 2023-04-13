@@ -24,7 +24,7 @@
 			<font class="ghost">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br><br><br></font>
 			<font class="boy">Welcome to Quantum Safari.com. This is my home page!<br>
 			There's not much here right now, but click below to hear the new album!</font><br><br>
-			<font class="neonText"><a href="halloween.html">Lights Out: A Halloween Adventure</a></font><br><br>
+			<font class="neonText"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font><br><br>
 			<font class="boy">I'll continue to update this page until it's officially released,<br>
 			so make sure to check back often!</font>
 		</h1>
