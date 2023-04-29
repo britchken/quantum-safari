@@ -19,10 +19,9 @@ if (isset($_COOKIE['page_viewed'])) {
     fwrite($file, $count);
     fflush($file);
     flock($file, LOCK_UN);
-    ftruncate($file, ftell($file));
   } else {
       // loop until the lock is acquired
-      while (flock($file, LOCK_EX)) {
+      while (!flock($file, LOCK_EX)) {
           // sleep for a short period of time before trying again
           usleep(10);
       }
@@ -35,7 +34,6 @@ if (isset($_COOKIE['page_viewed'])) {
       fwrite($file, $count);
       fflush($file);
       flock($file, LOCK_UN);
-      ftruncate($file, ftell($file));
   }
   fclose($file);
 
