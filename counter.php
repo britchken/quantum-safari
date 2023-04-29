@@ -6,7 +6,8 @@ if (isset($_COOKIE['page_viewed'])) {
   $count = intval(file_get_contents($file)); // read the current count from the file
   echo " ... ";
 } else {
-  
+  echo " aaaa ";
+  die;
   // set a cookie to prevent the count from being incremented on page refreshes
   setcookie('page_viewed', true, time() + 3600 * 24); // expires after 24 hours
   
