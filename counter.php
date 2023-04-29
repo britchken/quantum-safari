@@ -1,6 +1,7 @@
 <?php
 $file = fopen("counter.txt", "r+"); // path to the text file that will store the view count
-
+echo " xxxx ";
+die;
 // check if a cookie has been set for this page
 if (isset($_COOKIE['page_viewed'])) {
   $count = intval(file_get_contents($file)); // read the current count from the file
