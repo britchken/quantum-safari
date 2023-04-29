@@ -4,7 +4,6 @@
 		<title>Lights Out: A Halloween Adventure</title>
 		<meta  http-equiv="Content-Type" content="application;charset=UTF-8">
 		<meta name="description" content="Quantum Safari's newest release: a Halloween album that will knock your socks off and get you dancing!">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
