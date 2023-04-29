@@ -4,7 +4,11 @@ echo " xxxx ";
 die;
 // check if a cookie has been set for this page
 if (isset($_COOKIE['page_viewed'])) {
-  $count = intval(file_get_contents($file)); // read the current count from the file
+    $contents = "";
+    while (!feof($file)) {
+        $contents .= fread($file, 8192);
+    }
+    $count = intval($contents);
   echo " ... ";
 } else {
   echo " aaaa ";
