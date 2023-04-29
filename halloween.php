@@ -3,18 +3,20 @@
 	<head>
 		<title>Lights Out: A Halloween Adventure</title>
 		<meta  http-equiv="Content-Type" content="application;charset=UTF-8">
+		<meta name="description" content="Quantum Safari's newest release: a Halloween album that will knock your socks off and get you dancing!">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mansalva">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Solid">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Emilys Candy">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coiny">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eater">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Creepster">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Permanent Marker">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Mansalva">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Londrina Solid">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Boogaloo">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Emilys Candy">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Coiny">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Eater">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint">
 	</head>
 	<body>
 
@@ -30,7 +32,7 @@
 					</font>	
 				</div>
 				<div class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
-					<font color="#000" style="font-family: Creepster; font-size:60px;">
+					<font color="#000" style="font-family: Creepster; font-size:100px;">
 					LET'S BEGIN</font>
 				</div>
 			</div>
@@ -60,15 +62,31 @@
 			</div>
 			<div class="main-content">
 				<!-- Lyrics -->
-					<div id="lyrics">
+					<div id="lyrics"><!--
+                     --><font style="color: #c8a176; font-family:Londrina Solid"><div id="lyrics1_emphasis"></div></font>					
 						<div id="current_lyrics" style="position:relative; z-index:1;">
+						<div id="lyrics1" class="song">
+<br><br><br>
+<font class="boy">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img alt="Boy" src="images/head.png" style="margin-left: 35px; transform: translateY(20px);"></img><br>
+It's Halloween night
+My one shot a year
+The dark comes to life
+but my bedtime draws near
+Well the night has begun
+Hello world, here I come 
+<br><br>
+I WILL BE PART OF THE SCENE!<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</font>
+							</div>
 							<div id="lyrics2" class="song">
 <br><br><br>
 <font class="mom">Good night honey,
 I've got candy to give out
 Sweet dreams
 Now I'll turn the lights out</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font class="boy">
 There’s only one chance a year to conquer the night,
 But it’s always the same story, she turns out that dang light
@@ -104,7 +122,7 @@ And I'm gone.
 							</div>
 							<div id="lyrics4" class="song">
 <font class="host">
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Welcome to the Grooveyard
 Let me introduce you
 Come and meet my friends
@@ -153,12 +171,12 @@ Stay a while!</font>
 Happy Halloween, kid
 One, two, three...</font>
 <font class="ghost">Boo!</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 							</div>
 							<div id="lyrics6" class="song">
-<div class="rainbow-text" style="font-family: Boogaloo; font-size:30px; text-shadow: 0px 0px 8px rgba(0,0,0,0.5);">It's time for the show!</div>
+<div class="rainbow-text" style="font-family: Boogaloo; font-size:30pt; text-shadow: 0px 0px 8px rgba(0,0,0,0.5);">It's time for the show!</div>
 <font class="host">It's a good idea, but bad execution,
 I'm thinking that's not a great solution!
 Hey, so come and play!</font>
@@ -167,7 +185,7 @@ How do you play?
 </font>
 <font color="#90A0E6" style="font-family: Boogaloo;">Let's all tell 'em why they're an idiot
 Hear their bright ideas and why they didn't work
-Finally we see they're just a little bit.... dumb!</font>
+Finally we see they're just a little bit dumb!</font>
 <font class="boy">
 What? Who would want to play-
 </font>
@@ -204,12 +222,10 @@ Hey, so come and play!
 
 And let's all tell 'em why they're an idiot
 Hear their bright ideas and why they didn't work
-Finally we see they're just a little bit...dumb!</font>
-
+Finally we see they're just a little bit dumb!</font>
 <font class="boy">
 No, this is a terrible game-
 </font>
-
 <font color="#90A0E6" style="font-family: Boogaloo;">Next up is a lonely ghost who liked to be alive
 She thought she wouldn't have to make new friends after she died
 Da dum da dum. Now she's feeling down - to be alone is tough
@@ -234,7 +250,7 @@ SHE EVER KNEW AND ALL HER FRIENDS WERE GONE!!!!!!
 
 AND SHE COULD NOT MOVE ON!!!!
 NO SHE COULD NOT MOVE ON!!!!!!!!
-<br><br>
+<br>
 So come on down and let's all tell her why!
 Let's all tell her why!
 <br><br><br><br><br>
@@ -261,9 +277,10 @@ These are NOT good ideas, and this show isn't fun
 I don't wanna play, and I'm not the only one
 I'm gonna unplug the music, put an end to this scene
 I won't let you take away my first Halloween!</font>
-<font color="#90A0E6" style="font-family: Creepster; font-size:24pt;">
+<font color="#90A0E6" style="font-family: Creepster; font-size:28pt;">
 You think you're in control?
 You're just a little boy!
+
 Now let's tell you why you're an idiot
 Turn the spotlights on -
 You're now in the thick of it!
@@ -271,17 +288,20 @@ Let's take a look at your GOOD IDEA!
 
 Tonight's last contestant is a kid who's all alone
 Wanting to feel big, he runs away from home
+
 BA DUM BA DUM
 
 Do you feel safe?
+
 Isn't it obvious this was all a big mistake?
 
 What were you thinking?
+
 WHAT ARE YOU DOING HERE?</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="lyrics7" class="song">
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font class="wolf">
 Turn the light out, don't shine it on me
 Turn the light out, don't let them see
@@ -296,6 +316,7 @@ Turn the light out, don't shine it on me
 Turn the light out, don't let them see</font>
 <br><br><br><br><br><br><br>
 <font class="pipe">
+
 Paint the pipe, just do the world a favor
 It's not alright to say you'll do it later
 Paint the pipe, just do the world a favor
@@ -423,7 +444,7 @@ WHO COULD BE A BETTER YOU!
 				</div>
 
 				<!-- Paintings -->
-				<img id="art" src="images/1.jpg">
+				<img alt="Artwork for each song on the album" id="art" src="images/1.jpg">
 
 			</div> <!-- /one -->
 			<div id="art_back"></div>
@@ -437,8 +458,8 @@ WHO COULD BE A BETTER YOU!
 					<span id="duration" class="time">0:00</span>
 				</div>
 				<div style="position:relative;">
-					<div style="position:absolute; text-align: center; width:100%;">
-						<select id="now_playing" style="position:absolute;" onchange="changeSong(this.selectedIndex+1)">
+					<div style="position:absolute; text-align: center; width:100%; white-space: nowrap;">
+						<select id="now_playing" onchange="changeSong(this.selectedIndex+1)">
 							<option>1. Overture</option>
 							<option>2. Lights Out</option>
 							<option>3. And I'm Gone</option>
@@ -452,8 +473,8 @@ WHO COULD BE A BETTER YOU!
 						<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>
 						<button id="play-icon"><i class='material-icons'>play_arrow</i></button>
 						<button id="next-icon" onclick="nextSong()"><i class='material-icons'>skip_next</i></button>
+						<button id="mute-icon"><i class='material-icons'>volume_up</i></button>
 					</div>
-					<button id="mute-icon" style="position:absolute; right:0;"><i class='material-icons'>volume_up</i></button>
 				</div>
 			</div>
 
@@ -496,6 +517,7 @@ WHO COULD BE A BETTER YOU!
 			const muteIconContainer = document.getElementById('mute-icon');
 			const lyrics = document.getElementById('lyrics');
 			const current_lyrics = document.getElementById("current_lyrics");
+			const lyr1 = document.getElementById("lyrics1");
 			const lyr2 = document.getElementById("lyrics2");
 			const lyr3 = document.getElementById("lyrics3");
 			const lyr4 = document.getElementById("lyrics4");
@@ -517,12 +539,68 @@ WHO COULD BE A BETTER YOU!
 			let muteState = 'unmute';
 			let song = 1;
 
+			/* TIMER STUFF */
+			var timer_ms;
+			var startTime;
+			function timer_start(ms) {
+				timer_ms = ms;
+				startTime = new Date().getTime();
+				timer_interval = setInterval(timer_step, 10);
+			}
+
+			function timer_resume() {
+				startTime = new Date().getTime();
+				setInterval(timer_step(), 10);
+			}
+
+			function timer_pause() {
+				clearInterval(timer_interval);
+			}
+
+			function timer_step() {
+				var now =  timer_ms + (new Date().getTime() - startTime);
+				var delta = 1000;
+				console.log(now);
+				if (playState == "pause") {
+					if (now < 197000 || now > 202260) {
+						lyr1.style.visibility = "visible";
+					} else {
+						lyr1.style.visibility = "hidden";
+					}
+					if (now < 197000 || now > 202260) {
+						document.body.style.backgroundColor = "#5e42a6";
+						lyrics1_emphasis.innerHTML = "";
+					} else if (now > 200520-delta) {
+						document.body.style.backgroundColor = "#5e42a6";
+						lyrics1_emphasis.innerHTML = "SCENE!";
+					} else if (now > 200100-delta) {
+						document.body.style.backgroundColor = "#555301";
+						lyrics1_emphasis.innerHTML = "THE";
+					} else if (now > 199680-delta) {
+						document.body.style.backgroundColor = "#bc5423";
+						lyrics1_emphasis.innerHTML = "OF";
+					} else if (now > 199260-delta) {
+						document.body.style.backgroundColor = "#555301";
+						lyrics1_emphasis.innerHTML = "PART";
+					} else if (now > 198840-delta) {
+						document.body.style.backgroundColor = "#bc5423";
+						lyrics1_emphasis.innerHTML = "BE";
+					} else if (now > 198420-delta) {
+						document.body.style.backgroundColor = "#555301";
+						lyrics1_emphasis.innerHTML = "WILL";
+					} else if (now > 198000-delta) {
+						document.body.style.backgroundColor = "#bc5423";
+						lyrics1_emphasis.innerHTML = "I";
+					}
+				}
+				return now;
+			}
 
 			/* Preload all the images so they load smoothly */
 			var images = [];
 			
 			preload(
-	    	"images/1.jpg",
+	    	    "images/1.jpg",
 				"images/2.jpg",
 				"images/3.jpg",
 				"images/4.jpg",
@@ -545,12 +623,14 @@ WHO COULD BE A BETTER YOU!
 					requestAnimationFrame(whilePlaying);
 					playIconContainer.innerHTML = "<i class='material-icons'>pause</i>";
 					playState = 'pause';
+					timer_resume();
 				} else {
 					audio.pause();
 					current_lyrics.style.animationPlayState = 'paused';
 					cancelAnimationFrame(raf);
 					playIconContainer.innerHTML = "<i class='material-icons'>play_arrow</i>";
 					playState = 'play';
+					timer_pause();
 				}
 			}
 
@@ -674,7 +754,7 @@ WHO COULD BE A BETTER YOU!
 
 			function updateAnimation() {
 				reset_animation();
-        current_lyrics.style.top = "calc(100% - 200px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
+                current_lyrics.style.top = "calc(100% - 300px - " + seekSlider.value/audio.duration*current_lyrics.clientHeight + "px)";
 				var calc = audio.duration;
 				current_lyrics.style.setProperty("animation", "my-animation linear " + calc + "s infinite");
 				if(playState === 'play') {
@@ -689,8 +769,10 @@ WHO COULD BE A BETTER YOU!
 			audio.addEventListener('ended', nextSong);
 
 			seekSlider.addEventListener('input', () => {
+				timer_pause();
 				current_lyrics.style.animationPlayState = 'paused';
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
+				timer_start(seekSlider.value*1000);
 				if(!audio.paused) {
 					cancelAnimationFrame(raf);
 				}
@@ -701,6 +783,7 @@ WHO COULD BE A BETTER YOU!
 			function mouse_up() {
 				if (playState == "pause") {
 					current_lyrics.style.animationPlayState = 'running';
+					timer_resume();
 				}
 			}
 
@@ -710,7 +793,6 @@ WHO COULD BE A BETTER YOU!
 					requestAnimationFrame(whilePlaying);
 				}
 			});
-
 
 			function deleteCurtains() {
 				document.getElementById("move_left").remove();
@@ -733,15 +815,22 @@ WHO COULD BE A BETTER YOU!
 				playState = 'play'
 				updatePlayState();
 				document.getElementById('art').src='images/' + s + '.jpg';
+				lyr1.style.visibility = "hidden";
 				lyr2.style.visibility = "hidden";
 				lyr3.style.visibility = "hidden";
 				lyr4.style.visibility = "hidden";
 				lyr6.style.visibility = "hidden";
 				lyr7.style.visibility = "hidden";
 				lyr8.style.visibility = "hidden";
-				current_lyrics.style.top = "calc(100% - 200px)"; // Make the lyrics come from the bottom!
+				current_lyrics.style.top = "calc(100% - 300px)"; // Make the lyrics come from the bottom!
 				reset_animation();
 				np.selectedIndex = s-1;
+				if (s == 1) {
+					timer_start(0);
+					lyr1.style.visibility = "visible";
+					current_lyrics.style.height = lyr1.offsetHeight + "px";
+                    current_lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
+				}
 				if (s == 2) {
 					lyr2.style.visibility = "visible";
 					current_lyrics.style.height = lyr2.offsetHeight + "px";
@@ -797,10 +886,12 @@ WHO COULD BE A BETTER YOU!
 						audio.play();
 						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
+						timer_resume();
 					} else {
 						audio.pause();
 						cancelAnimationFrame(raf);
 						playState = 'play';
+						timer_pause();
 					}
 				});
 				navigator.mediaSession.setActionHandler('pause', () => {
@@ -808,10 +899,12 @@ WHO COULD BE A BETTER YOU!
 						audio.play();
 						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
+						timer_resume();
 					} else {
 						audio.pause();
 						cancelAnimationFrame(raf);
 						playState = 'play';
+						timer_pause();
 					}
 				});
 				navigator.mediaSession.setActionHandler('nexttrack', (details) => {

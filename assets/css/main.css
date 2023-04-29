@@ -139,7 +139,7 @@ p {
 	white-space:pre;
 	color: white;
 	font-family: sans-serif;
-	font-size: 18pt;
+	font-size: 25pt;
 	text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
 	width:100%;
 	overflow:hidden;
@@ -179,6 +179,16 @@ p {
 	position:absolute;
 	z-index:-1;
 	top:5px;
+	visibility:visible;
+}
+
+#lyrics1_emphasis {
+	font-size:60pt;
+	position:relative;
+	z-index: 2;
+	text-align: center;
+	width:100%;
+	top:25%;
 }
 
 @media (min-aspect-ratio: 1) {
@@ -196,7 +206,7 @@ p {
 	}
 
 	#art_back {
-		background-color: #5e42a6;
+		visibility: hidden;
 	}
 
 	#lyrics {
@@ -205,10 +215,10 @@ p {
 		white-space:pre;
 		color: white;
 		font-family: sans-serif;
-		font-size: 18pt;
+		font-size: 25pt;
 		text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
 		z-index:1;
-		width:600px; 
+		width:820px; 
 		margin-left:25px;
 	}
 	
@@ -222,7 +232,7 @@ p {
 		position:relative;
 		top:50%;
 		transform:translateY(-50%);
-		max-width:calc(100% - 600px);
+		max-width:calc(100% - 820px);
 		z-index:0;
 		max-height:100%;
 	}
@@ -239,6 +249,18 @@ p {
 		animation: my-animation 50s linear infinite;
 		animation-play-state: 'paused';
 	}
+
+	#lyrics1_emphasis {
+		font-size:22vh;
+		position:relative;
+		z-index: 2;
+		text-align: center;
+		width:100%;
+		top:25%;
+		left: 25px;
+		overflow:visible;
+	}
+
 }
 
 #curtain {
@@ -311,31 +333,45 @@ p {
 	margin-left: 30px;
 }
 
+.material-icons {
+	font-size:40px !important;
+}
+
 #now_playing {
-	top:50%;
-	left:30px;
+	position:absolute;
+	left: 25px;
+	top: 60px;
 	font-family: "Londrina Solid";
-	font-size: 20pt;
+	font-size: 25pt;
 	background-color: #9E8DC9;
 	border-color: #000;
+	width: 100%;
+	max-width: 20%;
+	margin-right:50px;
+}
+
+#prev-icon {
+	margin: 50px 2% 10px 30%;
+	padding: 10px 2% 10px 2%;
 }
 
 #play-icon {
-	margin: 50px 30px 10px 30px;
-	padding: 10px 30px 10px 30px;
+	margin: 50px 0 10px 0;
+	padding: 20px 2% 20px 2%;
 }
-#prev-icon {
-	margin: 50px 30px 10px 30px;
-	padding: 8px 20px 8px 20px;
-}
+
 #next-icon {
-	margin: 50px 30px 10px 30px;
-	padding: 8px 20px 8px 20px;
+	margin: 10px 30% 50px 2%;
+	padding: 10px 2% 10px 2%;
 }
+
 #mute-icon {
-	margin: 50px 100px 10px 20px;
+	position:absolute;
+	right:25px;
+	margin: 50px 0 10px 5%;
 	padding: 8px 20px 8px 20px;
 }
+
 path {
 	stroke: #2edcd9;
 }
@@ -461,11 +497,6 @@ input[type="range"]::-ms-fill-upper {
 	background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
 }
 
-.material-icons {
-	font-size:60px !important;
-}
-
-
 #scroll-container {
 	border: 3px solid black;
 	border-radius: 5px;
@@ -499,7 +530,7 @@ input[type="range"]::-ms-fill-upper {
 	}
 
 	.boy {
-		color: #B0916E;
+		color: #c8a176;
 		font-family: "Londrina Solid";
 	}
 
@@ -510,20 +541,20 @@ input[type="range"]::-ms-fill-upper {
 
 	.ghost {
 		color:#90EE90;
-		font-size:17pt;
+		font-size:23pt;
 		opacity: 0.7;
 		font-family: "Mansalva";
 	}
 
 	.wolf {
 		color:#111111;
-		font-size:17pt;
+		font-size:23pt;
 		font-family: "Rubik Wet Paint";
 		text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 	}
 
 	.pipe {
-		color: #618a88;
+		color: #89cecb;
 		font-family: "Coiny";
 	}
 

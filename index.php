@@ -3,6 +3,8 @@
 	<head>
 		<title>Quantum Safari</title>
 		<meta  http-equiv="Content-Type" content="application;charset=UTF-8">
+		<meta name="description" content="The home of Quantum Safari, an up-and-coming musical genius.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
@@ -20,7 +22,7 @@
 
 		<!-- Wrapper -->
 		<div id="wrapper" style="position:relative; width:100%; height:100vh; overflow:hidden; text-align:center;">
-		<div style="position:absolute; top:25%; width:100%; text-align: center; font-size:3vw" >
+		<div style="position:absolute; top:25%; width:100%; text-align: center; font-size:3vh" >
 			<font class="ghost" style="font-size:2vw">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
 		    yoooou are visitorrr numberrr<?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
 		    </font>
