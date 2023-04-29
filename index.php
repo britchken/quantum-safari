@@ -24,7 +24,7 @@
 		<div id="wrapper" style="position:relative; width:100%; height:100vh; overflow:hidden; text-align:center;">
 		<div style="position:absolute; top:25%; width:100%; text-align: center; font-size:3vh" >
 			<font class="ghost" style="font-size:2vw">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
-		    yoooou are visitorrr numberrr<?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
+		    yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
 		    </font>
 			<font class="boy">Welcome to Quantum Safari.com. This is my home page!<br>
 			There's not much here right now, but click below to hear the new album!</font><br><br>
