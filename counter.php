@@ -22,8 +22,9 @@ if (!isset($_COOKIE['page_viewed'])) {
     fflush($file);
     flock($file, LOCK_UN);
   } else {
+      echo "bbbggbb";
       // loop until the lock is acquired
-      while (!flock($file, LOCK_EX)) {
+      while (flock($file, LOCK_EX)) {
           // sleep for a short period of time before trying again
           usleep(10);
       }
