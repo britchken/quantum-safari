@@ -1,7 +1,6 @@
 <?php
 $file = fopen("counter.txt", "r+"); // path to the text file that will store the view count
 echo " xxxx ";
-die;
 // check if a cookie has been set for this page
 if (isset($_COOKIE['page_viewed'])) {
     $contents = "";
@@ -12,7 +11,6 @@ if (isset($_COOKIE['page_viewed'])) {
   echo " ... ";
 } else {
   echo " aaaa ";
-  die;
   // set a cookie to prevent the count from being incremented on page refreshes
   setcookie('page_viewed', true, time() + 3600 * 24); // expires after 24 hours
   
