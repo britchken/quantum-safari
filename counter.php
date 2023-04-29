@@ -16,7 +16,7 @@ if (isset($_COOKIE['page_viewed'])) {
     }
     $count = intval($contents) + 1;
     fseek($file, 0);
-    fwrite($file, $count);
+    fwrite($file, "blorg");
     fflush($file);
     flock($file, LOCK_UN);
   } else {
@@ -31,7 +31,7 @@ if (isset($_COOKIE['page_viewed'])) {
       }
       $count = intval($contents) + 1;
       fseek($file, 0);
-      fwrite($file, $count);
+      fwrite($file, "blarg");
       fflush($file);
       flock($file, LOCK_UN);
   }
