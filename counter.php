@@ -4,6 +4,7 @@ $file = fopen("counter.txt", "r+"); // path to the text file that will store the
 // check if a cookie has been set for this page
 if (isset($_COOKIE['page_viewed'])) {
   $count = intval(file_get_contents($file)); // read the current count from the file
+  echo " ... ";
 } else {
   
   // set a cookie to prevent the count from being incremented on page refreshes
@@ -20,20 +21,7 @@ if (isset($_COOKIE['page_viewed'])) {
     fflush($file);
     flock($file, LOCK_UN);
   } else {
-      // loop until the lock is acquired
-      while (!flock($file, LOCK_EX)) {
-          // sleep for a short period of time before trying again
-          usleep(10);
-      }
-      $contents = "";
-      while (!feof($file)) {
-          $contents .= fread($file, 8192);
-      }
-      $count = intval($contents) + 1;
-      fseek($file, 0);
-      fwrite($file, $count);
-      fflush($file);
-      flock($file, LOCK_UN);
+    echo "Uh oh my code has a bug!";
   }
   fclose($file);
 
