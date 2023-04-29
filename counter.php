@@ -2,7 +2,7 @@
 $file = "counter.txt"; // path to the text file that will store the view count
 
 // check if a cookie has been set for this page
-if (isset($_COOKIE['page_viewed'])) {
+if (!isset($_COOKIE['page_viewed'])) {
   $count = intval(file_get_contents($file)); // read the current count from the file
   echo "aaaaaa";
 } else {
@@ -11,11 +11,11 @@ if (isset($_COOKIE['page_viewed'])) {
   setcookie('page_viewed', true, time() + 3600 * 24); // expires after 24 hours
   
   if (flock($file, LOCK_EX)) {
+    echo "bbbbbbbb";
     $contents = "";
     while (!feof($file)) {
         $contents .= fread($file, 8192);
     }
-    echo "bbbbbbbb";
     $count = intval($contents) + 1;
     fseek($file, 0);
     fwrite($file, "blorg");
