@@ -22,13 +22,13 @@
 
 		<!-- Wrapper -->
 		<div id="wrapper" style="position:relative; width:100%; height:100vh; overflow:hidden; text-align:center;">
-		<div style="position:absolute; top:25%; width:100%; text-align: center; font-size:3vh" >
-			<font class="ghost" style="font-size:2vw">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
+		<div style="position:absolute; top:20%; width:100%; text-align: center; font-size:3vh" >
+			<font class="ghost" style="font-size:4vw">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
 		    yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
 		    </font>
 			<font class="boy">Welcome to Quantum Safari.com. This is my home page!<br>
 			There's not much here right now, but click below to hear the new album!</font><br><br>
-			<h1><font class="neonText" style="font-size:3.5vw; font-family:Londrina Solid;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
+			<h1><font class="neonText" style="font-size:4vw; font-family:Londrina Solid;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
 			<font class="boy">I'll continue to update this page until it's officially released,<br>
 			so make sure to check back often!</font>
         </div>

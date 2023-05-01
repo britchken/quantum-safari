@@ -1,3 +1,7 @@
+html {
+	margin:0;
+}
+
 body {
 	background-color: #5e42a6;
 	margin: 0;
@@ -128,7 +132,7 @@ p {
 	margin:0;
 	padding:0;
 	height:calc(100% - 250px);
-	width:calc(100% - 20px);
+	width:calc(100% - 19px);
 	flex-direction: column-reverse;
 }
 
@@ -183,12 +187,13 @@ p {
 }
 
 #lyrics1_emphasis {
-	font-size:60pt;
+	font-size:120pt;
 	position:relative;
 	z-index: 2;
 	text-align: center;
 	width:100%;
-	top:25%;
+	top:40%;
+	transform:translateX(-20px);
 }
 
 @media (min-aspect-ratio: 1) {
@@ -251,12 +256,12 @@ p {
 	}
 
 	#lyrics1_emphasis {
-		font-size:22vh;
+		font-size:120pt;
 		position:relative;
 		z-index: 2;
 		text-align: center;
 		width:100%;
-		top:25%;
+		top:40%;
 		left: 25px;
 		overflow:visible;
 	}

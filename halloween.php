@@ -20,7 +20,7 @@
 	<body>
 
 		<!-- Wrapper -->
-		<div id="wrapper" style="position:relative; height:100vh; overflow:hidden;">
+		<div id="wrapper" style="position:absolute; height:100vh; width:100vw; overflow:hidden;">
 			<div id="curtain">
 				<div id="title">
 					<font class="neonText" style="font-size:9vw;">
@@ -31,7 +31,7 @@
 					</font>	
 				</div>
 				<div class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
-					<font color="#000" style="font-family: Creepster; font-size:100px;">
+					<font color="#000" style="font-family: Creepster; font-size:8vw;">
 					LET'S BEGIN</font>
 				</div>
 			</div>
