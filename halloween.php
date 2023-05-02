@@ -828,7 +828,7 @@ WHO COULD BE A BETTER YOU!
 					timer_start(0);
 					lyr1.style.visibility = "visible";
 					current_lyrics.style.height = lyr1.offsetHeight + "px";
-                    current_lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
+                    current_lyrics.style.setProperty("animation", "my-animation linear " + 403 + "s infinite");
 				}
 				if (s == 2) {
 					lyr2.style.visibility = "visible";
