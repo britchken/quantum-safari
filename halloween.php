@@ -559,7 +559,7 @@ WHO COULD BE A BETTER YOU!
 			}
 
 			window.onresize = function() {
-    			document.getElementById("wrapper") = window.innerHeight;
+    			document.getElementById("wrapper").height = window.innerHeight;
 			}
 			
 			window.onresize(); // called to initially set the height.
@@ -567,7 +567,6 @@ WHO COULD BE A BETTER YOU!
 			function timer_step() {
 				var now =  timer_ms + (new Date().getTime() - startTime);
 				var delta = 1000;
-				console.log(now);
 				if (playState == "pause") {
 					if (now < 197000 || now > 202260) {
 						lyr1.style.visibility = "visible";
