@@ -22,7 +22,7 @@
 	<body>
 
 		<!-- Wrapper -->
-		<div id="wrapper" style="position:absolute; height:100vh; width:100vw; overflow:hidden;">
+		<div id="wrapper">
 			<div id="curtain">
 				<div id="title">
 					<font class="neonText" style="font-size:9vw;">
