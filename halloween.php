@@ -546,13 +546,6 @@ WHO COULD BE A BETTER YOU!
 				clearInterval(timer_interval);
 			}
 
-			window.onresize = function() {
-    			document.getElementById("wrapper").height = window.innerHeight;
-				console.log("done");
-			}
-			
-			window.onresize(); // called to initially set the height.
-
 			function timer_step() {
 				var now =  timer_ms + (new Date().getTime() - startTime);
 				var delta = 1000;
@@ -802,10 +795,10 @@ WHO COULD BE A BETTER YOU!
 				changeSong(1);
 			}
 
+			document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");
 			/* Super cool function right here!  */
 			function changeSong(s) {
-				console.log(window.innerHeight);
-				document.getElementById("wrapper").height = window.innerHeight;
+				document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");
 				song = s;
 				audio.src='songs/' + names[s] + '.mp3';
 				audio.load();

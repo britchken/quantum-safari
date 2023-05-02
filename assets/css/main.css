@@ -8,7 +8,7 @@ body {
 	position:absolute;
 	overflow:hidden;
 	width:100vw;
-	height:100vh;
+	height:var(--fix-height);
 }
 
 h1 {
