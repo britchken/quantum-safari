@@ -9,6 +9,7 @@
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Creepster&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Permanent Marker&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Mansalva&display=swap">
@@ -18,6 +19,7 @@
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Coiny&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Eater&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint&display=swap">
+		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
 	</head>
 	<body>
 
@@ -495,21 +497,7 @@ WHO COULD BE A BETTER YOU!
 		<!--/////////////////////////// CODE //////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
-
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
+		<script>
 			/* Implementation of the presentation of the audio player */
 
 			const playIconContainer = document.getElementById('play-icon');
@@ -560,6 +548,7 @@ WHO COULD BE A BETTER YOU!
 
 			window.onresize = function() {
     			document.getElementById("wrapper").height = window.innerHeight;
+				console.log("done");
 			}
 			
 			window.onresize(); // called to initially set the height.
@@ -815,6 +804,8 @@ WHO COULD BE A BETTER YOU!
 
 			/* Super cool function right here!  */
 			function changeSong(s) {
+				console.log(window.innerHeight);
+				document.getElementById("wrapper").height = window.innerHeight;
 				song = s;
 				audio.src='songs/' + names[s] + '.mp3';
 				audio.load();
