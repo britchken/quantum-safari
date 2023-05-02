@@ -795,7 +795,12 @@ WHO COULD BE A BETTER YOU!
 				changeSong(1);
 			}
 
-			document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");
+			document.getElementById("wrapper").style.setProperty("--fix-height", "100vh");
+
+			window.addEventListener('resize', function(event){
+				document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");
+			});
+
 			/* Super cool function right here!  */
 			function changeSong(s) {
 				document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");

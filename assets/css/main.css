@@ -195,11 +195,12 @@ p {
 	z-index: 2;
 	text-align: center;
 	width:100%;
-	top:40%;
-	transform:translateX(-20px);
+	top:50%;
+	transform:translateY(-60pt);
+	left:-40px;
 }
 
-@media (min-aspect-ratio: 1) {
+@media (min-aspect-ratio: 1) and (min-width: 1300px) {
 	.main-content {
 		display:inline-flex;
 		align-items:flex-start;

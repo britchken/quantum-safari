@@ -21,8 +21,8 @@
 	<body>
 
 		<!-- Wrapper -->
-		<div id="wrapper" style="position:relative; width:100%; text-align:center;">
-		<div style="position:absolute; top:10%; width:100%; text-align: center; font-size:3vh" >
+		<div style="position:absolute; width:100%; height:100vh; text-align:center;">
+		<div style="position:relative; top:10%; width:100%; text-align: center; font-size:3vh" >
 			<font class="ghost" style="font-size:3vh">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
 		    yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
 		    </font>
