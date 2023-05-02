@@ -63,6 +63,7 @@
 				   --></div>
 				<div id="curtain_rod"></div>
 			</div>
+			<?php include("counter2.php"); ?>
 			<div class="main-content">
 				<!-- Lyrics -->
 					<div id="lyrics"><!--
@@ -550,7 +551,7 @@ WHO COULD BE A BETTER YOU!
 				var now =  timer_ms + (new Date().getTime() - startTime);
 				var delta = 1000;
 				if (playState == "pause") {
-					if (now < 197000 || now > 202260) {
+					if ((now < 197000 || now > 202260) && (song == 1)) {
 						lyr1.style.visibility = "visible";
 					} else {
 						lyr1.style.visibility = "hidden";
