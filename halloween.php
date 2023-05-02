@@ -558,6 +558,12 @@ WHO COULD BE A BETTER YOU!
 				clearInterval(timer_interval);
 			}
 
+			window.onresize = function() {
+    			document.getElementById("wrapper") = window.innerHeight;
+			}
+			
+			window.onresize(); // called to initially set the height.
+
 			function timer_step() {
 				var now =  timer_ms + (new Date().getTime() - startTime);
 				var delta = 1000;
@@ -874,7 +880,7 @@ WHO COULD BE A BETTER YOU!
 					artist: 'Quantum Safari',
 					album: 'Lights Out: A Halloween Adventure',
 					artwork: [
-/*						{ src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
+						/*{ src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
 						{ src: 'images/1/128.jpg', sizes: '128x128', type: 'image/png' },
 						{ src: 'images/1/192.jpg', sizes: '192x192', type: 'image/png' },
 						{ src: 'images/1/256.jpg', sizes: '256x256', type: 'image/png' },
