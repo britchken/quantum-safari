@@ -2,18 +2,19 @@ html {
 	height: -webkit-fill-available;
 }
 
-#wrapper {
-	position:absolute;
-	overflow:hidden;
-	width:100vw;
-	height: 100vh;
-	height: -webkit-fill-available;
-}
-
 body {
 	background-color: #5e42a6;
 	margin: 0;
 	padding: 0;
+	height: 100vh;
+	height: -webkit-fill-available;
+}
+
+#wrapper {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:100%;
 }
 
 h1 {
