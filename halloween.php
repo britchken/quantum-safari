@@ -62,9 +62,8 @@
 					--><div class='rnUnit'></div><!--
 				   --></div>
 				<div id="curtain_rod"></div>
-			</div>
-			<?php include("counter2.php"); ?>
-			<div class="main-content">
+			</div><?php include("counter2.php"); ?><!--
+         --><div class="main-content">
 				<!-- Lyrics -->
 					<div id="lyrics"><!--
                      --><font style="color: #c8a176; font-family:Londrina Solid"><div id="lyrics1_emphasis"></div></font>					
@@ -530,59 +529,45 @@ WHO COULD BE A BETTER YOU!
 			let song = 1;
 
 			/* TIMER STUFF */
-			var timer_ms;
-			var startTime;
-			function timer_start(ms) {
-				timer_ms = ms;
-				startTime = new Date().getTime();
-				timer_interval = setInterval(timer_step, 10);
-			}
-
-			function timer_resume() {
-				startTime = new Date().getTime();
-				setInterval(timer_step(), 10);
-			}
-
-			function timer_pause() {
-				clearInterval(timer_interval);
-			}
-
+			timer_interval = setInterval(timer_step, 10);
 			function timer_step() {
-				var now =  timer_ms + (new Date().getTime() - startTime);
-				var delta = 1000;
-				if (playState == "pause") {
-					if ((now < 197000 || now > 202260) && (song == 1)) {
+				var now =  audio.currentTime;
+				if (song == 1) {
+					if (now < 197) {
 						lyr1.style.visibility = "visible";
-					} else {
-						lyr1.style.visibility = "hidden";
-					}
-					if (now < 197000 || now > 202260) {
 						document.body.style.backgroundColor = "#5e42a6";
 						lyrics1_emphasis.innerHTML = "";
-					} else if (now > 200520-delta) {
-						document.body.style.backgroundColor = "#5e42a6";
-						lyrics1_emphasis.innerHTML = "SCENE!";
-					} else if (now > 200100-delta) {
-						document.body.style.backgroundColor = "#555301";
-						lyrics1_emphasis.innerHTML = "THE";
-					} else if (now > 199680-delta) {
-						document.body.style.backgroundColor = "#bc5423";
-						lyrics1_emphasis.innerHTML = "OF";
-					} else if (now > 199260-delta) {
-						document.body.style.backgroundColor = "#555301";
-						lyrics1_emphasis.innerHTML = "PART";
-					} else if (now > 198840-delta) {
-						document.body.style.backgroundColor = "#bc5423";
-						lyrics1_emphasis.innerHTML = "BE";
-					} else if (now > 198420-delta) {
-						document.body.style.backgroundColor = "#555301";
-						lyrics1_emphasis.innerHTML = "WILL";
-					} else if (now > 198000-delta) {
-						document.body.style.backgroundColor = "#bc5423";
-						lyrics1_emphasis.innerHTML = "I";
+					} else if (now > 202.260) {
+						lyrics1_emphasis.innerHTML = "";
+					} else {
+						lyr1.style.visibility = "hidden";
+						if (now < 197.000) {
+							document.body.style.backgroundColor = "#5e42a6";
+							lyrics1_emphasis.innerHTML = "";
+						} else if (now > 199.520) {
+							document.body.style.backgroundColor = "#5e42a6";
+							lyrics1_emphasis.innerHTML = "SCENE!";
+						} else if (now > 199.100) {
+							document.body.style.backgroundColor = "#555301";
+							lyrics1_emphasis.innerHTML = "THE";
+						} else if (now > 198.680) {
+							document.body.style.backgroundColor = "#bc5423";
+							lyrics1_emphasis.innerHTML = "OF";
+						} else if (now > 198.260) {
+							document.body.style.backgroundColor = "#555301";
+							lyrics1_emphasis.innerHTML = "PART";
+						} else if (now > 197.840) {
+							document.body.style.backgroundColor = "#bc5423";
+							lyrics1_emphasis.innerHTML = "BE";
+						} else if (now > 197.420) {
+							document.body.style.backgroundColor = "#555301";
+							lyrics1_emphasis.innerHTML = "WILL";
+						} else if (now > 197.000) {
+							document.body.style.backgroundColor = "#bc5423";
+							lyrics1_emphasis.innerHTML = "I";
+						}
 					}
 				}
-				return now;
 			}
 
 			/* Preload all the images so they load smoothly */
@@ -612,14 +597,12 @@ WHO COULD BE A BETTER YOU!
 					requestAnimationFrame(whilePlaying);
 					playIconContainer.innerHTML = "<i class='material-icons'>pause</i>";
 					playState = 'pause';
-					timer_resume();
 				} else {
 					audio.pause();
 					current_lyrics.style.animationPlayState = 'paused';
 					cancelAnimationFrame(raf);
 					playIconContainer.innerHTML = "<i class='material-icons'>play_arrow</i>";
 					playState = 'play';
-					timer_pause();
 				}
 			}
 
@@ -758,10 +741,8 @@ WHO COULD BE A BETTER YOU!
 			audio.addEventListener('ended', nextSong);
 
 			seekSlider.addEventListener('input', () => {
-				timer_pause();
 				current_lyrics.style.animationPlayState = 'paused';
 				currentTimeContainer.textContent = calculateTime(seekSlider.value);
-				timer_start(seekSlider.value*1000);
 				if(!audio.paused) {
 					cancelAnimationFrame(raf);
 				}
@@ -772,7 +753,6 @@ WHO COULD BE A BETTER YOU!
 			function mouse_up() {
 				if (playState == "pause") {
 					current_lyrics.style.animationPlayState = 'running';
-					timer_resume();
 				}
 			}
 
@@ -822,7 +802,6 @@ WHO COULD BE A BETTER YOU!
 				reset_animation();
 				np.selectedIndex = s-1;
 				if (s == 1) {
-					timer_start(0);
 					lyr1.style.visibility = "visible";
 					current_lyrics.style.height = lyr1.offsetHeight + "px";
                     current_lyrics.style.setProperty("animation", "my-animation linear " + 403 + "s infinite");
@@ -882,12 +861,10 @@ WHO COULD BE A BETTER YOU!
 						audio.play();
 						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
-						timer_resume();
 					} else {
 						audio.pause();
 						cancelAnimationFrame(raf);
 						playState = 'play';
-						timer_pause();
 					}
 				});
 				navigator.mediaSession.setActionHandler('pause', () => {
@@ -895,12 +872,10 @@ WHO COULD BE A BETTER YOU!
 						audio.play();
 						requestAnimationFrame(whilePlaying);
 						playState = 'pause';
-						timer_resume();
 					} else {
 						audio.pause();
 						cancelAnimationFrame(raf);
 						playState = 'play';
-						timer_pause();
 					}
 				});
 				navigator.mediaSession.setActionHandler('nexttrack', (details) => {
