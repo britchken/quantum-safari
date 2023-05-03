@@ -546,7 +546,7 @@ WHO COULD BE A BETTER YOU!
 							lyrics1_emphasis.innerHTML = "";
 						} else if (now > 199.520) {
 							document.body.style.backgroundColor = "#5e42a6";
-							lyrics1_emphasis.innerHTML = "<font style=''color: #c8a176; font-family: Londrina Solid''>SCENE!</font>";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">SCENE!</font>";
 						} else if (now > 199.100) {
 							document.body.style.backgroundColor = "#555301";
 							lyrics1_emphasis.innerHTML = "THE";
