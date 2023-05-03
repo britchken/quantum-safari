@@ -66,7 +66,7 @@
          --><div class="main-content">
 				<!-- Lyrics -->
 					<div id="lyrics"><!--
-                     --><font style="color: #c8a176; font-family:Londrina Solid"><div id="lyrics1_emphasis"></div></font>					
+  		             --><div id="lyrics1_emphasis"></div>
 						<div id="current_lyrics" style="position:relative; z-index:1;">
 						<div id="lyrics1" class="song">
 <br><br><br>

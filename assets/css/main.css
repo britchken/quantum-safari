@@ -190,6 +190,8 @@ p {
 }
 
 #lyrics1_emphasis {
+	color: #c8a176;
+	font-family: "Londrina Solid";
 	font-size:120pt;
 	position:relative;
 	z-index: 2;
@@ -261,12 +263,12 @@ p {
 
 	#lyrics1_emphasis {
 		font-size:120pt;
-		position:relative;
+		position:absolute;
 		z-index: 2;
 		text-align: center;
-		width:100%;
+		width:820px;
 		top:40%;
-		left: 25px;
+		left: 10px;
 		overflow:visible;
 	}
 
