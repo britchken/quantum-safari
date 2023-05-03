@@ -549,22 +549,22 @@ WHO COULD BE A BETTER YOU!
 							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">SCENE!</font>";
 						} else if (now > 199.100) {
 							document.body.style.backgroundColor = "#555301";
-							lyrics1_emphasis.innerHTML = "THE";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">THE</font>";
 						} else if (now > 198.680) {
 							document.body.style.backgroundColor = "#bc5423";
-							lyrics1_emphasis.innerHTML = "OF";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">OF</font>";
 						} else if (now > 198.260) {
 							document.body.style.backgroundColor = "#555301";
-							lyrics1_emphasis.innerHTML = "PART";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">PART</font>"";
 						} else if (now > 197.840) {
 							document.body.style.backgroundColor = "#bc5423";
-							lyrics1_emphasis.innerHTML = "BE";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">BE</font>"";
 						} else if (now > 197.420) {
 							document.body.style.backgroundColor = "#555301";
-							lyrics1_emphasis.innerHTML = "WILL";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">WILL</font>"";
 						} else if (now > 197.000) {
 							document.body.style.backgroundColor = "#bc5423";
-							lyrics1_emphasis.innerHTML = "I";
+							lyrics1_emphasis.innerHTML = "<font style=\"color: #c8a176; font-family: Londrina Solid\">I</font>"";
 						}
 					}
 				}
