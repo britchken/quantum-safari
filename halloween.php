@@ -27,15 +27,21 @@
 		<div id="wrapper">
 			<div id="curtain">
 				<div id="title">
-					<font class="neonText" style="font-size:9vw;">
-						Lights Out:<br>
+					<font class="neonText" style="font-size:9vmin;">
+						Lights Out:
 					</font>	
-					<font class="neonText" style="font-size:5vw;">
-						A Halloween Adventure
+					<font class="neonText" style="font-size:6vmin;">
+						<br>A Halloween Adventure<br>
+					</font>
+					<font class="neonText2" style="font-size:4vmin;">
+						Featuring:<br>
+						Art from LANK<br> 
+						Vocals from Arianna Neal<br>
+						Lyrics from Billy Me<br>
 					</font>	
 				</div>
 				<div class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
-					<font color="#000" style="font-family: Creepster; font-size:8vw;">
+					<font color="#000" style="font-family: Creepster; font-size:8vmin;">
 					LET'S BEGIN</font>
 				</div>
 			</div>
@@ -83,12 +89,12 @@ Hello world, here I come
 </font>
 							</div>
 							<div id="lyrics2" class="song">
-<br><br><br>
+<br><br>
 <font class="mom">Good night honey,
 I've got candy to give out
 Sweet dreams
 Now I'll turn the lights out</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font class="boy">
 There’s only one chance a year to conquer the night,
 But it’s always the same story, she turns out that dang light
@@ -113,12 +119,11 @@ No matter how you’re feeling
 Or what you’re gonna do
 There will never be another
 who could be a better you!
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 </font>
 							</div>
 							<div id="lyrics3" class="song">
-<font class="boy">
-And I'm gone.
+<font class="boy">And I'm gone.
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </font>
 							</div>
@@ -133,7 +138,7 @@ Join the skeleton crew!
 
 First a real-life ghost, not just a sheet with some holes
 Though her love overflows, it’s oh so hard to get close
-Let yourself be seen
+Let yourself be seen!
 
 
 On Halloween</font>
@@ -165,7 +170,6 @@ all we needed was fresh blood</font>
 <font class="host">Hope you brought your dance moves kid,
 I want to see your style
 So get down beside the flicker of a pumpkin's smile
-
 Stay a while!</font>
 
 <br><br><br><br><br><br><br>
@@ -173,13 +177,12 @@ Stay a while!</font>
 Happy Halloween, kid
 One, two, three...</font>
 <font class="ghost">Boo!</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 							</div>
-							<div id="lyrics6" class="song">
-<div class="rainbow-text" style="font-family: Boogaloo; font-size:30pt; text-shadow: 0px 0px 8px rgba(0,0,0,0.5);">It's time for the show!</div>
-<font class="host">It's a good idea, but bad execution,
+							<div id="lyrics6" class="song"><div class="rainbow-text" style="font-family: Boogaloo; font-size:30pt; text-shadow: 0px 0px 8px rgba(0,0,0,0.5);">It's time for the show!</div>
+<font class="host">It was a good idea, but bad execution,
 I'm thinking that's not a great solution!
 Hey, so come and play!</font>
 <font class="boy">
@@ -233,7 +236,7 @@ She thought she wouldn't have to make new friends after she died
 Da dum da dum. Now she's feeling down - to be alone is tough
 She wants her old friends back but they're not dying fast enough!!
 
-And there's one guy in particular she misses most of all
+There's one guy in particular she misses most of all
 He was charming, he was clever, he made winter feel like fall
 She died too soon to tell him and they never got to be
 She sees an opportunity to fulfill destiny!
@@ -303,7 +306,7 @@ WHAT ARE YOU DOING HERE?</font>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="lyrics7" class="song">
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <font class="wolf">
 Turn the light out, don't shine it on me
 Turn the light out, don't let them see
@@ -316,7 +319,7 @@ Turn the light out, don't let them see
 
 Turn the light out, don't shine it on me
 Turn the light out, don't let them see</font>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <font class="pipe">
 
 Paint the pipe, just do the world a favor
@@ -339,7 +342,7 @@ There used to be this comet,
 I would count the weeks till she flew by
 But every time she would say she's still waiting
 Waiting to meteorite guy!
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 And that jealous moon's always there
 Feels like I just can't win
@@ -372,7 +375,7 @@ RARARAHRARHHRAO </font>
 <br><br><br><br><br>
 							</div>
 							<div id="lyrics8" class="song">
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <font class="boy_white">
 Give it a try, be part of the world that surrounds you
 Open your eyes, look around, go outside
@@ -439,7 +442,7 @@ NO MATTER HOW YOU'RE FEELIN'
 OR WHAT YOU'RE GONNA DO
 THERE WILL NEVER BE ANOTHER
 WHO COULD BE A BETTER YOU!
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 </font>
 						</div>
 					</div>
@@ -823,7 +826,7 @@ WHO COULD BE A BETTER YOU!
 				else if (s == 6) {
 					lyr6.style.visibility = "visible";
 					current_lyrics.style.height = lyr6.offsetHeight + "px";
-					current_lyrics.style.setProperty("animation", "my-animation linear " + 332 + "s infinite");
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 322 + "s infinite");
 				}
 				else if (s == 7) {
 					lyr7.style.visibility = "visible";
