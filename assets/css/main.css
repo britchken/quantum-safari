@@ -197,7 +197,7 @@ p {
 	width:100%;
 	top:50%;
 	transform:translateY(-60pt);
-	left:-40px;
+	left:-25px;
 }
 
 @media (min-aspect-ratio: 1) and (min-width: 1300px) {
