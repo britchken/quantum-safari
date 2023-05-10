@@ -288,6 +288,7 @@ p {
 	width:100%;
 	height:100%;
 	z-index:7;
+	transition: opacity 0.5s;
 }
 
 #curtain_rod {

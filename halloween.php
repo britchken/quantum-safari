@@ -31,10 +31,10 @@
 						Lights Out:
 					</font>	
 					<font class="neonText" style="font-size:6vmin;">
-						<br>A Halloween Adventure<br>
+						<br>A Halloween Adventure
 					</font>
 					<font class="neonText2" style="font-size:4vmin;">
-						Featuring:<br>
+						<br><br>Featuring:<br>
 						Art from LANK<br> 
 						Vocals from Arianna Neal<br>
 						Lyrics from Billy Me<br>
@@ -770,10 +770,15 @@ WHO COULD BE A BETTER YOU!
 				document.getElementById("move_right").remove();
 			}
 
+			function deleteCurtainCover() {
+				document.getElementById("curtain").remove();
+			}
+
 			function move() {
 				document.getElementById("move_left").style.left = "-55%";
 				document.getElementById("move_right").style.left = "105%";
-				document.getElementById("curtain").remove();
+				document.getElementById("curtain").style.opacity = 0;
+				setTimeout(deleteCurtainCover, 500);
 				setTimeout(deleteCurtains, 5500); // For performance!
 				changeSong(1);
 			}
