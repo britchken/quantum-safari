@@ -247,7 +247,7 @@ But as she saunters past, everyone becomes aghast,
 They start running
 
 And she's moaning and wailing, in her desperation
-She starts scarin’ and spookin', there's a mass migration
+She starts scarin’ and spookin', it's a mass migration
 IT'S A GHOST TOWN!!!!!!!!
 SHE STOPS THERE WRAPPED IN SPACE AND SKY
 AND WONDERS HOW THE ONLY LIFE
@@ -274,8 +274,8 @@ Or a washer for one dish! Let's hear these...
 ...Good ideas, with bad execution!
 That's the thing we're lookin for, that's the right solution
 Like a floor-mounted shower head that sprays you from below
-Or a verbal traffic signal: "stop stop stop, okay go!"
-No doubt about it, we've got so much more in store!</font>
+Or a verbal traffic signal: "Green! Red! Yellow!"
+No doubt about it, we've got so much more in store...</font>
 
 <font class="boy">No! I just can't take any more!
 These are NOT good ideas, and this show isn't fun
@@ -826,12 +826,12 @@ WHO COULD BE A BETTER YOU!
 				else if (s == 4) {
 					lyr4.style.visibility = "visible";
 					current_lyrics.style.height = lyr4.offsetHeight + "px";
-					current_lyrics.style.setProperty("animation", "my-animation linear " + 216 + "s infinite");
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 208 + "s infinite");
 				}
 				else if (s == 6) {
 					lyr6.style.visibility = "visible";
 					current_lyrics.style.height = lyr6.offsetHeight + "px";
-					current_lyrics.style.setProperty("animation", "my-animation linear " + 322 + "s infinite");
+					current_lyrics.style.setProperty("animation", "my-animation linear " + 317 + "s infinite");
 				}
 				else if (s == 7) {
 					lyr7.style.visibility = "visible";
