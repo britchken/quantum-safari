@@ -258,7 +258,7 @@ NO SHE COULD NOT MOVE ON!!!!!!!!
 <br>
 So come on down and let's all tell her why!
 Let's all tell her why!
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 It's the good idea hall of fame!
 
 Doors with hinges on the bottom, a counterclockwise clock
@@ -272,7 +272,7 @@ Individually wrapped cereal,
 Or a washer for one dish! Let's hear these...
 
 ...Good ideas, with bad execution!
-That's the thing we're lookin for, that's the right solution
+That's the thing we're lookin' for, that's the right solution
 Like a floor-mounted shower head that sprays you from below
 Or a verbal traffic signal: "Green! Red! Yellow!"
 No doubt about it, we've got so much more in store...</font>
@@ -280,7 +280,7 @@ No doubt about it, we've got so much more in store...</font>
 <font class="boy">No! I just can't take any more!
 These are NOT good ideas, and this show isn't fun
 I don't wanna play, and I'm not the only one
-I'm gonna unplug the music, put an end to this scene
+I'm gonna unplug the music, put an end to the scene
 I won't let you take away my first Halloween!</font>
 <font color="#90A0E6" style="font-family: Creepster; font-size:28pt;">
 You think you're in control?
@@ -303,7 +303,7 @@ Isn't it obvious this was all a big mistake?
 What were you thinking?
 
 WHAT ARE YOU DOING HERE?</font>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="lyrics7" class="song">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -339,7 +339,7 @@ And maybe one of these days I'll find love
 Intergalactically
 <br>
 There used to be this comet,
-I would count the weeks till she flew by
+I would count the weeks till she passed by
 But every time she would say she's still waiting
 Waiting to meteorite guy!
 <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -382,10 +382,10 @@ Open your eyes, look around, go outside
 One of these days, something good's gonna find you
 And life won’t pass you by</font>
 
-<font class="ghost">When I try to meet somebody
-they stare right through me
+<font class="ghost">Hello when I try to meet somebody
+They stare right through me
 And if they feel anything
-it’s only slightly gloomy
+It’s only slightly gloomy
 
 The last time that I opened up
 And didn’t have a thing to hide
@@ -400,12 +400,12 @@ One of these days, something good's gonna find you
 And life won’t pass you by</font>
 <br><br><br><br><br><br>
 <font class="ghost">
-I must admit I don’t see
-Why I need to change
-And what you’re asking me to do
+Oh no, I don't know why it is
+You think I need to change
+What you’re asking me to do
 Well, it sounds quite strange
 
-The last time that I opened up
+Last time that I opened up
 And didn’t have a thing to hide
 Was back when I was with you
 But that was on the other side
@@ -421,13 +421,14 @@ Everybody’s had some time that they felt better
 Close your eyes, remember back, look inside
 If you still think that your ship can’t stand the weather
 Well just hop on board mine
+
 Let's go!</font>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <font class="boy_white">
 And I'm always by your side, yeah, I'm always by your side
 I'll always be there for you, you can be my spirit guide
 
-Cause so what? You died! Okay? Take it as a given
+'Cause so what? You died! Okay? Take it as a given
 You're in the after life, why not start after livin'!
 
 You're gonna be just fine if you give it a go
