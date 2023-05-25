@@ -469,11 +469,11 @@ WHO COULD BE A BETTER YOU!
 							<option>1. Overture</option>
 							<option>2. Lights Out</option>
 							<option>3. And I'm Gone</option>
-							<option>4. Be Seen on Halloween</option>
-							<option>5. Two for the Toads</option>
+							<option>4. Be Seen On Halloween</option>
+							<option>5. Two For The Toads</option>
 							<option>6. Good Idea, Bad Execution</option>
-							<option>7. Echoes of the Moon</option>
-							<option>8. Give it a Try</option>
+							<option>7. Echoes Of The Moon</option>
+							<option>8. Give It A Try</option>
 							<option>9. Be Seein' You</option>
 						  </select>
 						<button id="prev-icon" onclick="prevSong()"><i class='material-icons'>skip_previous</i></button>
@@ -521,11 +521,11 @@ WHO COULD BE A BETTER YOU!
 							"1. Overture",
 							"2. Lights Out",
 							"3. And I'm Gone",
-							"4. Be Seen on Halloween",
-							"5. Two for the Toads",
+							"4. Be Seen On Halloween",
+							"5. Two For The Toads",
 							"6. Good Idea, Bad Execution",
-							"7. Echoes of the Moon",
-							"8. Give It a Try",
+							"7. Echoes Of The Moon",
+							"8. Give It A Try",
 							"9. Be Seein' You"];
 			let playState = 'play';
 			let muteState = 'unmute';
@@ -808,6 +808,7 @@ WHO COULD BE A BETTER YOU!
 				lyr8.style.visibility = "hidden";
 				current_lyrics.style.top = "calc(100% - 300px)"; // Make the lyrics come from the bottom!
 				reset_animation();
+				updateMetadata();
 				np.selectedIndex = s-1;
 				if (s == 1) {
 					lyr1.style.visibility = "visible";
@@ -849,19 +850,154 @@ WHO COULD BE A BETTER YOU!
 
 			}
 
+
+			/* Songs */
+			const songs = [
+			{
+				title: 'Overture',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},
+			{
+				title: 'Lights Out',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},	
+			{
+				title: "And I'm Gone",
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},			
+			{
+				title: 'Be Seen On Halloween',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},	
+			{
+				title: 'Two For The Toads',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},
+			{
+				title: 'Good Idea, Bad Execution',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},
+			{
+				title: 'Echoes Of The Moon',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},
+			{
+				title: 'Give It A Try',
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},			
+			{
+				title: "Be Seein' You",
+				artist: 'Quantum Safari',
+				album: 'Lights Out: A Halloween Adventure',
+				artwork: [
+				{ src: 'album_art_96.png', sizes: '96x96', type: 'image/png' },
+				{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+				{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+				{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+				{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+				{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
+				]
+			},	
+			];
+
+			// Function to update the metadata for the current song
+			function updateMetadata() {
+			const currentSong = songs[song-1];
+			navigator.mediaSession.metadata = new MediaMetadata({
+				title: currentSong.title,
+				artist: currentSong.artist,
+				album: currentSong.album,
+				artwork: currentSong.artwork,
+			});
+			}
+
+			updateMetadata();
+
 			/* Implementation of the Media Session API */
 			if('mediaSession' in navigator) {
 				navigator.mediaSession.metadata = new MediaMetadata({
-					title: 'Lights Out: A Halloween Adventure',
+					title: 'Overture',
 					artist: 'Quantum Safari',
 					album: 'Lights Out: A Halloween Adventure',
 					artwork: [
-						/*{ src: 'images/1/96.jpg',  sizes: '96x96',   type: 'image/png' },
-						{ src: 'images/1/128.jpg', sizes: '128x128', type: 'image/png' },
-						{ src: 'images/1/192.jpg', sizes: '192x192', type: 'image/png' },
-						{ src: 'images/1/256.jpg', sizes: '256x256', type: 'image/png' },
-						{ src: 'images/1/384.jpg', sizes: '384x384', type: 'image/png' },
-						{ src: 'images/1/512.jpg', sizes: '512x512', type: 'image/png' },*/
+						{ src: 'album_art_96.png',  sizes: '96x96',   type: 'image/png' },
+						{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
+						{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
+						{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
+						{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
+						{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
 					]
 				});
 				navigator.mediaSession.setActionHandler('play', () => {
