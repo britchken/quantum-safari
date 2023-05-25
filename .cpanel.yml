@@ -11,3 +11,9 @@ deployment:
     - cp -R songs $DEPLOYPATH
     - cp -R assets $DEPLOYPATH
     - cp counter.php $DEPLOYPATH
+    - cp album_art_96.png $DEPLOYPATH
+    - cp album_art_128.png $DEPLOYPATH
+    - cp album_art_192.png $DEPLOYPATH
+    - cp album_art_256.png $DEPLOYPATH
+    - cp album_art_384.png $DEPLOYPATH
+    - cp album_art_512.png $DEPLOYPATH
