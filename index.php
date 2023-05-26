@@ -26,7 +26,7 @@
 				</font>
 				<font class="boy" style="font-size:4vmin;">Quantum Safari here! Check out my newest release:<br></font><br><br>
 				<a href="halloween.php">
-				<img src="album_art_256.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
+				<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
 				</a>
 				<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
 			</div>
