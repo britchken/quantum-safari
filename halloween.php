@@ -106,7 +106,7 @@ I know there’s something out there, a world outside this room,
 Though so far I only know its reflection in the moon
 
 Tonight will be different, I won’t go to sleep
-this time around I pick trick over treat
+This time around I pick trick over treat
 
 See mom always told me, I’m her special little son
 Now it’s time for someone special to have a little fun!
@@ -118,7 +118,7 @@ Oh honey? One more thing -
 No matter how you’re feeling
 Or what you’re gonna do
 There will never be another
-who could be a better you!
+Who could be a better you!
 <br><br><br><br><br><br><br><br><br>
 </font>
 							</div>
@@ -144,7 +144,7 @@ Let yourself be seen!
 On Halloween</font>
 <br>
 <font class="ghost">Helloooo helloooooooooooooooo
-helooooo ooo oooooooohh helloooooooooo
+hellooooo ooo oooooooohh helloooooooooo
 ooooooohhh ho ho hoooooooooo ohello</font>
 <br>
 <font class="host">
