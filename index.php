@@ -20,17 +20,19 @@
 
 		<!-- Wrapper -->
 		<div style="position:absolute; width:100%; height:100%; text-align:center;">
-			<div style="position:relative; top:15%; width:100%; text-align: center; font-size:3vmin" >
+			<div style="position:relative; top:5%; width:100%; text-align: center; font-size:3vmin" >
 				<font class="ghost" style="font-size:3vmin">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
-				yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br>
+				yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br>
 				</font>
-				<font class="boy" style="font-size:4vmin">Welcome to Quantum Safari.com!<br>
-				Click on the link below to check out my newest release,<br>"Lights Out: A Halloween Adventure"!</font><br><br>
+				<font class="boy" style="font-size:4vmin;">Quantum Safari here! Check out my newest release:<br></font><br><br>
+				<a href="halloween.php">
+				<img src="album_art_256.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
+				</a>
 				<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
 			</div>
 
 			<!-- Footer -->
-			<div style="position:absolute; top:80%; width:100%; text-align: center;">
+			<div style="position:absolute; top:89%; width:100%; text-align: center;">
 			    <!-- <a href="https://open.spotify.com/artist/0NJmqnqA1o57xzMYTq66C1?si=dOLrQ27iSg-NxKPbeUYsjA" class="fa fa-spotify" style=" text-decoration:none; padding: 20px; font-size:5vmin; color:#c8a176;"></a> -->
 				<a href="https://www.instagram.com/quantumsafari/" class="fa fa-instagram" style=" text-decoration:none; padding: 20px; font-size:8vmin; color:#c8a176;"></a>
 			</div>
