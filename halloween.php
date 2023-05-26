@@ -947,11 +947,6 @@ WHO COULD BE A BETTER YOU!
 					artist: 'Quantum Safari',
 					album: 'Lights Out: A Halloween Adventure',
 					artwork: [
-						{ src: 'album_art_96.png',  sizes: '96x96',   type: 'image/png' },
-						{ src: 'album_art_128.png', sizes: '128x128', type: 'image/png' },
-						{ src: 'album_art_192.png', sizes: '192x192', type: 'image/png' },
-						{ src: 'album_art_256.png', sizes: '256x256', type: 'image/png' },
-						{ src: 'album_art_384.png', sizes: '384x384', type: 'image/png' },
 						{ src: 'album_art_512.png', sizes: '512x512', type: 'image/png' },
 					]
 				});
