@@ -207,7 +207,7 @@ p {
 	left:-25px;
 }
 
-@media (min-aspect-ratio: 1) and (min-width: 1300px) {
+@media (min-aspect-ratio: 1) and (min-width: 1070px) {
 	.main-content {
 		display:inline-flex;
 		align-items:flex-start;
