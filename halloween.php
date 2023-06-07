@@ -67,8 +67,8 @@
 						Lyrics from Billy Me<br>
 					</font>	
 				</div>
-				<div id="load_bar1" style="position:absolute; top:90%; left:50%; border-radius:10px; transform:translate(-50%, -50%); background:brown; height:3%; width:36%;"></div>
-				<div id="load_bar2" style="position:absolute; top:90%; left:32%; border-radius:10px; transform:translate(0%, -50%);background:#876fc6; height:3%; width:36%;"></div>
+				<div id="load_bar1" style="position:absolute; top:90%; left:50%; border-radius:10px; transform:translate(-50%, -50%); background:brown; height:3%; width:40%;"></div>
+				<div id="load_bar2" style="position:absolute; top:90%; left:30%; border-radius:10px; transform:translate(0%, -50%);background:#553c97; height:3%; width:40%;"></div>
 				<div id="startB" class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
 					<font color="#000" style="font-family: Creepster; font-size:8vmin;">
 					LOADING...</font>
@@ -550,25 +550,17 @@ WHO COULD BE A BETTER YOU!
 			let muteState = 'unmute';
 			let song = 1;
 			
-			// Preload all the songs
+			// Last one is for window ready!
 			window.onload = function() {
-				for (let i=1;i<10;i++) {
-					if (document.getElementById("audio_pre" + i).readyState >=2) {
-						setLoaded();
-						console.log("was already ready:" + i)
-					} else {
-						document.getElementById("audio_pre" + i).addEventListener("loadeddata", setLoaded());
-						document.getElementById("audio_pre" + i).load();
-					}
-				}
+				setLoaded();
 			}
 
 			// Loading progress bar
-			preload_interval = setInterval(preload_step, 100);
+			preload_interval = setInterval(preload_step, 10);
 			function preload_step() {
-				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
+				document.getElementById("load_bar2").style.width = 4*load_counter + "%";
 				console.log(load_counter);
-				if (load_counter == 18) {
+				if (load_counter == 10) {
 					clearInterval(preload_interval);
 					document.getElementById("load_bar1").remove();
 					document.getElementById("load_bar2").remove();
