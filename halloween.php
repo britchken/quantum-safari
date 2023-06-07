@@ -20,6 +20,15 @@
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Eater&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css?family=Rubik Wet Paint&display=swap">
 		<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+
+		<script type="text/javascript">
+			/* Preload all the images and audio so they load smoothly */
+			var load_counter = 0;
+			function setLoaded() {
+				load_counter = load_counter + 1;
+			}
+		</script>
+
 	</head>
 	<body>
 
@@ -27,15 +36,15 @@
 		<div id="wrapper">
 			<div id="curtain">
 				<div   id="title">
-				<img   id="image_pre1" src="images/1.jpg" style="display: none;"></img>
-				<img   id="image_pre2" src="images/2.jpg" style="display: none;"></img>
-				<img   id="image_pre3" src="images/3.jpg" style="display: none;"></img>
-				<img   id="image_pre4" src="images/4.jpg" style="display: none;"></img>
-				<img   id="image_pre5" src="images/5.jpg" style="display: none;"></img>
-				<img   id="image_pre6" src="images/6.jpg" style="display: none;"></img>
-				<img   id="image_pre7" src="images/7.jpg" style="display: none;"></img>
-				<img   id="image_pre8" src="images/8.jpg" style="display: none;"></img>
-				<img   id="image_pre9" src="images/9.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/1.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/2.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/3.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/4.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/5.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/6.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/7.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/8.jpg" style="display: none;"></img>
+				<img onload="setLoaded()" src="images/9.jpg" style="display: none;"></img>
 				<audio id="audio_pre1" src="songs/1. Overture.mp3"></audio>
 				<audio id="audio_pre2" src="songs/2. Lights Out.mp3"></audio>
 				<audio id="audio_pre3" src="songs/3. And I'm Gone.mp3"></audio>
@@ -540,19 +549,6 @@ WHO COULD BE A BETTER YOU!
 			let playState = 'play';
 			let muteState = 'unmute';
 			let song = 1;
-
-
-			/* Preload all the images and audio so they load smoothly */
-			let load_counter = 0;
-			function setLoaded() {
-				load_counter = load_counter + 1;
-				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
-				if (load_counter == 18) {
-					document.getElementById("load_bar1").remove();
-					document.getElementById("load_bar2").remove();
-					document.getElementById("startB").innerHTML = '<font color="#000" style="font-family: Creepster; font-size:8vmin;">LET&apos;S BEGIN</font>';
-				}
-			}
 			
 			// Preload all the songs
 			document.getElementById("audio_pre1").addEventListener("canplaythrough", setLoaded());
@@ -564,15 +560,21 @@ WHO COULD BE A BETTER YOU!
 			document.getElementById("audio_pre7").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre8").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre9").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("image_pre1").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre2").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre3").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre4").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre5").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre6").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre7").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre8").addEventListener("onload", setLoaded());
-			document.getElementById("image_pre9").addEventListener("onload", setLoaded());
+			
+			// Preload
+			preload_interval = setInterval(preload_step, 100);
+			function preload_step() {
+				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
+				console.log(load_counter);
+				if (load_counter == 18) {
+					clearInterval(preload_interval);
+					document.getElementById("load_bar1").remove();
+					document.getElementById("load_bar2").remove();
+					document.getElementById("startB").innerHTML = '<font color="#000" style="font-family: Creepster; font-size:8vmin;">LET&apos;S BEGIN</font>';
+				}
+			}
+			
+
 			/* TIMER STUFF */
 			timer_interval = setInterval(timer_step, 10);
 			function timer_step() {
