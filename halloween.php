@@ -45,14 +45,6 @@
 				<img onload="setLoaded()" src="images/7.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/8.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/9.jpg" style="display: none;"></img>
-				<audio preload="auto" src="songs/2. Lights Out.mp3"></audio>
-				<audio preload="auto" src="songs/3. And I'm Gone.mp3"></audio>
-				<audio preload="auto" src="songs/4. Be Seen on Halloween.mp3"></audio>
-				<audio preload="auto" src="songs/5. Two for the Toads.mp3"></audio>
-				<audio preload="auto" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
-				<audio preload="auto" src="songs/7. Echoes of the Moon.mp3"></audio>
-				<audio preload="auto" src="songs/8. Give It a Try.mp3"></audio>
-				<audio preload="auto" src="songs/9. Be Seein' You.mp3"></audio>
 					<font class="neonText" style="font-size:9vmin;">
 						Lights Out:
 					</font>	
