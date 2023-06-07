@@ -67,8 +67,8 @@
 						Lyrics from Billy Me<br>
 					</font>	
 				</div>
-				<div id="load_bar1" style="position:absolute; top:90%; left:50%; transform:translate(-50%, -50%); background:#876fc6; height:3%; width:36%;"></div>
-				<div id="load_bar2" style="position:absolute; top:90%; left:50%; transform:translate(-50%, -50%); background:blue; height:3%; width:0%;"></div>
+				<div id="load_bar1" style="position:absolute; top:90%; left:50%; border-radius:10px; transform:translate(-50%, -50%); background:brown; height:3%; width:36%;"></div>
+				<div id="load_bar2" style="position:absolute; top:90%; left:32%; border-radius:10px; transform:translate(0%, -50%);background:#876fc6; height:3%; width:36%;"></div>
 				<div id="startB" class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
 					<font color="#000" style="font-family: Creepster; font-size:8vmin;">
 					LOADING...</font>
@@ -560,7 +560,16 @@ WHO COULD BE A BETTER YOU!
 			document.getElementById("audio_pre7").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre8").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre9").addEventListener("canplaythrough", setLoaded());
-			
+			document.getElementById("audio_pre1").load();
+			document.getElementById("audio_pre2").load();
+			document.getElementById("audio_pre3").load();
+			document.getElementById("audio_pre4").load();
+			document.getElementById("audio_pre5").load();
+			document.getElementById("audio_pre6").load();
+			document.getElementById("audio_pre7").load();
+			document.getElementById("audio_pre8").load();
+			document.getElementById("audio_pre9").load();
+
 			// Preload
 			preload_interval = setInterval(preload_step, 100);
 			function preload_step() {
