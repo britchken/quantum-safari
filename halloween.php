@@ -26,7 +26,25 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<div id="curtain">
-				<div id="title">
+				<div   id="title">
+				<img   id="image_pre1" src="images/1.jpg" style="display: none;"></img>
+				<img   id="image_pre2" src="images/2.jpg" style="display: none;"></img>
+				<img   id="image_pre3" src="images/3.jpg" style="display: none;"></img>
+				<img   id="image_pre4" src="images/4.jpg" style="display: none;"></img>
+				<img   id="image_pre5" src="images/5.jpg" style="display: none;"></img>
+				<img   id="image_pre6" src="images/6.jpg" style="display: none;"></img>
+				<img   id="image_pre7" src="images/7.jpg" style="display: none;"></img>
+				<img   id="image_pre8" src="images/8.jpg" style="display: none;"></img>
+				<img   id="image_pre9" src="images/9.jpg" style="display: none;"></img>
+				<audio id="audio_pre1" src="songs/1. Overture.mp3"></audio>
+				<audio id="audio_pre2" src="songs/2. Lights Out.mp3"></audio>
+				<audio id="audio_pre3" src="songs/3. And I'm Gone.mp3"></audio>
+				<audio id="audio_pre4" src="songs/4. Be Seen on Halloween.mp3"></audio>
+				<audio id="audio_pre5" src="songs/5. Two for the Toads.mp3"></audio>
+				<audio id="audio_pre6" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
+				<audio id="audio_pre7" src="songs/7. Echoes of the Moon.mp3"></audio>
+				<audio id="audio_pre8" src="songs/8. Give It a Try.mp3"></audio>
+				<audio id="audio_pre9" src="songs/9. Be Seein' You.mp3"></audio>
 					<font class="neonText" style="font-size:9vmin;">
 						Lights Out:
 					</font>	
@@ -40,9 +58,11 @@
 						Lyrics from Billy Me<br>
 					</font>	
 				</div>
-				<div class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
+				<div id="load_bar1" style="position:absolute; top:90%; left:50%; transform:translate(-50%, -50%); background:#876fc6; height:3%; width:36%;"></div>
+				<div id="load_bar2" style="position:absolute; top:90%; left:50%; transform:translate(-50%, -50%); background:blue; height:3%; width:0%;"></div>
+				<div id="startB" class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
 					<font color="#000" style="font-family: Creepster; font-size:8vmin;">
-					LET'S BEGIN</font>
+					LOADING...</font>
 				</div>
 			</div>
 			<div id="move_left">
@@ -457,7 +477,7 @@ WHO COULD BE A BETTER YOU!
 
 			<!-- Audio Player -->
 			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-				<audio src="songs/1. Overture.mp3" preload="auto"></audio>
+				<audio src="songs/1. Overture.mp3"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
@@ -485,15 +505,6 @@ WHO COULD BE A BETTER YOU!
 			</div>
 
 		</div> <!-- /wrapper -->
-		<audio src="songs/1. Overture.mp3" preload="auto"></audio>
-		<audio src="songs/2. Lights Out.mp3" preload="auto"></audio>
-		<audio src="songs/3. And I'm Gone.mp3" preload="auto"></audio>
-		<audio src="songs/4. Be Seen on Halloween.mp3" preload="auto"></audio>
-		<audio src="songs/5. Two for the Toads.mp3" preload="auto"></audio>
-		<audio src="songs/6. Good Idea, Bad Execution.mp3" preload="auto"></audio>
-		<audio src="songs/7. Echoes of the Moon.mp3" preload="auto"></audio>
-		<audio src="songs/8. Give It a Try.mp3" preload="auto"></audio>
-		<audio src="songs/9. Be Seein' You.mp3" preload="auto"></audio>
 
 		<!--///////////////////////////////////////////////////////////////////-->
 		<!--///////////////////////////////////////////////////////////////////-->
@@ -502,7 +513,6 @@ WHO COULD BE A BETTER YOU!
 		<!--///////////////////////////////////////////////////////////////////-->
 		<script>
 			/* Implementation of the presentation of the audio player */
-
 			const playIconContainer = document.getElementById('play-icon');
 			const audioPlayerContainer = document.getElementById('audio-player-container');
 			const seekSlider = document.getElementById('seek-slider');
@@ -531,6 +541,38 @@ WHO COULD BE A BETTER YOU!
 			let muteState = 'unmute';
 			let song = 1;
 
+
+			/* Preload all the images and audio so they load smoothly */
+			let load_counter = 0;
+			function setLoaded() {
+				load_counter = load_counter + 1;
+				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
+				if (load_counter == 18) {
+					document.getElementById("load_bar1").remove();
+					document.getElementById("load_bar2").remove();
+					document.getElementById("startB").innerHTML = '<font color="#000" style="font-family: Creepster; font-size:8vmin;">LET&apos;S BEGIN</font>';
+				}
+			}
+
+			// Preload all the songs
+			document.getElementById("audio_pre1").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre2").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre3").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre4").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre5").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre6").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre7").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre8").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("audio_pre9").addEventListener("canplaythrough", setLoaded());
+			document.getElementById("image_pre1").addEventListener("load", setLoaded());
+			document.getElementById("image_pre2").addEventListener("load", setLoaded());
+			document.getElementById("image_pre3").addEventListener("load", setLoaded());
+			document.getElementById("image_pre4").addEventListener("load", setLoaded());
+			document.getElementById("image_pre5").addEventListener("load", setLoaded());
+			document.getElementById("image_pre6").addEventListener("load", setLoaded());
+			document.getElementById("image_pre7").addEventListener("load", setLoaded());
+			document.getElementById("image_pre8").addEventListener("load", setLoaded());
+			document.getElementById("image_pre9").addEventListener("load", setLoaded());
 			/* TIMER STUFF */
 			timer_interval = setInterval(timer_step, 10);
 			function timer_step() {
@@ -573,26 +615,6 @@ WHO COULD BE A BETTER YOU!
 				}
 			}
 
-			/* Preload all the images so they load smoothly */
-			var images = [];
-			
-			preload(
-	    	    "images/1.jpg",
-				"images/2.jpg",
-				"images/3.jpg",
-				"images/4.jpg",
-				"images/5.jpg",
-				"images/6.jpg",
-				"images/7.jpg",
-				"images/8.jpg",
-				"images/9.jpg"
-			)
-			function preload() {
-			    for (var i = 0; i < arguments.length; i++) {
-			        images[i] = new Image();
-			        images[i].src = preload.arguments[i];
-			    }
-			}
 			const updatePlayState = () => {
 				if(playState === 'play') {
 					audio.play();
