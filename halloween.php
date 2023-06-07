@@ -547,13 +547,13 @@ WHO COULD BE A BETTER YOU!
 			function setLoaded() {
 				load_counter = load_counter + 1;
 				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
-				if (load_counter == 19) {
+				if (load_counter == 18) {
 					document.getElementById("load_bar1").remove();
 					document.getElementById("load_bar2").remove();
 					document.getElementById("startB").innerHTML = '<font color="#000" style="font-family: Creepster; font-size:8vmin;">LET&apos;S BEGIN</font>';
 				}
 			}
-
+			
 			// Preload all the songs
 			document.getElementById("audio_pre1").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre2").addEventListener("canplaythrough", setLoaded());
@@ -564,15 +564,15 @@ WHO COULD BE A BETTER YOU!
 			document.getElementById("audio_pre7").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre8").addEventListener("canplaythrough", setLoaded());
 			document.getElementById("audio_pre9").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("image_pre1").addEventListener("load", setLoaded());
-			document.getElementById("image_pre2").addEventListener("load", setLoaded());
-			document.getElementById("image_pre3").addEventListener("load", setLoaded());
-			document.getElementById("image_pre4").addEventListener("load", setLoaded());
-			document.getElementById("image_pre5").addEventListener("load", setLoaded());
-			document.getElementById("image_pre6").addEventListener("load", setLoaded());
-			document.getElementById("image_pre7").addEventListener("load", setLoaded());
-			document.getElementById("image_pre8").addEventListener("load", setLoaded());
-			document.getElementById("image_pre9").addEventListener("load", setLoaded());
+			document.getElementById("image_pre1").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre2").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre3").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre4").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre5").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre6").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre7").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre8").addEventListener("onload", setLoaded());
+			document.getElementById("image_pre9").addEventListener("onload", setLoaded());
 			/* TIMER STUFF */
 			timer_interval = setInterval(timer_step, 10);
 			function timer_step() {
