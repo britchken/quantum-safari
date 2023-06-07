@@ -547,7 +547,7 @@ WHO COULD BE A BETTER YOU!
 			function setLoaded() {
 				load_counter = load_counter + 1;
 				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
-				if (load_counter == 18) {
+				if (load_counter == 19) {
 					document.getElementById("load_bar1").remove();
 					document.getElementById("load_bar2").remove();
 					document.getElementById("startB").innerHTML = '<font color="#000" style="font-family: Creepster; font-size:8vmin;">LET&apos;S BEGIN</font>';
