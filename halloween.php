@@ -45,15 +45,14 @@
 				<img onload="setLoaded()" src="images/7.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/8.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/9.jpg" style="display: none;"></img>
-				<audio preload="auto" id="audio_pre1" src="songs/1. Overture.mp3"></audio>
-				<audio preload="auto" id="audio_pre2" src="songs/2. Lights Out.mp3"></audio>
-				<audio preload="auto" id="audio_pre3" src="songs/3. And I'm Gone.mp3"></audio>
-				<audio preload="auto" id="audio_pre4" src="songs/4. Be Seen on Halloween.mp3"></audio>
-				<audio preload="auto" id="audio_pre5" src="songs/5. Two for the Toads.mp3"></audio>
-				<audio preload="auto" id="audio_pre6" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
-				<audio preload="auto" id="audio_pre7" src="songs/7. Echoes of the Moon.mp3"></audio>
-				<audio preload="auto" id="audio_pre8" src="songs/8. Give It a Try.mp3"></audio>
-				<audio preload="auto" id="audio_pre9" src="songs/9. Be Seein' You.mp3"></audio>
+				<audio preload="auto" src="songs/2. Lights Out.mp3"></audio>
+				<audio preload="auto" src="songs/3. And I'm Gone.mp3"></audio>
+				<audio preload="auto" src="songs/4. Be Seen on Halloween.mp3"></audio>
+				<audio preload="auto" src="songs/5. Two for the Toads.mp3"></audio>
+				<audio preload="auto" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
+				<audio preload="auto" src="songs/7. Echoes of the Moon.mp3"></audio>
+				<audio preload="auto" src="songs/8. Give It a Try.mp3"></audio>
+				<audio preload="auto" src="songs/9. Be Seein' You.mp3"></audio>
 					<font class="neonText" style="font-size:9vmin;">
 						Lights Out:
 					</font>	
@@ -67,7 +66,7 @@
 						Lyrics from Billy Me<br>
 					</font>	
 				</div>
-				<div id="load_bar1" style="position:absolute; top:90%; left:50%; border-radius:10px; transform:translate(-50%, -50%); background:brown; height:3%; width:40%;"></div>
+				<div id="load_bar1" style="position:absolute; top:90%; left:50%; border-radius:10px; transform:translate(-50%, -50%); background:#3D0F2C; height:3%; width:40%;"></div>
 				<div id="load_bar2" style="position:absolute; top:90%; left:30%; border-radius:10px; transform:translate(0%, -50%);background:#553c97; height:3%; width:40%;"></div>
 				<div id="startB" class="start_button" onclick="move()" style="position:absolute; top:80%; left:50%; transform:translate(-50%, -50%);">
 					<font color="#000" style="font-family: Creepster; font-size:8vmin;">
@@ -486,7 +485,7 @@ WHO COULD BE A BETTER YOU!
 
 			<!-- Audio Player -->
 			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-				<audio src="songs/1. Overture.mp3"></audio>
+				<audio id="audio_real" preload="auto" src="songs/1. Overture.mp3"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
@@ -559,7 +558,6 @@ WHO COULD BE A BETTER YOU!
 			preload_interval = setInterval(preload_step, 10);
 			function preload_step() {
 				document.getElementById("load_bar2").style.width = 4*load_counter + "%";
-				console.log(load_counter);
 				if (load_counter == 10) {
 					clearInterval(preload_interval);
 					document.getElementById("load_bar1").remove();
@@ -654,7 +652,7 @@ WHO COULD BE A BETTER YOU!
 			});
 
 			/* Implementation of the functionality of the audio player */
-			const audio = document.querySelector('audio');
+			const audio = document.getElementById('audio_real');
 			const durationContainer = document.getElementById('duration');
 			const currentTimeContainer = document.getElementById('current-time');
 			let raf = null;
@@ -811,10 +809,10 @@ WHO COULD BE A BETTER YOU!
 			/* Super cool function right here!  */
 			function changeSong(s) {
 				document.getElementById("wrapper").style.setProperty("--fix-height", window.innerHeight + "px");
-				song = s;
+				song = s; // "song" is global variable
 				audio.src='songs/' + names[s] + '.mp3';
 				audio.load();
-				playState = 'play'
+				playState = 'play';
 				updatePlayState();
 				document.getElementById('art').src='images/' + s + '.jpg';
 				lyr1.style.visibility = "hidden";
@@ -833,7 +831,7 @@ WHO COULD BE A BETTER YOU!
 					current_lyrics.style.height = lyr1.offsetHeight + "px";
                     current_lyrics.style.setProperty("animation", "my-animation linear " + 403 + "s infinite");
 				}
-				if (s == 2) {
+				else if (s == 2) {
 					lyr2.style.visibility = "visible";
 					current_lyrics.style.height = lyr2.offsetHeight + "px";
 					current_lyrics.style.setProperty("animation", "my-animation linear " + 152 + "s infinite");
@@ -864,6 +862,7 @@ WHO COULD BE A BETTER YOU!
 					current_lyrics.style.setProperty("animation", "my-animation linear " + 242 + "s infinite");
 				}
 				else {
+					// todo: closing credits?
 				}
 
 			}
