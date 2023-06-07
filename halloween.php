@@ -45,15 +45,15 @@
 				<img onload="setLoaded()" src="images/7.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/8.jpg" style="display: none;"></img>
 				<img onload="setLoaded()" src="images/9.jpg" style="display: none;"></img>
-				<audio id="audio_pre1" src="songs/1. Overture.mp3"></audio>
-				<audio id="audio_pre2" src="songs/2. Lights Out.mp3"></audio>
-				<audio id="audio_pre3" src="songs/3. And I'm Gone.mp3"></audio>
-				<audio id="audio_pre4" src="songs/4. Be Seen on Halloween.mp3"></audio>
-				<audio id="audio_pre5" src="songs/5. Two for the Toads.mp3"></audio>
-				<audio id="audio_pre6" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
-				<audio id="audio_pre7" src="songs/7. Echoes of the Moon.mp3"></audio>
-				<audio id="audio_pre8" src="songs/8. Give It a Try.mp3"></audio>
-				<audio id="audio_pre9" src="songs/9. Be Seein' You.mp3"></audio>
+				<audio preload="auto" id="audio_pre1" src="songs/1. Overture.mp3"></audio>
+				<audio preload="auto" id="audio_pre2" src="songs/2. Lights Out.mp3"></audio>
+				<audio preload="auto" id="audio_pre3" src="songs/3. And I'm Gone.mp3"></audio>
+				<audio preload="auto" id="audio_pre4" src="songs/4. Be Seen on Halloween.mp3"></audio>
+				<audio preload="auto" id="audio_pre5" src="songs/5. Two for the Toads.mp3"></audio>
+				<audio preload="auto" id="audio_pre6" src="songs/6. Good Idea, Bad Execution.mp3"></audio>
+				<audio preload="auto" id="audio_pre7" src="songs/7. Echoes of the Moon.mp3"></audio>
+				<audio preload="auto" id="audio_pre8" src="songs/8. Give It a Try.mp3"></audio>
+				<audio preload="auto" id="audio_pre9" src="songs/9. Be Seein' You.mp3"></audio>
 					<font class="neonText" style="font-size:9vmin;">
 						Lights Out:
 					</font>	
@@ -551,26 +551,19 @@ WHO COULD BE A BETTER YOU!
 			let song = 1;
 			
 			// Preload all the songs
-			document.getElementById("audio_pre1").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre2").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre3").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre4").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre5").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre6").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre7").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre8").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre9").addEventListener("canplaythrough", setLoaded());
-			document.getElementById("audio_pre1").load();
-			document.getElementById("audio_pre2").load();
-			document.getElementById("audio_pre3").load();
-			document.getElementById("audio_pre4").load();
-			document.getElementById("audio_pre5").load();
-			document.getElementById("audio_pre6").load();
-			document.getElementById("audio_pre7").load();
-			document.getElementById("audio_pre8").load();
-			document.getElementById("audio_pre9").load();
+			window.onload = function() {
+				for (let i=1;i<10;i++) {
+					if (document.getElementById("audio_pre" + i).readyState >=2) {
+						setLoaded();
+						console.log("was already ready:" + i)
+					} else {
+						document.getElementById("audio_pre" + i).addEventListener("loadeddata", setLoaded());
+						document.getElementById("audio_pre" + i).load();
+					}
+				}
+			}
 
-			// Preload
+			// Loading progress bar
 			preload_interval = setInterval(preload_step, 100);
 			function preload_step() {
 				document.getElementById("load_bar2").style.width = 2*load_counter + "%";
