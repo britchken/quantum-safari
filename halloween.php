@@ -477,7 +477,7 @@ WHO COULD BE A BETTER YOU!
 
 			<!-- Audio Player -->
 			<div id="audio-player-container" onmouseup="mouse_up()" ontouchend="mouse_up()">
-				<audio id="audio_real" preload="auto" src="songs/1. Overture.mp3"></audio>
+				<audio id="audio_real" src="songs/1. Overture.mp3"></audio>
 				<div style="display:flex; align-items:center;">
 					<span id="current-time" class="time">0:00</span>
 					<input type="range" id="seek-slider" max="100" value="0" style="z-index:500;">
