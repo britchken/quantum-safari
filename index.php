@@ -33,7 +33,7 @@
 
 			<!-- Footer -->
 			<div style="position:absolute; top:89%; width:100%; text-align: center;">
-			    <a href="https://open.spotify.com/artist/0NJmqnqA1o57xzMYTq66C1?si=dOLrQ27iSg-NxKPbeUYsjA" class="fa fa-spotify" style=" text-decoration:none; padding: 20px; font-size:8vmin; color:#c8a176;"></a>
+			    <a href="https://open.spotify.com/album/6W1sVGVI4aLiHebCFLGOSh?si=GCygTtpQTtu4VTmNWQCzDA" class="fa fa-spotify" style=" text-decoration:none; padding: 20px; font-size:8vmin; color:#c8a176;"></a>
 				<a href="https://www.instagram.com/quantumsafari/" class="fa fa-instagram" style=" text-decoration:none; padding: 20px; font-size:8vmin; color:#c8a176;"></a>
 			</div>
 	    </div> <!-- /wrapper -->
