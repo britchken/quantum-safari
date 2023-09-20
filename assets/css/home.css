@@ -87,7 +87,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.15;
 		color: #888;
 	}
 
@@ -113,7 +113,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		color: #666;
-		line-height: 1.5em;
+		line-height: 2.5em;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1948,7 +1948,7 @@ input, select, textarea {
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: #0d5c59;
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -1966,7 +1966,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #9ececc;
+			background-color: #198683;
 		}
 
 		input[type="button"]:active,
@@ -1974,7 +1974,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #7eaeac;
+			background-color: #198683;
 		}
 
 /* Item */
@@ -2078,7 +2078,7 @@ input, select, textarea {
 			}
 
 		#header .icons {
-			font-size: 3.8em;
+			font-size: 3.0em;
 			text-align: center;
 		}
 
@@ -2138,6 +2138,7 @@ input, select, textarea {
 				display: block;
 				padding: 0.5em 1.5em 0.5em 1.5em;
 				color: rgba(255, 255, 255, 0.5);
+				font-family: InsideOut;
 				text-decoration: none;
 				outline: 0;
 				border: 0;
@@ -2150,7 +2151,7 @@ input, select, textarea {
 				#nav ul li a span {
 					position: relative;
 					display: block;
-					font-size: 0.8em;
+					font-size: 1.3em;
 				}
 
 					#nav ul li a span:before {
@@ -2247,20 +2248,19 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-color: #35208e;
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				background-color: #101010;
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #35208e;
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: #1E0050;
 			}
 
 /* Wide */
@@ -2641,3 +2641,57 @@ input, select, textarea {
 		color: #c8a176;
 		font-family: "Londrina Solid";
 	}
+	@font-face {
+		font-family: InsideOut;
+		src: url("../webfonts/InsideOut.ttf")
+	}
+
+	
+.neonText {
+	animation: pulsate 1.5s infinite alternate;  
+
+	color: #fff;
+	text-shadow:
+	  0 0 7px #fff,
+	  0 0 10px #fff,
+	  0 0 21px #bc13fe,
+	  0 0 42px #bc13fe,
+	  0 0 82px #bc13fe,
+	  0 0 92px #bc13fe,
+	  0 0 102px #bc13fe,
+	  0 0 151px #bc13fe;
+ }
+
+ @keyframes pulsate {
+	  
+	100% {
+ 
+		 text-shadow:
+		 0 0 3px #fff,
+		 0 0 7px #cec6e4,
+		 0 0 19px #bc13fe,
+		 0 0 40px #bc13fe,
+		 0 0 80px #bc13fe,
+		 0 0 90px #bc13fe,
+		 0 0 100px #bc13fe;
+	
+	}
+	
+	0% {
+ 
+	  text-shadow:
+	  0 0 2px #fff,
+	  0 0 4px #cec6e4,
+	  0 0 6px #bc13fe,
+	  0 0 10px #bc13fe,
+	  0 0 45px #bc13fe,
+	  0 0 55px #bc13fe,
+	  0 0 70px #bc13fe;
+
+ }
+}
+
+.flex-container {
+	display: flex;
+  flex-direction: row;
+}

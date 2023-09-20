@@ -24,7 +24,7 @@
 		<!-- Header -->
 			<div id="header">
 
-				<div class="top">
+				<div class="welcome">
 
 					<!-- Logo -->
 						<div id="logo">
@@ -34,11 +34,10 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Welcome</span></a></li>
+								<li><a href="#welcome" id="welcome-link"><span class="icon solid fa-home">Welcome</span></a></li>
+								<li><a href="#lights-out" id="lights-out-link"><span class="icon solid fa-ghost">Lights Out</span></a></li>
 								<li><a href="#mole-park" id="mole-park-link"><span class="icon solid fa-hammer">Mole Park</span></a></li>
-								<li><a href="#lights-out" id="portfolio-link"><span class="icon solid fa-ghost">Lights Out</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-music">Longo Bongos</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+								<li><a href="#longo-bongos" id="longo-bongos-link"><span class="icon solid fa-music">Longo Bongos</span></a></li>
 							</ul>
 						</nav>
 
@@ -59,84 +58,84 @@
 		<!-- Main -->
 			<div id="main">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
+				<!-- Top -->
+					<section id="welcome" class="one">
 						<div class="container" height="100%">
 
-							
-							<div style="position:relative; top:5%; width:100%; text-align: center; font-size:3vmin;" >
+							<div style="position:relative; width:100%; text-align: center; font-size:3vmin;" >
 								<font class="ghost" style="font-size:3vmin">ooooohhhh hellooooooooo helloooo ohh ho hoooo hellooooooo<br>
-								yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br>
+								yoooou are <?php include("counter.php"); ?>! that's a gooooooood one...<br><br><br><br><br>
 								</font>
 							</div>
-							<font class="boy" style="font-size:4vmin;">Quantum Safari here! Check out my newest release:<br></font><br><br>
-							<a href="halloween.php">
-								<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
-								</a>
-								<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
-							</footer>
-
+							<font class="boy" style="font-size:4vmin;">
+							<p>Hi! I'm Quantum Safari. Click below to check out my Halloween album, or scroll around this page to explore more music.</p>
+							<a href="#lights-out" class="button scrolly">Let's get Spooky!</a>
+							<br>
+							<br>
+							<p>And get ready for Halloween - new music will come out Quantober 31st! I'll be posting updates on this website
+								and <font color="#F77737"><a href="https://www.instagram.com/quantumsafari/"> Instagram</a></font>, so don't worry about missing out! More music is on the way.</p></font>
 						</div>
 					</section>
 
-				<!-- Portfolio -->
+				<!-- Lights-out -->
 					<section id="lights-out" class="two">
-						<div class="container">
+						<div class="container" height="100%">
 
 
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+						<a href="halloween.php">
+							<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
+						</a>
+						<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
+						
+						<p align="left"><font style="font-family:Londrina Solid; font-size:3vmin; color:#ffae42">
+							"Lights Out: A Halloween Adventure" is my breakthrough album! Featuring captivating watercolor paintings from LANK and surprise guest appearances,
+							the album follows the journey of a boy as he discovers the sights and frights of Halloween. Take a listen - you won't regret it!
+						</font><p>
 
 						</div>
 					</section>
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+				<!-- Mole Park -->
+					<section id="mole-park" class="three">
+						<div class="container" height="100%">
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
+						<h1><font style="font-family:Londrina Solid; font-size:4vmin; color:#309950">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!</font>
+						<br><br>
+						<font style="font-family:Londrina Solid; font-size:4vmin; color:#906920">Check out my theme song for the game:</font></h1>
+						<audio controls style="width:50%">
+							<source src="./molepark.wav" type="audio/wav">
+						Your browser does not support the audio element. 
+						</audio>
+						<img src="./images/MolePark.png" width=100%></img>
+						
 						</div>
+					</section>
+
+				<!-- Longo Bongos -->
+				<section id="longo-bongos" class="four">
+						<div class="container" height="100%">
+
+						<h1><font class="boy" style="font-size:4vmin;">Before Quantum Safari, there was Longo Bongos! Check out some of my previous work:</font></h1>
+						<br>
+						<div>
+							<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7EENBecq4m4WlYtuKpAFKH?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+							</div>
+						<br>
+
+						<font class="boy" style="font-size:3vmin;">
+						<div class="flex-container">
+							<div>
+								Reptiles
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pe72tIaJj2hEPq5m&amp;list=OLAK5uy_kFNsnR-oc9J4NLrJzxOFXlQGMeyaAq0TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+							<div>
+								Five Fun Things To Do With Your Friends
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=83tsViE2-RrDRwiv&amp;list=OLAK5uy_lH6gv-_vgr5WxKyap4YqYMa2caIQzYjuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>								
+						</div>
+						<br>
+						</font>				
 					</section>
 
 			</div>
