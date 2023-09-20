@@ -81,7 +81,6 @@
 					<section id="lights-out" class="two">
 						<div class="container" height="100%">
 
-
 						<a href="halloween.php">
 							<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
 						</a>
@@ -100,13 +99,12 @@
 					<section id="mole-park" class="three">
 						<div class="container" height="100%">
 
-						<h1><font style="font-family:Londrina Solid; font-size:4vmin; color:#309950">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!</font>
-						<br><br>
-						<font style="font-family:Londrina Solid; font-size:4vmin; color:#906920">Check out my theme song for the game:</font></h1>
-						<audio controls style="width:50%">
-							<source src="./molepark.wav" type="audio/wav">
-						Your browser does not support the audio element. 
-						</audio>
+						<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
+							<p align="left">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!
+							And how could it not, when the theme song has been written by Quantum Safari!</p>
+							<p align="left">More information to come - but rest assured that the theme song and video are already complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
+						</font>
+						<br>
 						<img src="./images/MolePark.png" width=100%></img>
 						
 						</div>
@@ -121,19 +119,14 @@
 						<div>
 							<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7EENBecq4m4WlYtuKpAFKH?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 							</div>
-						<br>
-
+						<br><br>
 						<font class="boy" style="font-size:3vmin;">
-						<div class="flex-container">
-							<div>
-								Reptiles
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pe72tIaJj2hEPq5m&amp;list=OLAK5uy_kFNsnR-oc9J4NLrJzxOFXlQGMeyaAq0TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							</div>
-							<div>
-								Five Fun Things To Do With Your Friends
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=83tsViE2-RrDRwiv&amp;list=OLAK5uy_lH6gv-_vgr5WxKyap4YqYMa2caIQzYjuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							</div>								
-						</div>
+						<p align="left">My first album: Reptiles</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pe72tIaJj2hEPq5m&amp;list=OLAK5uy_kFNsnR-oc9J4NLrJzxOFXlQGMeyaAq0TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<br><br>
+						<p align="left">My second album: Five Fun Things To Do With Your Friends</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=83tsViE2-RrDRwiv&amp;list=OLAK5uy_lH6gv-_vgr5WxKyap4YqYMa2caIQzYjuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 						<br>
 						</font>				
 					</section>
