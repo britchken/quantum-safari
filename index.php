@@ -6,6 +6,7 @@
 -->
 <html>
 	<head>
+		<title>Quantum Safari</title>
 	<meta  http-equiv="Content-Type" content="application;charset=UTF-8">
 		<meta name="description" content="The home of Quantum Safari, an up-and-coming musical genius.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
