@@ -69,12 +69,15 @@
 								</font>
 							</div>
 							<font class="boy" style="font-size:4vmin;">
-							<p>Hi! I'm Quantum Safari. Click below to check out my Halloween album, or scroll around this page to explore more music.</p>
+							<p>Hi! I'm Quantum Safari. Click below to check out my Halloween album, or scroll down to find out what else is going on.</p>
 							<a href="#lights-out" class="button scrolly">Let's get Spooky!</a>
 							<br>
 							<br>
-							<p>And get ready for Halloween - new music will come out Quantober 31st! I'll be posting updates on this website
-								and <font color="#F77737"><a href="https://www.instagram.com/quantumsafari/"> Instagram</a></font>, so don't worry about missing out! More music is on the way.</p></font>
+							<br>
+							<p>I'll be posting updates on this website and 
+								<font color="#F77737"><a href="https://www.instagram.com/quantumsafari/">Instagram</a></font>,
+								so don't worry about missing out! More music is on the way.</p></font>
+							<br>
 						</div>
 					</section>
 
