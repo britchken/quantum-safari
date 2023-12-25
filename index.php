@@ -102,16 +102,13 @@
 				<!-- Mole Park -->
 					<section id="mole-park" class="three">
 						<div class="container" height="100%">
-
-						<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
-							<p align="left">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!
-							And how could it not, when the theme song has been written by Quantum Safari!</p>
-							<p align="left">More information to come - but rest assured that the theme song and video are already complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
-						</font>
-						<br>
-						<img src="./images/MolePark.png" width=100%></img>
-						
-						</div>
+							<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
+								<p align="left">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!
+								And how could it not, when the theme song has been written by Quantum Safari! Learn more about it on the 
+								<font style="font-family:Londrina Solid; font-size:3vmin; color:#a03950"><a href="https://restartround.com">Restart Round</a></font> website!</p>
+								<p align="left">The theme song and video are complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
+							</font>
+							<img src="./images/MolePark.png" width=100%></img>						</div>
 					</section>
 
 				<!-- Longo Bongos -->
