@@ -37,7 +37,8 @@
 							<ul>
 								<li><a href="#welcome" id="welcome-link"><span class="icon solid fa-home">Welcome</span></a></li>
 								<li><a href="#lights-out" id="lights-out-link"><span class="icon solid fa-ghost">Lights Out</span></a></li>
-								<li><a href="#mole-park" id="mole-park-link"><span class="icon solid fa-hammer">Mole Park</span></a></li>
+								<li><a href="#work-in-progress" id="work-in-progress-link"><span class="icon solid fa-gear">Work in Progress</span></a></li>
+								<li><a href="#restart-round" id="restart-round-link"><span class="icon solid fa-hammer">Restart Round</span></a></li>
 								<li><a href="#longo-bongos" id="longo-bongos-link"><span class="icon solid fa-music">Longo Bongos</span></a></li>
 							</ul>
 						</nav>
@@ -98,21 +99,76 @@
 						</div>
 					</section>
 
+				<!-- Work In Progress -->
+				<section id="work-in-progress" class="three" style="width:100%; margin:0; padding:0;">
+				<div class="container" style="min-height:100vh; width:100%; box-sizing:border-box; padding:6vmin 5vmin;">
+					
+					<!-- Header -->
+					<div style="max-width:980px; margin:0 auto 4vmin auto; text-align:center; padding:3vmin 3vmin; border-radius:20px; background:rgba(255,255,255,0.7); box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+					<div style="font-family: 'Trebuchet MS', 'Londrina Solid', Arial, sans-serif; font-size:4.8vmin; line-height:1.1; letter-spacing:0.5px; color:#1f3b3a; font-weight:800;">Here’s some stuff I’m working on!</div>
+					</div>
+
+					<!-- Track list -->
+					<div style="max-width:980px; margin:0 auto; display:flex; flex-wrap:wrap; gap:2.4vmin; justify-content:center;">
+					
+					<!-- Track Card -->
+					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎵</div>
+						<div style="flex:1 1 auto;">
+						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Syntax</figcaption>
+						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+							<source src="./songs/Syntax.mp3" type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+						</div>
+					</figure>
+
+					<!-- Track Card -->
+					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎶</div>
+						<div style="flex:1 1 auto;">
+						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Swamp Song</figcaption>
+						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+							<source src="./songs/Swamp-Song.mp3" type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+						</div>
+					</figure>
+
+					<!-- Example: Add more songs by duplicating this card -->
+					<!--
+					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎧</div>
+						<div style="flex:1 1 auto;">
+						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">New Track</figcaption>
+						<div style="font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:1.9vmin; color:#5a7a76; margin:0 0 1.2vmin 0;">Notes or mood</div>
+						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+							<source src="./songs/NewTrack.mp3" type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+						</div>
+					</figure>
+					-->
+
+					</div>
+
+				</div>
+				</section>
 
 				<!-- Mole Park -->
-					<section id="mole-park" class="three">
-						<div class="container" height="100%">
-							<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
-								<p align="left">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!
-								And how could it not, when the theme song has been written by Quantum Safari! Learn more about it on the 
-								<font style="font-family:Londrina Solid; font-size:3vmin; color:#a03950"><a href="https://restartround.com">Restart Round</a></font> website!</p>
-								<p align="left">The theme song and video are complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
-							</font>
-							<img src="./images/MolePark.png" width=100%></img>						</div>
-					</section>
-
+				<section id="restart-round" class="four">
+					<div class="container" height="100%">
+						<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
+							<p align="left">"Mole Park: Whack and Win!" is an upcoming party game that will Win the world's hearts!
+							And how could it not, when the theme song has been written by Quantum Safari! Learn more about it on the 
+							<font style="font-family:Londrina Solid; font-size:3vmin; color:#a03950"><a href="https://restartround.com">Restart Round</a></font> website!</p>
+							<p align="left">The theme song and video are complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
+						</font>
+						<img src="./images/MolePark.png" width=100%></img>						</div>
+				</section>
+				
 				<!-- Longo Bongos -->
-				<section id="longo-bongos" class="four">
+				<section id="longo-bongos" class="five">
 						<div class="container" height="100%">
 
 						<h1><font class="boy" style="font-size:4vmin;">Before Quantum Safari, there was Longo Bongos! Check out some of my previous work:</font></h1>
