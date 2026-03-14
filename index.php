@@ -36,8 +36,9 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#welcome" id="welcome-link"><span class="icon solid fa-home">Welcome</span></a></li>
-								<li><a href="#lights-out" id="lights-out-link"><span class="icon solid fa-ghost">Lights Out</span></a></li>
+								<li><a href="#new-releases" id="new-releases-link"><span class="icon solid fa-star">New Releases</span></a></li>
 								<li><a href="#work-in-progress" id="work-in-progress-link"><span class="icon solid fa-gear">Work in Progress</span></a></li>
+								<li><a href="#lights-out" id="lights-out-link"><span class="icon solid fa-ghost">Lights Out</span></a></li>
 								<li><a href="#restart-round" id="restart-round-link"><span class="icon solid fa-hammer">Restart Round</span></a></li>
 								<li><a href="#longo-bongos" id="longo-bongos-link"><span class="icon solid fa-music">Longo Bongos</span></a></li>
 							</ul>
@@ -82,22 +83,19 @@
 						</div>
 					</section>
 
-				<!-- Lights-out -->
-					<section id="lights-out" class="two">
-						<div class="container" height="100%">
-
-						<a href="halloween.php">
-							<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
-						</a>
-						<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
+				<!-- New Releases -->
+				<section id="new-releases" class="two">
+					<div class="container" style="width:100%; box-sizing:border-box; padding:6vmin 5vmin;">
 						
-						<p align="left"><font style="font-family:Londrina Solid; font-size:3vmin; color:#ffae42">
-							"Lights Out: A Halloween Adventure" is my breakthrough album! Featuring captivating watercolor paintings from LANK and surprise guest appearances,
-							the album follows the journey of a boy as he discovers the sights and frights of Halloween. Take a listen - you won't regret it!
-						</font><p>
-
+						<!-- Header -->
+						<div style="max-width:980px; margin:0 auto 4vmin auto; text-align:center; padding:3vmin 3vmin; border-radius:20px; background:rgba(255,174,66,0.8); box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+						<div style="font-family: 'Trebuchet MS', 'Londrina Solid', Arial, sans-serif; font-size:4.8vmin; line-height:1.1; letter-spacing:0.5px; color:#1f3b3a; font-weight:800;">✨ Fresh Off The Press! ✨</div>
+						<br>
+						<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/78OiQr2YVoziplGre6sWE4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 						</div>
-					</section>
+
+					</div>
+				</section>
 
 				<!-- Work In Progress -->
 				<section id="work-in-progress" class="three" style="width:100%; margin:0; padding:0;">
@@ -125,7 +123,7 @@
 
 					<!-- Track Card -->
 					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
-						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎶</div>
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#245335,#420395); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🐊</div>
 						<div style="flex:1 1 auto;">
 						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Swamp Song</figcaption>
 						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
@@ -135,40 +133,103 @@
 						</div>
 					</figure>
 
-					<!-- Example: Add more songs by duplicating this card -->
-					<!--
+					<!-- Track Card -->
 					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
-						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎧</div>
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#d96459,#e87c6f); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌍</div>
 						<div style="flex:1 1 auto;">
-						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">New Track</figcaption>
-						<div style="font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:1.9vmin; color:#5a7a76; margin:0 0 1.2vmin 0;">Notes or mood</div>
+						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Continental Drift</figcaption>
 						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
-							<source src="./songs/NewTrack.mp3" type="audio/mpeg">
+							<source src="./songs/Continental Drift.mp3" type="audio/mpeg">
 							Your browser does not support the audio tag.
 						</audio>
 						</div>
 					</figure>
-					-->
 
+					<!-- Track Card -->
+					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#8e6a9b,#a67bb8); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌴</div>
+						<div style="flex:1 1 auto;">
+						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Lime Island Sound</figcaption>
+						<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+							<source src="./songs/The Lime Island Sound.mp3" type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+						</div>
+					</figure>
+
+					<!-- Track Card -->
+				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#4a6fa5,#6b8fc7); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌙</div>
+					<div style="flex:1 1 auto;">
+					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Three in the Morning</figcaption>
+					<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+						<source src="./songs/Three in the morning 6-22.mp3" type="audio/mpeg">
+						Your browser does not support the audio tag.
+					</audio>
 					</div>
+				</figure>
+
+				<!-- Track Card -->
+				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#c97d3a,#e0a060); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌅</div>
+					<div style="flex:1 1 auto;">
+					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">The Space Between Us</figcaption>
+					<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+						<source src="./songs/The Space Between Us 3-14-26.mp3" type="audio/mpeg">
+						Your browser does not support the audio tag.
+					</audio>
+					</div>
+				</figure>
+
+				<!-- Track Card -->
+				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#6a9b7d,#8fc4a0); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎶</div>
+					<div style="flex:1 1 auto;">
+					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Carrying Song</figcaption>
+					<audio controls preload="metadata" style="width:100%; height:38px; outline:none; border-radius:10px; background:#f5f9f8;">
+						<source src="./songs/Carrying song.mp3" type="audio/mpeg">
+						Your browser does not support the audio tag.
+					</audio>
+					</div>
+				</figure>
+
+				</div>
 
 				</div>
 				</section>
 
-				<!-- Mole Park -->
-				<section id="restart-round" class="four">
+				<!-- Lights Out -->
+				<section id="lights-out" class="four">
 					<div class="container" height="100%">
-						<font style="font-family:Londrina Solid; font-size:3vmin; color:#309950">
-							<p align="left"><i>Mole Park: Whack and Win</i> is a new party game that will Win the world's hearts!
-							And how could it not, when the theme song has been written by Quantum Safari! Learn more about it on the 
-							<font style="font-family:Londrina Solid; font-size:3vmin; color:#a03950"><a href="https://restartround.com">Restart Round</a></font> website!</p>
-							<p align="left">The theme song and video are complete! And for those of you who submitted moles, know that they are as lively as ever. Thanks again.</p>
+
+					<a href="halloween.php">
+						<img src="art_high_quality.png" style="width:40vmin; border-radius:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></img>
+					</a>
+					<h1><font class="neonText" style="font-size:4vh; font-family:Londrina Solid; text-decoration-line: underline;"><a href="halloween.php">Lights Out: A Halloween Adventure</a></font></h1><br><br>
+					
+					<p align="left"><font style="font-family:Londrina Solid; font-size:3vmin; color:#ffae42">
+						"Lights Out: A Halloween Adventure" was my breakout album! Featuring captivating watercolor paintings from LANK and surprise guest appearances,
+						the album follows the journey of a boy as he discovers the sights and frights of Halloween. Take a listen - you won't regret it!
+					</font><p>
+
+					</div>
+				</section>
+
+				<!-- Restart Round -->
+				<section id="restart-round" class="five">
+					<div class="container" height="100%">
+						<font style="font-family:Londrina Solid; font-size:3vmin; color:#30dd80">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/lwtBjOKS1y0?si=jIR9PMNiLTKPIq_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							<p align="left">I'm the lead musician behind Restart Round's new game: <i>Mole Park: Whack and Win</i>. Available now at the
+							<font style="font-family:Londrina Solid; font-size:3vmin; color:#f03950"><a href="https://restartround.com">Restart Round</a></font> website! This is the game's theme song.</p>
+							<audio controls="" src="/restartround.mp3"></audio>
+							<p align="left">And naturally, the company needs a theme song too!</p>
 						</font>
-						<img src="./images/MolePark.png" width=50%></img>						</div>
+						<img src="./images/MolePark.png" width="25%" style="max-width:200px;"></img>						</div>
 				</section>
 				
 				<!-- Longo Bongos -->
-				<section id="longo-bongos" class="five">
+				<section id="longo-bongos" class="six">
 						<div class="container" height="100%">
 
 						<h1><font class="boy" style="font-size:4vmin;">Before Quantum Safari, there was Longo Bongos! Check out some of my previous work:</font></h1>
