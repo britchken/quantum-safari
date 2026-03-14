@@ -110,7 +110,7 @@
 					<div style="max-width:980px; margin:0 auto; display:flex; flex-wrap:wrap; gap:2.4vmin; justify-content:center;">
 					
 					<!-- Track Card -->
-					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#5dad9d,#79d0c2); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎵</div>
 						<div style="flex:1 1 auto;">
 						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Syntax</figcaption>
@@ -122,7 +122,7 @@
 					</figure>
 
 					<!-- Track Card -->
-					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#245335,#420395); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🐊</div>
 						<div style="flex:1 1 auto;">
 						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Swamp Song</figcaption>
@@ -134,7 +134,7 @@
 					</figure>
 
 					<!-- Track Card -->
-					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#d96459,#e87c6f); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌍</div>
 						<div style="flex:1 1 auto;">
 						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Continental Drift</figcaption>
@@ -146,7 +146,7 @@
 					</figure>
 
 					<!-- Track Card -->
-					<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+					<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 						<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#8e6a9b,#a67bb8); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌴</div>
 						<div style="flex:1 1 auto;">
 						<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Lime Island Sound</figcaption>
@@ -158,7 +158,7 @@
 					</figure>
 
 					<!-- Track Card -->
-				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+				<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#4a6fa5,#6b8fc7); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌙</div>
 					<div style="flex:1 1 auto;">
 					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Three in the Morning</figcaption>
@@ -170,7 +170,7 @@
 				</figure>
 
 				<!-- Track Card -->
-				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+				<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#c97d3a,#e0a060); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🌅</div>
 					<div style="flex:1 1 auto;">
 					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">The Space Between Us</figcaption>
@@ -182,7 +182,7 @@
 				</figure>
 
 				<!-- Track Card -->
-				<figure style="flex:1 1 280px; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
+				<figure style="flex:1 1 400px; min-width:0; max-width:460px; margin:0; padding:3vmin; border-radius:18px; background:#ffffff; box-shadow:0 10px 24px rgba(0,0,0,0.10); display:flex; align-items:center; gap:2.4vmin;">
 					<div aria-hidden="true" style="flex:0 0 64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#6a9b7d,#8fc4a0); display:flex; align-items:center; justify-content:center; font-size:32px; color:white;">🎶</div>
 					<div style="flex:1 1 auto;">
 					<figcaption style="font-family:'Trebuchet MS','Londrina Solid',Arial,sans-serif; font-size:2.6vmin; color:#1f3b3a; font-weight:700; margin:0 0 0.4vmin 0;">Carrying Song</figcaption>
